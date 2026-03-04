@@ -8,8 +8,8 @@ const ImageCarousel = () => {
     <section className="py-8 section-dark overflow-hidden">
       <div className="carousel-auto-scroll flex gap-4" style={{ width: "max-content" }}>
         {[...images, ...images].map((src, i) => (
-          <div key={i} className="flex-shrink-0 w-48 md:w-64 h-32 md:h-44 rounded-lg overflow-hidden">
-            <img src={src} alt={`Evento ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+          <div key={i} className="flex-shrink-0 rounded-lg overflow-hidden">
+            <img src={src} alt={`Evento ${i + 1}`} className="h-44 md:h-56 w-auto object-contain" loading="lazy" />
           </div>
         ))}
       </div>
