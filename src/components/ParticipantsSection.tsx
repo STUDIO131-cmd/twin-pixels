@@ -22,8 +22,6 @@ const ParticipantsSection = () => {
                 <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-2 border-border grayscale hover:grayscale-0 transition-all duration-500">
                   <img src={p.img} alt={p.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
-                <p className="mt-3 font-display font-bold text-foreground text-sm">{p.name}</p>
-                <p className="text-gold text-xs font-body font-semibold tracking-wider">{p.role}</p>
               </div>
             ))}
           </div>
