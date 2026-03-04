@@ -1,12 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import TickerBar from "@/components/TickerBar";
+import CountdownSection from "@/components/CountdownSection";
+import ParticipantsSection from "@/components/ParticipantsSection";
+import HeroSection from "@/components/HeroSection";
+import ImageCarousel from "@/components/ImageCarousel";
+import ForWhoSection from "@/components/ForWhoSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import MethodologySection from "@/components/MethodologySection";
+import PricingSection from "@/components/PricingSection";
+import SpeakersSection from "@/components/SpeakersSection";
+import RegistrationForm from "@/components/RegistrationForm";
+import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <TickerBar />
+      <CountdownSection />
+      <ParticipantsSection />
+      <HeroSection />
+      <ImageCarousel />
+      <ForWhoSection />
+      <TestimonialsSection />
+      <MethodologySection />
+      <PricingSection />
+      <SpeakersSection />
+      <RegistrationForm />
+      <FooterSection />
     </div>
   );
 };
