@@ -19,7 +19,7 @@ const ParticipantsSection = () => {
           <div className="flex gap-6 carousel-auto-scroll" style={{ width: "max-content" }}>
             {[...participants, ...participants].map((p, i) => (
               <div key={i} className="flex-shrink-0 w-40 md:w-48 text-center">
-                <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-2 border-border grayscale hover:grayscale-0 transition-all duration-500">
+                <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden glass-ring grayscale hover:grayscale-0 transition-all duration-500">
                   <img src={p.img} alt={p.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
               </div>
