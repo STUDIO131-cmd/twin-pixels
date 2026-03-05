@@ -1,14 +1,31 @@
 
 
-## Intensificar Glow das Fotos
+## Glow expandido além do container + pulsar mais lento
 
-Aumentar a opacidade e o raio do `box-shadow` na classe `.glass-ring` e na animação `neon-pulse` para tornar o efeito mais visível.
+### Problema
+O `overflow-hidden` no div circular (linha 22) corta o `box-shadow`, impedindo que o glow se expanda para fora. O brilho fica "preso" dentro do círculo.
 
-### Alterações em `src/index.css`
+### Solução
 
-- **Estado base**: `box-shadow` de `0.08` → `0.20`, raio de `15px` → `20px`
-- **Borda**: opacidade de `0.15` → `0.25`
-- **Animação min** (0%, 100%): `0.06` → `0.12`, raio `12px` → `16px`
-- **Animação max** (50%): `0.15` → `0.35`, raio `20px` → `30px`
-- **Hover**: `0.25` → `0.45`, raio `25px` → `35px`
+**1. Separar o glow do container da imagem**
+- Remover `overflow-hidden` e `glass-ring` do div da imagem
+- Criar um wrapper externo para o glow que não tenha `overflow-hidden`
+- Manter `overflow-hidden` apenas no div interno (para recortar a imagem em círculo)
+
+**2. Estrutura no `ParticipantsSection.tsx`:**
+```
+<div className="glass-ring rounded-full p-[2px]">        ← glow visível, sem overflow-hidden
+  <div className="rounded-full overflow-hidden w-32 h-32"> ← recorte da imagem
+    <img ... />
+  </div>
+</div>
+```
+
+**3. Pulsar mais lento no `index.css`:**
+- Animação de `4s` → `6s` para um pulsar mais calmo e sofisticado
+- Remover o `inset` box-shadow (não faz sentido no wrapper externo)
+
+### Arquivos
+- **`src/components/ParticipantsSection.tsx`** — Reestruturar o HTML: wrapper externo com `glass-ring`, div interno com `overflow-hidden`
+- **`src/index.css`** — Alterar duração da animação para `6s`, remover `inset` shadows
 
