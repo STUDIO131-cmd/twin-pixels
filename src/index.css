@@ -116,13 +116,25 @@
     @apply border-border;
   }
 
-  body {
+  body, * {
     @apply bg-background text-foreground;
-    font-family: 'Source Sans 3', 'Moneta', sans-serif;
+    font-family: 'TikTok Sans', Inter, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', 'TikTok Sans', sans-serif;
+  h1, h2 {
+    font-weight: 700;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  p, span, li {
+    font-weight: 400;
+  }
+
+  small, caption, .text-xs {
+    font-weight: 300;
   }
 }
 
