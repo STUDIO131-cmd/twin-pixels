@@ -1,61 +1,14 @@
 /* ============================================
-   FONTES OFICIAIS STUDIO 131
+   FONTES
    ============================================ */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/source-sans-3/300.css';
+@import '@fontsource/source-sans-3/400.css';
+@import '@fontsource/source-sans-3/600.css';
 
-/* NT EPIKA — Display */
-@font-face {
-  font-family: 'NT Epika';
-  src: url('/fonts/epika-thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'NT Epika';
-  src: url('/fonts/epika-regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'NT Epika';
-  src: url('/fonts/epika-medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'NT Epika';
-  src: url('/fonts/epika-bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* MONETA — Body */
-@font-face {
-  font-family: 'Moneta';
-  src: url('/fonts/moneta-light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Moneta';
-  src: url('/fonts/moneta-regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Moneta';
-  src: url('/fonts/moneta-bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* TIKTOK SANS — UI */
+/* TikTok Sans fallback */
 @font-face {
   font-family: 'TikTok Sans';
   src: url('/fonts/tiktok-regular.ttf') format('truetype');
@@ -72,15 +25,24 @@
 }
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/tiktok-semibold.ttf') format('truetype');
-  font-weight: 600;
+  src: url('/fonts/tiktok-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Moneta fallback */
+@font-face {
+  font-family: 'Moneta';
+  src: url('/fonts/moneta-regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'TikTok Sans';
-  src: url('/fonts/tiktok-bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: 'Moneta';
+  src: url('/fonts/moneta-light.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -91,48 +53,58 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
+    --background: 20 18% 9%;
+    --foreground: 30 20% 92%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 20 20% 13%;
+    --card-foreground: 30 20% 92%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 20 20% 13%;
+    --popover-foreground: 30 20% 92%;
 
-    --primary: 40 100% 50%;
-    --primary-foreground: 0 0% 4%;
+    --primary: 10 58% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 20 20% 16%;
+    --secondary-foreground: 30 20% 92%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 20 10% 20%;
+    --muted-foreground: 20 8% 55%;
 
-    --accent: 40 100% 50%;
-    --accent-foreground: 0 0% 4%;
+    --accent: 10 58% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 40 100% 50%;
+    --border: 20 15% 18%;
+    --input: 20 15% 18%;
+    --ring: 10 58% 55%;
 
     --radius: 0.75rem;
 
-    --gold: 40 100% 50%;
-    --gold-light: 43 100% 65%;
-    --gold-dark: 37 100% 40%;
+    /* Brand colors */
+    --coral: 10 58% 55%;
+    --coral-dark: 6 65% 49%;
+    --coral-light: 17 60% 61%;
+    --vinho: 320 55% 35%;
+    --azul-escuro: 205 45% 32%;
+    --azul: 205 40% 48%;
+    --verde: 150 30% 31%;
+    --creme: 35 40% 90%;
+    --texto: 0 0% 17%;
+    --texto-sec: 0 0% 32%;
+    --azul-claro: 205 45% 63%;
+    --verde-claro: 150 18% 50%;
 
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 40 100% 50%;
-    --sidebar-primary-foreground: 0 0% 4%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 40 100% 50%;
+    --sidebar-background: 20 18% 8%;
+    --sidebar-foreground: 30 20% 92%;
+    --sidebar-primary: 10 58% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 20 20% 16%;
+    --sidebar-accent-foreground: 30 20% 92%;
+    --sidebar-border: 20 15% 18%;
+    --sidebar-ring: 10 58% 55%;
   }
 }
 
@@ -143,42 +115,44 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Source Sans 3', 'Moneta', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sora', sans-serif;
+    font-family: 'Inter', 'TikTok Sans', sans-serif;
   }
 }
 
 @layer components {
-  .text-gold-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(40 100% 50%), hsl(43 100% 65%));
+  /* Noise texture overlay */
+  .noise-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
   }
 
   .btn-cta {
-    @apply inline-block px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 cursor-pointer;
-    background: linear-gradient(135deg, hsl(40 100% 50%), hsl(43 100% 65%));
-    color: hsl(0 0% 4%);
-    font-family: 'Sora', sans-serif;
+    @apply inline-block px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 cursor-pointer text-white;
+    background-color: hsl(var(--coral));
+    font-family: 'Inter', 'TikTok Sans', sans-serif;
   }
 
   .btn-cta:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px hsla(40, 100%, 50%, 0.4);
+    transform: scale(1.03);
+    box-shadow: 0 0 30px hsla(10, 58%, 55%, 0.35);
+    background-color: hsl(var(--coral-dark));
   }
 
   .section-dark {
-    background-color: hsl(0 0% 4%);
-  }
-
-  .section-darker {
-    background-color: hsl(0 0% 2%);
+    background-color: hsl(var(--background));
   }
 
   .section-card {
-    background-color: hsl(0 0% 8%);
+    background-color: hsl(var(--card));
   }
 
   .ticker-scroll {
@@ -190,27 +164,28 @@
     100% { transform: translateX(-50%); }
   }
 
-  @keyframes carousel-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  /* Light leak */
+  .light-leak-tr::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 50%;
+    height: 60%;
+    background: radial-gradient(ellipse at center, hsla(10, 58%, 55%, 0.25), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
   }
 
-  .carousel-auto-scroll {
-    animation: carousel-scroll 30s linear infinite;
-  }
-
-  @keyframes neon-pulse {
-    0%, 100% { box-shadow: 0 0 16px rgba(255,255,255,0.12); }
-    50% { box-shadow: 0 0 30px rgba(255,255,255,0.35); }
-  }
-
-  .glass-ring {
-    border: 1.5px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.20);
-    animation: neon-pulse 6s ease-in-out infinite;
-  }
-
-  .glass-ring:hover {
-    box-shadow: 0 0 35px rgba(255, 255, 255, 0.45);
+  .light-leak-bl::before {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 40%;
+    height: 50%;
+    background: radial-gradient(ellipse at center, hsla(30, 80%, 50%, 0.15), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
   }
 }

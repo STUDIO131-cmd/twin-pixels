@@ -14,9 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Sora"', 'sans-serif'],
-        body: ['"Space Grotesk"', 'sans-serif'],
-        poppins: ['"Poppins"', 'sans-serif'],
+        display: ['"Inter"', '"TikTok Sans"', 'sans-serif'],
+        body: ['"Source Sans 3"', '"Moneta"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -24,11 +23,18 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        coral: {
+          DEFAULT: "hsl(var(--coral))",
+          dark: "hsl(var(--coral-dark))",
+          light: "hsl(var(--coral-light))",
         },
+        vinho: "hsl(var(--vinho))",
+        "azul-escuro": "hsl(var(--azul-escuro))",
+        azul: "hsl(var(--azul))",
+        verde: "hsl(var(--verde))",
+        creme: "hsl(var(--creme))",
+        "azul-claro": "hsl(var(--azul-claro))",
+        "verde-claro": "hsl(var(--verde-claro))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

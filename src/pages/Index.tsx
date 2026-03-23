@@ -1,30 +1,36 @@
 import TickerBar from "@/components/TickerBar";
-import CountdownSection from "@/components/CountdownSection";
-import ParticipantsSection from "@/components/ParticipantsSection";
 import HeroSection from "@/components/HeroSection";
-import ImageCarousel from "@/components/ImageCarousel";
+import IdentificationSection from "@/components/IdentificationSection";
+import ProblemSection from "@/components/ProblemSection";
+import WhatIsSection from "@/components/WhatIsSection";
+import PillarsSection from "@/components/PillarsSection";
 import ForWhoSection from "@/components/ForWhoSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import MethodologySection from "@/components/MethodologySection";
+import OutcomeSection from "@/components/OutcomeSection";
+import ScheduleSection from "@/components/ScheduleSection";
+import ContinuitySection from "@/components/ContinuitySection";
 import PricingSection from "@/components/PricingSection";
-import SpeakersSection from "@/components/SpeakersSection";
-import RegistrationForm from "@/components/RegistrationForm";
+import FAQSection from "@/components/FAQSection";
+import SupportSection from "@/components/SupportSection";
+import FinalCTASection from "@/components/FinalCTASection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <TickerBar />
-      <CountdownSection />
-      <ParticipantsSection />
       <HeroSection />
-      <ImageCarousel />
+      <IdentificationSection />
+      <ProblemSection />
+      <WhatIsSection />
+      <PillarsSection />
       <ForWhoSection />
-      <TestimonialsSection />
-      <MethodologySection />
+      <OutcomeSection />
+      <ScheduleSection />
+      <ContinuitySection />
       <PricingSection />
-      <SpeakersSection />
-      <RegistrationForm />
+      <FAQSection />
+      <SupportSection />
+      <FinalCTASection />
       <FooterSection />
     </div>
   );

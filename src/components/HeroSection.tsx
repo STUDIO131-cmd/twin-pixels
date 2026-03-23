@@ -1,60 +1,67 @@
-import { Check } from "lucide-react";
-import heroDecoration from "@/assets/hero-decoration.webp";
-import videoPoster from "@/assets/video-poster.jpg";
+import { useState, useEffect } from "react";
+
+const TARGET_DATE = new Date("2025-04-06T23:59:59");
+
+function calculateTimeLeft() {
+  const difference = TARGET_DATE.getTime() - new Date().getTime();
+  if (difference <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  return {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((difference / 1000 / 60) % 60),
+    seconds: Math.floor((difference / 1000) % 60),
+  };
+}
 
 const HeroSection = () => {
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="relative py-16 md:py-24 section-darker overflow-hidden">
-      {/* Floating decoration */}
-      <img
-        src={heroDecoration}
-        alt=""
-        className="absolute -right-20 top-10 w-60 md:w-80 opacity-30 pointer-events-none"
-      />
+    <section className="relative py-20 md:py-28 overflow-hidden light-leak-tr light-leak-bl noise-bg">
+      <div className="container max-w-4xl mx-auto px-4 relative z-10 text-center">
+        {/* Badge */}
+        <div className="inline-block mb-6">
+          <span className="text-coral font-display text-sm font-medium tracking-wide">
+            Imersão online · 11 de abril
+          </span>
+        </div>
 
-      <div className="container max-w-5xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-10">
-          <h1 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
-            Pare de carregar seu negócio na cabeça:
-          </h1>
-          <p className="text-gold font-display text-lg md:text-2xl font-semibold max-w-3xl mx-auto">
-            saia da Imersão com um mapa de crescimento que sua rotina consegue sustentar.
-          </p>
-          <p className="text-muted-foreground font-body mt-6 text-base md:text-lg max-w-2xl mx-auto">
-            Para pequenos e médios empresários da região que querem fazer da marca pessoal o{" "}
-            <strong className="text-foreground">motor do crescimento.</strong>
-          </p>
+        <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+          Você trabalha demais para depender de sorte.
+        </h1>
 
-          <div className="flex items-center justify-center gap-6 mt-6">
-            {["Posicionamento", "Conteúdo", "Vendas"].map((item) => (
-              <span key={item} className="flex items-center gap-2 text-foreground font-body">
-                <Check className="w-5 h-5 text-gold" />
-                {item}
+        <p className="text-muted-foreground font-body text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+          Em 1 dia, descubra o que está travando seu crescimento — se é um problema de marca, de conteúdo ou de vendas — e saia sabendo exatamente o que resolver primeiro.
+        </p>
+
+        <a href="#preco" className="btn-cta text-base md:text-lg">
+          Participar da imersão · R$47
+        </a>
+
+        <p className="text-muted-foreground text-sm font-body mt-4">
+          Lote 1 · R$47 até 06/04 | Lote 2 · R$99 a partir de 07/04
+        </p>
+
+        {/* Countdown */}
+        <div className="flex gap-4 justify-center mt-8">
+          {[
+            { value: timeLeft.days, label: "dias" },
+            { value: timeLeft.hours, label: "horas" },
+            { value: timeLeft.minutes, label: "min" },
+            { value: timeLeft.seconds, label: "seg" },
+          ].map((item, i) => (
+            <div key={i} className="text-center bg-white/10 rounded-lg px-4 py-3 border border-white/10">
+              <span className="text-3xl md:text-4xl font-bold text-coral font-display">
+                {String(item.value).padStart(2, "0")}
               </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Video */}
-        <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border shadow-2xl">
-          <video
-            controls
-            preload="metadata"
-            poster={videoPoster}
-            controlsList="nodownload"
-            className="w-full aspect-video"
-          >
-            <source
-              src="https://www.studio131.com.br/wp-content/uploads/2026/01/Carta-de-Vendas-JDA-21-e-22-de-Janeiro-Horizontal-1.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-
-        <div className="text-center mt-8">
-          <a href="#lista" className="btn-cta">
-            QUERO GARANTIR A MINHA VAGA
-          </a>
+              <p className="text-xs text-muted-foreground mt-1">{item.label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
