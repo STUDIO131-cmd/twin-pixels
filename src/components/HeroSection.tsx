@@ -1,68 +1,71 @@
-import { useState, useEffect } from "react";
-
-const TARGET_DATE = new Date("2025-04-06T23:59:59");
-
-function calculateTimeLeft() {
-  const difference = TARGET_DATE.getTime() - new Date().getTime();
-  if (difference <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  return {
-    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((difference / 1000 / 60) % 60),
-    seconds: Math.floor((difference / 1000) % 60),
-  };
-}
+import mockupImage from "@/assets/mockup-produto.png";
 
 const HeroSection = () => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden light-leak-tr light-leak-bl noise-bg">
-      <div className="container max-w-4xl mx-auto px-4 relative z-10 text-center">
-        {/* Badge */}
-        <div className="inline-block mb-6">
-          <span className="text-coral font-display text-sm font-medium tracking-wide">
-            Imersão online · 11 de abril
-          </span>
+    <section className="relative py-20 md:py-28 overflow-hidden" style={{ backgroundColor: '#1a1a1a' }}>
+      {/* Dark overlay for event photo bg feel */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-[1]" />
+      <div className="absolute inset-0 noise-bg z-[2]" />
+
+      {/* Light leaks */}
+      <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[60%] z-0" style={{ background: 'radial-gradient(ellipse at center, hsla(10, 58%, 55%, 0.25), transparent 70%)' }} />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[50%] z-0" style={{ background: 'radial-gradient(ellipse at center, hsla(30, 80%, 50%, 0.15), transparent 70%)' }} />
+
+      <div className="relative z-10 max-w-[760px] mx-auto px-4 text-center flex flex-col items-center">
+        {/* Mockup */}
+        <div className="hero-float" style={{ filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.6))' }}>
+          <img
+            src={mockupImage}
+            alt="Diagnóstico de próximo passo em um dia"
+            width={280}
+            className="w-[280px] h-auto"
+          />
         </div>
 
-        <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-          Você trabalha demais para depender de sorte.
+        {/* Progress bar */}
+        <div className="w-[280px] mt-4">
+          <div className="w-full h-1.5 rounded-full" style={{ backgroundColor: '#333' }}>
+            <div className="h-full rounded-full" style={{ width: '81%', backgroundColor: '#D97706' }} />
+          </div>
+          <p className="text-xs mt-2" style={{ color: '#aaa' }}>
+            81% das vagas preenchidas a R$47,00
+          </p>
+        </div>
+
+        {/* Title */}
+        <h1 className="font-display font-extrabold text-white leading-tight mt-12" style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}>
+          Você trabalha demais<br />
+          para depender de{' '}
+          <span className="italic" style={{ color: '#D97706' }}>sorte</span>
         </h1>
 
-        <p className="text-muted-foreground font-body text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-          Em 1 dia, descubra o que está travando seu crescimento — se é um problema de marca, de conteúdo ou de vendas — e saia sabendo exatamente o que resolver primeiro.
+        {/* Subtitle */}
+        <p className="mt-6 font-body leading-relaxed max-w-[560px]" style={{ color: '#cccccc', fontSize: '18px', lineHeight: '1.6' }}>
+          Em 1 dia, descubra o que está travando seu crescimento
+          — <span className="font-bold text-white">se é um problema de marca, de conteúdo ou de vendas</span> —
+          e saia sabendo exatamente o que resolver primeiro.
         </p>
 
-        <a href="#preco" className="btn-cta text-base md:text-lg">
-          Participar da imersão · R$47
+        {/* CTA Button */}
+        <a
+          href="#preco"
+          className="hero-cta-btn mt-10 inline-block rounded-lg font-display font-extrabold uppercase tracking-wider"
+          style={{
+            backgroundColor: '#D97706',
+            color: '#1a1a1a',
+            fontSize: '16px',
+            letterSpacing: '0.05em',
+            padding: '18px 48px',
+          }}
+        >
+          PARTICIPAR DA IMERSÃO · R$47
         </a>
 
-        <p className="text-muted-foreground text-sm font-body mt-4">
-          Lote 1 · R$47 até 06/04 | Lote 2 · R$99 a partir de 07/04
+        {/* Lote note */}
+        <p className="mt-4 text-center font-body" style={{ fontSize: '13px', color: '#888' }}>
+          <span className="font-bold" style={{ color: '#ccc' }}>Lote 1</span> · R$47 até 06/04 |{' '}
+          <span className="font-bold" style={{ color: '#ccc' }}>Lote 2</span> · R$99 a partir de 07/04
         </p>
-
-        {/* Countdown */}
-        <div className="flex gap-4 justify-center mt-8">
-          {[
-            { value: timeLeft.days, label: "dias" },
-            { value: timeLeft.hours, label: "horas" },
-            { value: timeLeft.minutes, label: "min" },
-            { value: timeLeft.seconds, label: "seg" },
-          ].map((item, i) => (
-            <div key={i} className="text-center bg-white/10 rounded-lg px-4 py-3 border border-white/10">
-              <span className="text-3xl md:text-4xl font-bold text-coral font-display">
-                {String(item.value).padStart(2, "0")}
-              </span>
-              <p className="text-xs text-muted-foreground mt-1">{item.label}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
