@@ -11,26 +11,30 @@
 /* TikTok Sans */
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/TikTokSans-Light.woff2') format('woff2');
+  src: url('/fonts/tiktok-regular.ttf') format('truetype');
   font-weight: 300;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/TikTokSans-Regular.woff2') format('woff2');
+  src: url('/fonts/tiktok-regular.ttf') format('truetype');
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/TikTokSans-SemiBold.woff2') format('woff2');
+  src: url('/fonts/tiktok-semibold.ttf') format('truetype');
   font-weight: 600;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/TikTokSans-Bold.woff2') format('woff2');
+  src: url('/fonts/tiktok-bold.ttf') format('truetype');
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -225,7 +229,7 @@
     z-index: 0;
   }
 
-  /* Draw animations for ProblemSection */
+  /* Draw animations */
   @keyframes drawEllipse {
     to { stroke-dashoffset: 0; }
   }
@@ -233,4 +237,20 @@
   @keyframes drawArrow {
     to { stroke-dashoffset: 0; }
   }
+
+  @keyframes drawLine {
+    to { stroke-dashoffset: 0; }
+  }
+
+  .draw-ellipse {
+    animation: drawEllipse 1.4s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .draw-arrow-1    { animation: drawLine 0.5s ease-out forwards; animation-delay: 1.7s; }
+  .draw-arrowhead-1{ animation: drawLine 0.25s ease-out forwards; animation-delay: 2.2s; }
+  .draw-arrow-2    { animation: drawLine 0.5s ease-out forwards; animation-delay: 1.9s; }
+  .draw-arrowhead-2{ animation: drawLine 0.25s ease-out forwards; animation-delay: 2.4s; }
+  .draw-arrow-3    { animation: drawLine 0.5s ease-out forwards; animation-delay: 2.1s; }
+  .draw-arrowhead-3{ animation: drawLine 0.25s ease-out forwards; animation-delay: 2.6s; }
 }
