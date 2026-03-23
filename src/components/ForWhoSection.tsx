@@ -37,7 +37,6 @@ const StorefrontIcon = () => (
     <path d="M36 60v2" />
     <rect x="50" y="42" width="10" height="8" rx="1" />
     <path d="M50 46h10" />
-    <text x="28" y="24" fontSize="6" fill="#4a3f35" stroke="none" fontWeight="600" fontFamily="serif">BOOKSTORE</text>
   </svg>
 );
 
