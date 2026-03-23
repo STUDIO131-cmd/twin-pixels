@@ -8,26 +8,29 @@
 @import '@fontsource/source-sans-3/400.css';
 @import '@fontsource/source-sans-3/600.css';
 
-/* TikTok Sans fallback */
+/* TikTok Sans */
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/tiktok-regular.ttf') format('truetype');
+  src: url('/fonts/TikTokSans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TikTok Sans';
+  src: url('/fonts/TikTokSans-Regular.woff2') format('woff2');
   font-weight: 400;
-  font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/tiktok-medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+  src: url('/fonts/TikTokSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/tiktok-bold.ttf') format('truetype');
+  src: url('/fonts/TikTokSans-Bold.woff2') format('woff2');
   font-weight: 700;
-  font-style: normal;
   font-display: swap;
 }
 
@@ -113,13 +116,25 @@
     @apply border-border;
   }
 
-  body {
+  body, * {
     @apply bg-background text-foreground;
-    font-family: 'Source Sans 3', 'Moneta', sans-serif;
+    font-family: 'TikTok Sans', Inter, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', 'TikTok Sans', sans-serif;
+  h1, h2 {
+    font-weight: 700;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  p, span, li {
+    font-weight: 400;
+  }
+
+  small, caption, .text-xs {
+    font-weight: 300;
   }
 }
 
@@ -208,5 +223,14 @@
     background: radial-gradient(ellipse at center, hsla(30, 80%, 50%, 0.15), transparent 70%);
     pointer-events: none;
     z-index: 0;
+  }
+
+  /* Draw animations for ProblemSection */
+  @keyframes drawEllipse {
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes drawArrow {
+    to { stroke-dashoffset: 0; }
   }
 }
