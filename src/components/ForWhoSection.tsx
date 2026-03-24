@@ -35,20 +35,14 @@ const ForWhoSection = () => {
   return (
     <section
       className="relative py-24 overflow-hidden"
-      style={{ background: "#1a1a1a" }}
+      style={{
+        backgroundImage: "url('/backgrounds/Background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center top",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "transparent",
+      }}
     >
-      {/* Background image */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: "url('/backgrounds/Background-2.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: 0,
-          opacity: 0.4,
-        }}
-      />
 
       {/* Content */}
       <div className="relative z-10 max-w-[900px] mx-auto px-4">
