@@ -82,21 +82,6 @@ const PricingSection = () => {
               filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.4))"
             }}
           />
-          {/* Cadeado */}
-          <div style={{
-            position: "absolute", inset: 0,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            zIndex: 10
-          }}>
-            <img
-              src="/icons/Cadeado.png"
-              alt="Bloqueado"
-              style={{
-                width: "80px", height: "auto",
-                filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.5))"
-              }}
-            />
-          </div>
         </motion.div>
 
         {/* Urgência */}
