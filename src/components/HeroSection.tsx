@@ -81,6 +81,7 @@ const HeroSection = () => {
                 height: '100%',
                 position: 'relative',
                 boxShadow: '0 0 12px rgba(217,119,6,0.8), 0 0 24px rgba(217,119,6,0.4)',
+                overflow: 'hidden',
               }}
             />
             {/* Light sweep overlay */}
