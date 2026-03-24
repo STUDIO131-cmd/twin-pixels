@@ -76,59 +76,61 @@ const ForWhoSection = () => {
         >
           {cards.map((card, i) => (
             <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-              {/* Icon above card for first card */}
-              {i === 0 && (
-                <img
-                  src="/icons/personalizado-7.png"
-                  alt=""
-                  style={{
-                    width: "64px",
-                    height: "64px",
-                    objectFit: "contain",
-                    filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                    marginBottom: "8px",
-                  }}
-                />
-              )}
-              {i === 1 && (
-                <img
-                  src="/icons/Layer_13-3.png"
-                  alt=""
-                  style={{
-                    width: "64px",
-                    height: "64px",
-                    objectFit: "contain",
-                    filter: "drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                    marginBottom: "8px",
-                  }}
-                />
-              )}
-              {i === 2 && (
-                <img
-                  src="/icons/loja-3.png"
-                  alt=""
-                  style={{
-                    width: "64px",
-                    height: "64px",
-                    objectFit: "contain",
-                    filter: "drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                    marginBottom: "8px",
-                  }}
-                />
-              )}
-              {i === 3 && (
-                <img
-                  src="/icons/Liberal-3.svg"
-                  alt=""
-                  style={{
-                    width: "86px",
-                    height: "86px",
-                    objectFit: "contain",
-                    filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                    marginBottom: "8px",
-                  }}
-                />
-              )}
+              {/* Icon above card */}
+              <div style={{ height: "94px", display: "flex", alignItems: "flex-end" }}>
+                {i === 0 && (
+                  <img
+                    src="/icons/personalizado-7.png"
+                    alt=""
+                    style={{
+                      width: "64px",
+                      height: "64px",
+                      objectFit: "contain",
+                      filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
+                      marginBottom: "8px",
+                    }}
+                  />
+                )}
+                {i === 1 && (
+                  <img
+                    src="/icons/Layer_13-3.png"
+                    alt=""
+                    style={{
+                      width: "64px",
+                      height: "64px",
+                      objectFit: "contain",
+                      filter: "drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
+                      marginBottom: "8px",
+                    }}
+                  />
+                )}
+                {i === 2 && (
+                  <img
+                    src="/icons/loja-3.png"
+                    alt=""
+                    style={{
+                      width: "64px",
+                      height: "64px",
+                      objectFit: "contain",
+                      filter: "drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
+                      marginBottom: "8px",
+                    }}
+                  />
+                )}
+                {i === 3 && (
+                  <img
+                    src="/icons/Liberal-3.svg"
+                    alt=""
+                    style={{
+                      width: "86px",
+                      height: "86px",
+                      objectFit: "contain",
+                      filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
+                      marginBottom: "8px",
+                    }}
+                  />
+                )}
+              </div>
               <motion.div
                 className="text-[#efe0c8]"
                 initial={{ opacity: 0, y: 24 }}
