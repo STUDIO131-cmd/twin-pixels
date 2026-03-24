@@ -78,7 +78,7 @@ const ScheduleSection = () => {
                       lineHeight: 1,
                       letterSpacing: "-0.02em",
                       flexShrink: 0,
-                      textShadow: `0 0 8px ${item.color}, 0 0 20px ${item.color}80, 0 0 40px ${item.color}40`,
+                      textShadow: `0 0 6px ${item.color}90, 0 0 12px ${item.color}60, 0 0 24px ${item.color}35, 0 0 48px ${item.color}18`,
                     }}
                   >
                     {item.time}
