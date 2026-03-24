@@ -70,7 +70,7 @@ const WhatIsSection = () => {
 
         {/* Seta 1 */}
         <img
-          src="/icons/Seta.png"
+          src="/icons/Seta-3.png"
           alt=""
           style={{
             width: "48px",
