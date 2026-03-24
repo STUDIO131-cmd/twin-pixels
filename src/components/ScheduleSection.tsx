@@ -26,13 +26,13 @@ const ScheduleSection = () => {
           className="mx-auto"
           style={{
             maxWidth: "680px",
-            background: "rgba(30, 22, 14, 0.65)",
+            background: "rgba(255, 255, 255, 0.08)",
             backdropFilter: "blur(24px)",
             WebkitBackdropFilter: "blur(24px)",
-            border: "1px solid rgba(255,255,255,0.08)",
+            border: "1px solid rgba(255, 255, 255, 0.15)",
             borderRadius: "24px",
             padding: "48px 52px 52px",
-            boxShadow: "0 32px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06)",
+            boxShadow: "0 8px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)",
           }}
         >
           {/* Label */}
