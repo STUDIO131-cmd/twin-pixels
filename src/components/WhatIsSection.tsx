@@ -121,7 +121,13 @@ const WhatIsSection = () => {
                   <img src="/icons/cerebro_copy2-2.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
-              {i !== 0 && <div style={{ height: '76px' }} />}
+              {/* Ícone megaphone acima do terceiro card */}
+              {i === 2 && (
+                <div className="flex items-center justify-center mb-3" style={{ width: '64px', height: '64px' }}>
+                  <img src="/icons/megaphone.png" alt="Ícone" className="w-full h-full object-contain" />
+                </div>
+              )}
+              {i === 1 && <div style={{ height: '76px' }} />}
               <motion.div
               key={i}
               initial={{ opacity: 0, y: 24 }}
