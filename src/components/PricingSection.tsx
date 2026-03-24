@@ -88,7 +88,7 @@ const PricingSection = () => {
         {/* Urgência */}
         <p style={{
           textAlign: "center", fontWeight: 700, fontSize: "20px",
-          color: "white", marginBottom: "32px", transform: "translateY(-40px)"
+          color: "white", marginBottom: "32px", transform: "translateY(-90px)"
         }}>
           Lote 1 encerra em 06/04 · <span style={{ color: "#D15E4A" }}>Vagas limitadas</span>
         </p>
