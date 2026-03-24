@@ -103,8 +103,8 @@ const ProblemSection = () => {
           {cards.map((card, i) => (
             <div key={i}>
               {/* Ícone flutuante acima do card */}
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', height: '140px', overflow: 'visible', marginBottom: '-20px', position: 'relative', zIndex: 2 }}>
-                <img src={card.icon} alt="" style={{ width: '180px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', display: 'block', marginBottom: '-20px' }} />
+              <div style={{ width: '100%', height: '140px', display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden', marginBottom: '0px' }}>
+                <img src={card.icon} alt="" style={{ width: '120px', height: '120px', objectFit: 'contain', mixBlendMode: 'multiply', display: 'block', margin: '0 auto' }} />
               </div>
 
               {/* Card */}
