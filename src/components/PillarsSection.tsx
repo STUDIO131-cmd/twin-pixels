@@ -49,7 +49,7 @@ const PillarsSection = () => {
           </div>
         </div>
         {/* Overlay escuro para legibilidade */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(239,231,218,0.92) 0%, rgba(239,231,218,0.75) 30%, rgba(239,231,218,0.75) 70%, rgba(239,231,218,0.92) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(220,220,220,0.95) 0%, rgba(210,210,210,0.85) 30%, rgba(210,210,210,0.85) 70%, rgba(220,220,220,0.95) 100%)' }} />
       </div>
       <div className="max-w-[860px] mx-auto relative z-10" style={{
         background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 100%)',
