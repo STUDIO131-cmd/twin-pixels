@@ -87,6 +87,7 @@ const PillarsSection = () => {
           icon="/icons/Mega.png"
           reverse={true}
           iconPos="right"
+          textOffset="translateX(15%) translateY(-5%)"
         />
 
         <Pillar 
