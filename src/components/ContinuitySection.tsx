@@ -59,7 +59,7 @@ const ContinuitySection = () => {
           }}
         >
           Se você sair da imersão querendo implementar o que descobriu, existe a{' '}
-          <span style={{ fontWeight: 700, color: '#1a1a1a' }}>METODOLOGIA GRAVADA</span>
+          <span style={{ fontWeight: 700, color: '#1a1a1a' }}>Metodologia Gravada</span>
           : 90 dias de conteúdo prático com exercícios, templates e scripts para colocar cada eixo para funcionar.
         </p>
 
