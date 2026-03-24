@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false, iconPos = "left" }: any) => (
+const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false, iconPos = "left", textOffset }: any) => (
   <div className="relative w-full max-w-[860px] mx-auto mb-12">
 
 
