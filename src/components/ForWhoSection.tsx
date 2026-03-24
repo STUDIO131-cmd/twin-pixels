@@ -122,6 +122,7 @@ const ForWhoSection = () => {
                       }}
                     />
                   )}
+                </div>
                   <p style={{ fontWeight: 400, fontSize: "13px", color: "#eaeaea" }}>
                     {card.subtitle}
                   </p>
