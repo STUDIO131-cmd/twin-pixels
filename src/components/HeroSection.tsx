@@ -51,7 +51,7 @@ const HeroSection = () => {
           alt="Produto"
           className="hero-float"
           style={{
-            width: 320,
+            width: 384,
             height: 'auto',
             display: 'block',
             margin: '0 auto 0',
