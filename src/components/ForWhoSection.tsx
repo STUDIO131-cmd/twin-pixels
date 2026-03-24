@@ -122,10 +122,10 @@ const ForWhoSection = () => {
                     width: "216px",
                     height: "216px",
                     objectFit: "contain",
-                    mixBlendMode: "multiply",
                     flexShrink: 0,
                     marginLeft: "12px",
                     marginTop: "-4px",
+                    filter: "brightness(0) invert(0.95) drop-shadow(0 0 8px rgba(234,234,234,0.6)) drop-shadow(0 0 20px rgba(234,234,234,0.3))",
                   }}
                 />
               </div>
