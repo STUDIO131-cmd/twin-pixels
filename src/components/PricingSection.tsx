@@ -98,7 +98,7 @@ const PricingSection = () => {
           href="#"
           style={{
             display: "block", width: "fit-content",
-            margin: "0 auto 16px",
+            margin: "0 auto 16px", transform: "translateY(-40px)",
             fontWeight: 700, fontSize: "16px",
             letterSpacing: "0.06em", textTransform: "uppercase" as const,
             color: "#1a1a1a", background: "#D97706",
