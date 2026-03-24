@@ -116,6 +116,19 @@ const ForWhoSection = () => {
                   }}
                 />
               )}
+              {i === 3 && (
+                <img
+                  src="/icons/Liberal-3.svg"
+                  alt=""
+                  style={{
+                    width: "64px",
+                    height: "64px",
+                    objectFit: "contain",
+                    filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
+                    marginBottom: "8px",
+                  }}
+                />
+              )}
               <motion.div
                 className="text-[#efe0c8]"
                 initial={{ opacity: 0, y: 24 }}
