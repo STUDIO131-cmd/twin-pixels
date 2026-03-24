@@ -47,7 +47,7 @@ const ForWhoSection = () => {
           backgroundSize: "cover",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
-          opacity: 0.4,
+          opacity: 0.28,
         }}
       />
       {/* Content */}
