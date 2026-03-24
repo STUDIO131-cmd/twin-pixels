@@ -18,11 +18,6 @@ const cards = [
   },
 ];
 
-const arrowRotations = [
-  "rotate(-30deg) translateX(-20px)",
-  "rotate(5deg)",
-  "rotate(30deg) scaleX(-1) translateX(20px)",
-];
 
 const ProblemSection = () => {
   return (
