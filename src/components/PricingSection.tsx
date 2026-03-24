@@ -120,7 +120,7 @@ const PricingSection = () => {
         </a>
 
         {/* Barra de vagas */}
-        <div style={{ width: "320px", margin: "0 auto", textAlign: "center", transform: "translateY(-90px)" }}>
+        <div style={{ width: "320px", margin: "0 auto", textAlign: "center", transform: "translateY(-130px)" }}>
           <div style={{ background: "#333", borderRadius: "999px", height: "6px", overflow: "hidden" }}>
             <div style={{ width: "81%", background: "#D97706", borderRadius: "999px", height: "100%" }} />
           </div>
