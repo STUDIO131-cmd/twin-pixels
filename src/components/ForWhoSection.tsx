@@ -139,7 +139,7 @@ const ForWhoSection = () => {
               </p>
 
               {/* Quote */}
-              <p style={{ fontWeight: 700, fontSize: "13px", color: "#1a1a1a" }}>
+              <p style={{ fontWeight: 700, fontSize: "14px", color: "#1a1a1a" }}>
                 {card.quote}
               </p>
             </motion.div>
