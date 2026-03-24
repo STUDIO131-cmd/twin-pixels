@@ -81,7 +81,7 @@ const ProblemSection = () => {
             <p style={{ position: 'relative', zIndex: 2, fontWeight: 700, fontSize: '17px', color: '#1a1a1a', textAlign: 'center', padding: '12px 48px', lineHeight: 1.4 }}>
               Você precisa saber qual parte do seu<br />negócio está travando o resto:
             </p>
-            <img src="/icons/Circulo-2.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '110%', height: '140%', objectFit: 'fill', mixBlendMode: 'multiply', zIndex: 1, pointerEvents: 'none' }} />
+            <img src="/icons/Circulo.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '115%', height: '160%', objectFit: 'fill', mixBlendMode: 'multiply', zIndex: 1, pointerEvents: 'none' }} />
           </div>
         </div>
 
