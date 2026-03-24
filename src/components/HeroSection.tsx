@@ -46,20 +46,19 @@ const HeroSection = () => {
         />
 
         {/* Mockup */}
-        <div className="hero-float">
-          <img
-            src="/images/Produto.png"
-            alt="Diagnóstico de próximo passo em um dia"
-            style={{
-              width: 440,
-              height: 'auto',
-              display: 'block',
-              margin: '0 auto 8px',
-              mixBlendMode: 'screen',
-              filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.7))',
-            }}
-          />
-        </div>
+        <img
+          src="/images/Produto.png"
+          alt="Produto"
+          className="hero-float"
+          style={{
+            width: 320,
+            height: 'auto',
+            display: 'block',
+            margin: '0 auto 8px',
+            mixBlendMode: 'screen',
+            filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.7))',
+          }}
+        />
 
         {/* Progress bar */}
         <div style={{ width: 320, margin: '0 auto 8px' }}>
