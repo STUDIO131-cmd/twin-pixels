@@ -284,3 +284,40 @@
   .draw-arrow-3    { animation: drawLine 0.5s ease-out forwards; animation-delay: 2.1s; }
   .draw-arrowhead-3{ animation: drawLine 0.25s ease-out forwards; animation-delay: 2.6s; }
 }
+
+/* Hero progress bar neon glow pulse */
+.hero-progress-neon {
+  animation: neonPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(217,119,6,0.4), 0 0 20px rgba(217,119,6,0.2), 0 0 40px rgba(217,119,6,0.1);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(217,119,6,0.6), 0 0 30px rgba(217,119,6,0.35), 0 0 60px rgba(217,119,6,0.15);
+  }
+}
+
+/* Light sweep animation */
+.hero-light-sweep {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.4) 45%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0.4) 55%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: lightSweep 3s ease-in-out infinite;
+}
+
+@keyframes lightSweep {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
