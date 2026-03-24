@@ -66,7 +66,7 @@ const IdentificationSection = () => {
                 delay: i * 0.12,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="identification-card relative cursor-pointer h-full"
+              className="identification-card relative cursor-pointer h-full flex flex-col items-center"
               style={{
                 background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%)",
                 backdropFilter: "blur(40px) saturate(1.4)",
@@ -83,8 +83,14 @@ const IdentificationSection = () => {
               }}
             >
 
+              {/* Ícone acima do título */}
+              {i === 0 && (
+                <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="/icons/cerebro_copy2.png" alt="Ícone" className="w-full h-full object-contain" />
+                </div>
+              )}
 
-              {/* Título — independente do ícone */}
+              {/* Título */}
               <h3
                 style={{ fontWeight: 700, fontSize: "15px", color: "white", textAlign: "center", width: "100%", marginBottom: "12px", lineHeight: 1.3 }}
               >
