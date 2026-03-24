@@ -115,12 +115,12 @@ const ContinuitySection = () => {
               src="/icons/Seta.png"
               alt=""
               style={{
-                width: 210,
+                width: 273,
                 height: 'auto',
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
                 display: 'block',
-                transform: 'scaleX(-1) translateX(30%) translateY(-20%)',
+                transform: 'scaleX(-1) translateX(90%) translateY(-20%)',
               }}
             />
           </div>
