@@ -80,7 +80,7 @@ const ContinuitySection = () => {
           {/* TV — coluna esquerda, ocupa 2 linhas */}
           <div
             style={{
-              gridRow: '1 / 3',
+              gridRow: '1 / 4',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
