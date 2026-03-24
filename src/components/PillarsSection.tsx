@@ -52,13 +52,13 @@ const PillarsSection = () => {
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(220,220,220,0.95) 0%, rgba(210,210,210,0.85) 30%, rgba(210,210,210,0.85) 70%, rgba(220,220,220,0.95) 100%)' }} />
       </div>
       <div className="max-w-[860px] mx-auto relative z-10" style={{
-        background: 'linear-gradient(135deg, rgba(43,43,43,0.5) 0%, rgba(43,43,43,0.5) 100%)',
+        background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 100%)',
         backdropFilter: 'blur(40px) saturate(1.4)',
         WebkitBackdropFilter: 'blur(40px) saturate(1.4)',
-        border: '1px solid rgba(255,255,255,0.15)',
+        border: '1px solid rgba(255,255,255,0.4)',
         borderRadius: '28px',
         padding: '48px 0px',
-        boxShadow: '0 8px 32px rgba(0,0,0,0.15), inset 0 1px 1px rgba(255,255,255,0.1), inset 0 -1px 1px rgba(255,255,255,0.05)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.08), inset 0 1px 1px rgba(255,255,255,0.5), inset 0 -1px 1px rgba(255,255,255,0.1)',
       }}>
         <div className="text-center mb-20">
           <p className="text-[13px] tracking-widest text-neutral-500 mb-3">A estrutura</p>
