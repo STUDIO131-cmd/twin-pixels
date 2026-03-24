@@ -12,7 +12,7 @@ const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false,
       <div className={`absolute inset-0 flex flex-col justify-center p-8 md:p-12 ${reverse ? 'items-start text-left' : 'items-end text-right'}`}>
         <div
           className="max-w-[50%] space-y-2"
-          style={!reverse ? { transform: 'translateX(-40%) translateY(10%)' } : undefined}
+          style={!reverse ? { transform: 'translateX(-60%) translateY(10%)' } : undefined}
         >
           <div className="mb-4">
             <span className="block text-white text-[32px] md:text-[56px] font-bold leading-none">Pilar {num}</span>
