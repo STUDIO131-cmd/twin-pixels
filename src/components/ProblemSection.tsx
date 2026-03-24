@@ -108,8 +108,8 @@ const ProblemSection = () => {
                 }}
                 whileHover={{ y: -6, borderColor: 'rgba(217,119,6,0.25)' }}
               >
-                <h3 style={{ fontWeight: 700, color: 'white', fontSize: '16px', marginBottom: '12px' }}>{card.title}</h3>
-                <p style={{ fontWeight: 400, color: '#bbb', fontSize: '14px', lineHeight: 1.7 }}>{card.text}</p>
+                <h3 style={{ fontWeight: 700, color: '#eaeaea', fontSize: '16px', marginBottom: '12px' }}>{card.title}</h3>
+                <p style={{ fontWeight: 400, color: '#eaeaea', fontSize: '14px', lineHeight: 1.7 }}>{card.text}</p>
               </motion.div>
             </div>
           ))}
