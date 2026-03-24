@@ -206,6 +206,7 @@ const ContinuitySection = () => {
             padding: '16px 40px',
             textAlign: 'center',
             boxShadow: '0 0 20px rgba(217,119,6,0.4), 0 0 40px rgba(217,119,6,0.2)',
+            transform: 'translateY(-20%)',
           }}
         >
           <p className="font-display" style={{ fontWeight: 400, fontSize: 15, color: '#1a1a1a', margin: 0 }}>
