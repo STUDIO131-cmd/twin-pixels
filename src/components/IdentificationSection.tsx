@@ -89,12 +89,12 @@ const IdentificationSection = () => {
                   src={card.icon}
                   alt=""
                   style={{
-                    width: "280px",
-                    height: "280px",
+                    width: "840px",
+                    height: "840px",
                     objectFit: "contain",
                     mixBlendMode: "screen",
                     display: "block",
-                    margin: "-40px auto",
+                    margin: "-120px auto",
                   }}
                 />
                 <div
