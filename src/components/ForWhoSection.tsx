@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 
 const cards = [
   {
-    icon: "/icons/Homem.png",
+    icon: "/icons/Clínica-2.png",
     title: "Profissional-Marca",
     subtitle: "Você é o produto.",
     body: 'Nutricionista, psicólogo, arquiteto, advogado, contador, consultor. Seu nome é a marca. Sabe que precisa aparecer mais, mas na hora de se posicionar, trava. Não sabe como traduzir sua expertise em comunicação que o mercado entende — e que converte em cliente.',
     quote: '"Sou bom no que faço, mas não sei mostrar isso."',
   },
   {
-    icon: "/icons/Clínica-2.png",
+    icon: "/icons/Homem.png",
     title: "Dono Operacional",
     subtitle: "Você é a face de um negócio com equipe.",
     body: 'Clínica, escritório, estúdio. Tem diferencial técnico, método próprio, resultado comprovado — mas ninguém sabe. O cliente chega por indicação e não entende o valor antes de experimentar. Você quer atrair o cliente certo antes dele precisar perguntar pra alguém.',
