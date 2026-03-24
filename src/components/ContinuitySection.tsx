@@ -214,6 +214,21 @@ const ContinuitySection = () => {
             no dia da imersão levam um <span style={{ fontWeight: 700 }}>BÔNUS ESPECIAL.</span>
           </p>
         </div>
+
+        {/* Cópia centralizada do BÔNUS ESPECIAL */}
+        <p
+          className="font-display"
+          style={{
+            fontWeight: 700,
+            fontSize: 15,
+            color: '#1a1a1a',
+            textAlign: 'center',
+            margin: '24px auto 0',
+            transform: 'translateY(calc(-20% - 80px))',
+          }}
+        >
+          BÔNUS ESPECIAL.
+        </p>
       </div>
 
       {/* Responsive styles */}
