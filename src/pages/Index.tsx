@@ -23,7 +23,7 @@ const Index = () => {
       <IdentificationSection />
       <ProblemSection />
       <WhatIsSection />
-      <PillarsSection />
+      
       <ForWhoSection />
       <OutcomeSection />
       <ScheduleSection />
