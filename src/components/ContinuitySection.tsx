@@ -193,7 +193,7 @@ const ContinuitySection = () => {
         </p>
 
         {/* Badge bônus */}
-        <p className="font-display" style={{ fontWeight: 400, fontSize: 15, color: '#1a1a1a', margin: 0, textAlign: 'center', transform: 'translateY(calc(-20% - 80px))' }}>
+        <p className="font-display" style={{ fontWeight: 400, fontSize: 15, color: '#1a1a1a', margin: 0, textAlign: 'center', transform: 'translateY(calc(-20% - 40px))' }}>
           Os 5 primeiros a garantir a metodologia
           <br />
           no dia da imersão levam um <span style={{ fontWeight: 700 }}>BÔNUS ESPECIAL.</span>
@@ -207,11 +207,11 @@ const ContinuitySection = () => {
             display: 'block',
             width: 'fit-content',
             fontWeight: 700,
-            fontSize: 15,
+            fontSize: 21,
             color: '#1a1a1a',
             background: '#D97706',
             borderRadius: 999,
-            padding: '16px 48px',
+            padding: '22px 67px',
             textAlign: 'center',
             margin: '24px auto 0',
             textDecoration: 'none',
@@ -219,16 +219,16 @@ const ContinuitySection = () => {
             textTransform: 'uppercase' as const,
             cursor: 'pointer',
             boxShadow: '0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3)',
-            transform: 'translateY(calc(-20% - 80px))',
+            transform: 'translateY(calc(-20% - 40px))',
             transition: 'all 0.2s ease',
           }}
           onMouseEnter={e => {
             (e.currentTarget as HTMLElement).style.boxShadow = '0 0 30px rgba(217,119,6,0.95), 0 0 60px rgba(217,119,6,0.55)';
-            (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 80px - 2px)) scale(1.02)';
+            (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 40px - 2px)) scale(1.02)';
           }}
           onMouseLeave={e => {
             (e.currentTarget as HTMLElement).style.boxShadow = '0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3)';
-            (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 80px))';
+            (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 40px))';
           }}
         >
           BÔNUS ESPECIAL
