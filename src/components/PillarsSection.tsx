@@ -42,7 +42,23 @@ const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false,
 
 const PillarsSection = () => {
   return (
-    <section className="bg-[#EFE7DA] py-24 px-6 overflow-hidden">
+    <section className="relative py-24 px-6 overflow-hidden">
+      {/* Background photos collage */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 grid grid-cols-3 gap-0">
+          <div className="relative overflow-hidden">
+            <img src="/images/DSC05896.jpg" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="relative overflow-hidden">
+            <img src="/images/DSC07091.jpg" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="relative overflow-hidden">
+            <img src="/images/DSC07094.jpg" alt="" className="w-full h-full object-cover" />
+          </div>
+        </div>
+        {/* Overlay escuro para legibilidade */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(239,231,218,0.92) 0%, rgba(239,231,218,0.75) 30%, rgba(239,231,218,0.75) 70%, rgba(239,231,218,0.92) 100%)' }} />
+      </div>
       <div className="max-w-[900px] mx-auto">
         <div className="text-center mb-20">
           <p className="text-[13px] tracking-widest text-neutral-500 mb-3">A estrutura</p>
