@@ -36,13 +36,20 @@ const ForWhoSection = () => {
     <section
       className="relative py-24"
       style={{
-        backgroundImage: "url('/backgrounds/black-graph-paper.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center top",
-        backgroundRepeat: "no-repeat",
-        backgroundColor: "transparent",
+        backgroundColor: "#0a0a0a",
       }}
     >
+      {/* Background texture with reduced opacity */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('/backgrounds/black-graph-paper.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.4,
+        }}
+      />
       {/* Content */}
       <div className="relative z-10 max-w-[900px] mx-auto px-4" style={{ isolation: "isolate" }}>
         {/* Label */}
