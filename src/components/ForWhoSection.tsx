@@ -62,7 +62,7 @@ const ForWhoSection = () => {
             maxWidth: "800px",
             lineHeight: 1.2,
             color: "white",
-            fontWeight: 400,
+            fontWeight: 700,
             marginBottom: "48px",
           }}
         >
