@@ -61,7 +61,7 @@ const PillarsSection = () => {
       }}>
         <div className="text-center mb-20">
           <p className="text-[13px] tracking-widest text-neutral-500 mb-3">A estrutura</p>
-          <h2 className="text-[32px] md:text-[48px] font-bold text-neutral-900 leading-tight">Três perguntas. Um diagnóstico.</h2>
+          <h2 className="text-[32px] md:text-[48px] font-bold text-neutral-900 leading-tight">Três perguntas.<br />Um diagnóstico.</h2>
         </div>
 
         <Pillar 
