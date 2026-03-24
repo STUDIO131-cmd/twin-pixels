@@ -74,28 +74,8 @@ const ProblemSection = () => {
           ))}
         </div>
 
-        {/* Círculo PNG + texto */}
-        <div style={{ position: 'relative', width: '100%', maxWidth: '700px', margin: '32px auto 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', minHeight: '80px', overflow: 'visible', margin: '0 auto', transform: 'scale(1.08) translateX(6%) translateY(5%)' }}>
-            <p style={{ position: 'relative', zIndex: 2, fontWeight: 700, fontSize: '17px', color: '#1a1a1a', textAlign: 'center', padding: '0 60px', lineHeight: 1.4, margin: '0 auto' }}>
-              Você precisa saber qual parte do seu<br />negócio está travando o resto:
-            </p>
-            <img src="/icons/Circulo.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', transformOrigin: 'center center', width: '800px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', zIndex: 1, pointerEvents: 'none' }} />
-          </div>
-        </div>
 
-        {/* Setas PNG */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', width: '100%', maxWidth: '700px', margin: '8px auto 0', alignItems: 'flex-start' }}>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src="/icons/Setas.png" alt="" style={{ width: '120px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1)' }} />
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src="/icons/Seta_1.png" alt="" style={{ width: '60px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src="/icons/Seta_2.png" alt="" style={{ width: '120px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
-          </div>
-        </div>
+
 
         {/* Ícones + Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto" style={{ maxWidth: '860px', alignItems: 'start' }}>
