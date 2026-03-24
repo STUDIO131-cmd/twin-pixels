@@ -85,7 +85,7 @@ const OutcomeSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="tv-float-container relative cursor-pointer group">
+            <div className="relative cursor-pointer group">
               <img
                 src={vintageTv}
                 alt="TV vintage"
