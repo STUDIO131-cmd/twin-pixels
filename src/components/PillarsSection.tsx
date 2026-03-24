@@ -67,7 +67,7 @@ const PillarsSection = () => {
 
         {/* Seta 1→2 */}
         <div className="flex justify-end pr-[8%] py-2">
-          <img src="/icons/arrow_pillar.png" alt="" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+          <img src="/icons/arrow_pillar.png" alt="" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1)' }} />
         </div>
 
         {/* ══════ PILAR 02 ══════ */}
@@ -108,7 +108,7 @@ const PillarsSection = () => {
 
         {/* Seta 2→3 */}
         <div className="flex justify-start pl-[8%] py-2">
-          <img src="/icons/arrow_pillar.png" alt="" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1)' }} />
+          <img src="/icons/arrow_pillar.png" alt="" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
         </div>
 
         {/* ══════ PILAR 03 ══════ */}
