@@ -108,7 +108,7 @@ const ForWhoSection = () => {
               {/* Header: title left, icon right */}
               <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
                 <div>
-                  <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#1a1a1a", marginBottom: "4px" }}>
+                  <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#eaeaea", marginBottom: "4px" }}>
                     {card.title}
                   </h3>
                   <p style={{ fontWeight: 400, fontSize: "13px", color: "#777" }}>
