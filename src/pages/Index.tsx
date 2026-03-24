@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import IdentificationSection from "@/components/IdentificationSection";
 import ProblemSection from "@/components/ProblemSection";
 import WhatIsSection from "@/components/WhatIsSection";
-import PillarsSection from "@/components/PillarsSection";
+
 import ForWhoSection from "@/components/ForWhoSection";
 import OutcomeSection from "@/components/OutcomeSection";
 import ScheduleSection from "@/components/ScheduleSection";
