@@ -82,7 +82,7 @@ const ProblemSection = () => {
             <div key={i}>
               {/* Ícone flutuante acima do card */}
               <div style={{ width: '100%', height: '160px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', overflow: 'visible', marginBottom: '-20px' }}>
-                <img src={card.icon} alt="" style={{ width: '240px', height: '240px', objectFit: 'contain', mixBlendMode: 'multiply', display: 'block', margin: '0 auto' }} />
+                <img src={card.icon} alt="" style={{ width: '240px', height: '240px', objectFit: 'contain', mixBlendMode: 'multiply', display: 'block', margin: '0 auto', transform: 'translateY(20%)' }} />
               </div>
 
               {/* Card */}
