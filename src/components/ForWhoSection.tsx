@@ -104,6 +104,23 @@ const ForWhoSection = () => {
                 transition: "border-color 0.3s ease",
               }}
             >
+              {/* Icon top-left corner for first card */}
+              {i === 0 && (
+                <img
+                  src="/icons/personalizado-7.png"
+                  alt=""
+                  style={{
+                    position: "absolute",
+                    top: "-8px",
+                    left: "-8px",
+                    width: "64px",
+                    height: "64px",
+                    objectFit: "contain",
+                    filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
+                    zIndex: 1,
+                  }}
+                />
+              )}
               {/* Header: title left, icon in fixed container right */}
               <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
                 <div>
