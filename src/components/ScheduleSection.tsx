@@ -50,7 +50,7 @@ const ScheduleSection = () => {
           </h2>
 
           {/* Date */}
-          <p className="text-center" style={{ fontWeight: 600, fontSize: "15px", color: "#ccc", marginBottom: "24px" }}>
+          <p className="text-center" style={{ fontWeight: 600, fontSize: "15px", color: "#ccc", marginBottom: "24px", transform: "translateY(-10%)" }}>
             11 de abril · Online
           </p>
 
