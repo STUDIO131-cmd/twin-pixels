@@ -54,7 +54,7 @@ const HeroSection = () => {
             width: 320,
             height: 'auto',
             display: 'block',
-            margin: '0 auto 8px',
+            margin: '0 auto 0',
             mixBlendMode: 'screen',
             filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.7))',
           }}
