@@ -34,7 +34,7 @@ const cards = [
 const ForWhoSection = () => {
   return (
     <section
-      className="relative py-24 overflow-hidden"
+      className="relative py-24"
       style={{
         backgroundImage: "url('/backgrounds/Background.png')",
         backgroundSize: "cover",
