@@ -30,9 +30,9 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="relative py-20 md:py-28 bg-card noise-bg">
+    <section className="relative py-20 md:py-28 noise-bg bg-[#efe0c8]">
       <div className="container max-w-3xl mx-auto px-4 relative z-10">
-        <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-10">
+        <h2 className="font-display text-2xl md:text-4xl font-bold mb-10 text-center text-[#3d3b3f]">
           Dúvidas comuns
         </h2>
 
