@@ -4,7 +4,7 @@ const ContinuitySection = () => {
       className="relative py-24 overflow-hidden"
       style={{
         backgroundColor: '#EFE7DA',
-        backgroundIxmage:
+        backgroundImage:
           'linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)',
         backgroundSize: '32px 32px',
         borderRadius: 24,

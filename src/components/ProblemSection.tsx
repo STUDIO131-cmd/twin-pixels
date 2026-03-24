@@ -89,7 +89,7 @@ const ProblemSection = () => {
                     mixBlendMode: 'multiply',
                     bottom: '-20px',
                     left: '50%',
-                    transform: 'translateX(-50%)',
+                    transform: 'translateX(-50%) translateY(20%)',
                     zIndex: 10,
                   }}
                 />
