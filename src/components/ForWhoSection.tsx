@@ -45,7 +45,7 @@ const ForWhoSection = () => {
     >
 
       {/* Content */}
-      <div className="relative z-10 max-w-[900px] mx-auto px-4">
+      <div className="relative z-10 max-w-[900px] mx-auto px-4" style={{ isolation: "isolate" }}>
         {/* Label */}
         <p
           className="text-center uppercase"
