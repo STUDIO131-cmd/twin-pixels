@@ -39,7 +39,7 @@ const SupportSection = () => {
 
         <div
           ref={cardRef}
-          className="mx-auto text-left"
+          className="mx-auto text-center"
           style={{
             maxWidth: 680,
             background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%)',
@@ -55,7 +55,7 @@ const SupportSection = () => {
           }}
         >
           <p
-            className="font-display"
+            className="font-display text-center"
             style={{
               fontWeight: 300,
               fontSize: 13,
@@ -67,7 +67,7 @@ const SupportSection = () => {
             Suporte
           </p>
           <p
-            className="font-display text-white"
+            className="font-display text-white text-center mx-auto"
             style={{
               fontWeight: 600,
               fontSize: 20,
