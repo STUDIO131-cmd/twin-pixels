@@ -7,36 +7,34 @@ const CalendarIcon = () => (
   </svg>
 );
 
-const TickerBar = () => {
-  const items = (
-    <>
-      <span className="flex items-center gap-[60px] px-[30px]">
-        <span className="flex items-center whitespace-nowrap">
-          <span className="w-2 h-2 rounded-full bg-coral inline-block mr-2 shrink-0" />
-          <span className="text-white text-sm font-medium font-display">Imersão online</span>
-        </span>
-        <span className="flex items-center whitespace-nowrap">
-          <CalendarIcon />
-          <span className="text-white text-sm font-medium font-display">11 de abril</span>
-        </span>
-        <span className="flex items-center whitespace-nowrap">
-          <span className="w-2 h-2 rounded-full bg-coral inline-block mr-2 shrink-0" />
-          <span className="text-white text-sm font-medium font-display">Imersão online</span>
-        </span>
-        <span className="flex items-center whitespace-nowrap">
-          <CalendarIcon />
-          <span className="text-white text-sm font-medium font-display">11 de abril</span>
-        </span>
-      </span>
-    </>
-  );
+const TickerContent = () => (
+  <span className="flex items-center gap-[60px] px-[30px]">
+    <span className="flex items-center whitespace-nowrap">
+      <span className="w-2 h-2 rounded-full bg-coral inline-block mr-2 shrink-0" />
+      <span className="text-white text-sm font-medium font-display">Imersão online</span>
+    </span>
+    <span className="flex items-center whitespace-nowrap">
+      <CalendarIcon />
+      <span className="text-white text-sm font-medium font-display">11 de abril</span>
+    </span>
+    <span className="flex items-center whitespace-nowrap">
+      <span className="w-2 h-2 rounded-full bg-coral inline-block mr-2 shrink-0" />
+      <span className="text-white text-sm font-medium font-display">Imersão online</span>
+    </span>
+    <span className="flex items-center whitespace-nowrap">
+      <CalendarIcon />
+      <span className="text-white text-sm font-medium font-display">11 de abril</span>
+    </span>
+  </span>
+);
 
+const TickerBar = () => {
   return (
     <div className="w-full overflow-hidden h-10 flex items-center" style={{ backgroundColor: '#0D0D0D' }}>
       <div className="ticker-scroll flex whitespace-nowrap">
         {Array.from({ length: 8 }).map((_, i) => (
           <div key={i} className="flex">
-            {items}
+            <TickerContent />
           </div>
         ))}
       </div>
