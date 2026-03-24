@@ -89,6 +89,11 @@ const IdentificationSection = () => {
                   <img src="/icons/personalizado-5.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
+              {i === 1 && (
+                <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="/icons/loja.png" alt="Ícone" className="w-full h-full object-contain" />
+                </div>
+              )}
 
               {/* Título */}
               <h3
