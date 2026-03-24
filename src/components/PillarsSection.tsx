@@ -99,6 +99,7 @@ const PillarsSection = () => {
           icon="/icons/Cifrao.png"
           reverse={false}
           iconPos="left"
+          textOffset="translateX(-60%) translateY(0%)"
         />
 
         {/* Botão CTA */}
