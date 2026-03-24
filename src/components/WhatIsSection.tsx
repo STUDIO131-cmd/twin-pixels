@@ -114,7 +114,15 @@ const WhatIsSection = () => {
           style={{ maxWidth: "860px", marginBottom: "48px", alignItems: "stretch" }}
         >
           {cards.map((card, i) => (
-            <motion.div
+            <div key={i} className="relative flex flex-col items-center">
+              {/* Ícone cérebro acima do primeiro card */}
+              {i === 0 && (
+                <div className="flex items-center justify-center mb-3" style={{ width: '64px', height: '64px' }}>
+                  <img src="/icons/cerebro_copy2-2.png" alt="Ícone" className="w-full h-full object-contain" />
+                </div>
+              )}
+              {i !== 0 && <div style={{ height: '76px' }} />}
+              <motion.div
               key={i}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -157,6 +165,7 @@ const WhatIsSection = () => {
                 {card.text}
               </p>
             </motion.div>
+            </div>
           ))}
         </div>
 
