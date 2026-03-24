@@ -121,16 +121,16 @@ const WhatIsSection = () => {
                   <img src="/icons/cerebro_copy2-2.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
-              {/* Ícone megaphone acima do terceiro card */}
+              {/* Ícone dólar acima do terceiro card */}
               {i === 2 && (
                 <div className="flex items-center justify-center mb-3" style={{ width: '64px', height: '64px' }}>
-                  <img src="/icons/megaphone.png" alt="Ícone" className="w-full h-full object-contain" />
+                  <img src="/icons/Layer_12_copy.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
-              {/* Ícone dólar acima do segundo card */}
+              {/* Ícone megaphone acima do segundo card */}
               {i === 1 && (
                 <div className="flex items-center justify-center mb-3" style={{ width: '64px', height: '64px' }}>
-                  <img src="/icons/Layer_12_copy.png" alt="Ícone" className="w-full h-full object-contain" />
+                  <img src="/icons/megaphone.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
               <motion.div
