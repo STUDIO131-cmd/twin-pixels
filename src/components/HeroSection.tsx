@@ -109,7 +109,7 @@ const HeroSection = () => {
           style={{
             fontWeight: 700,
             color: 'white',
-            fontSize: 'clamp(36px, 5.5vw, 64px)',
+            fontSize: 'clamp(29px, 4.4vw, 51px)',
             lineHeight: 1.15,
             textAlign: 'center',
             marginTop: 40,
