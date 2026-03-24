@@ -165,6 +165,7 @@ const ContinuitySection = () => {
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
                 display: 'block',
+                transform: 'translateY(-20%)',
               }}
             />
           </div>
