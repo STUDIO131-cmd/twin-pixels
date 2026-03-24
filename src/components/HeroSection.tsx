@@ -134,7 +134,9 @@ const HeroSection = () => {
           }}
         >
           Em 1 dia, descubra o que está travando seu crescimento
-          {' — '}<span style={{ fontWeight: 700, color: 'white' }}>se é um problema de marca, de conteúdo ou de vendas</span>{' — '}
+          <br />
+          —<span style={{ fontWeight: 700, color: 'white' }}>se é um problema de marca, de conteúdo ou de vendas</span>—
+          <br />
           e saia sabendo exatamente o que resolver primeiro.
         </p>
 
