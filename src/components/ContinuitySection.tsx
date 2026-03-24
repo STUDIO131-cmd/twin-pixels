@@ -101,34 +101,13 @@ const ContinuitySection = () => {
             />
           </div>
 
-          {/* Coluna direita linha 1 — Texto */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              paddingLeft: 32,
-              paddingBottom: 16,
-            }}
-          >
-            <p
-              className="font-display"
-              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6 }}
-            >
-              A imersão <span style={{ fontWeight: 700 }}>funciona sozinha.</span>
-              <br />
-              Você pode parar no diagnóstico e seguir por conta própria.
-            </p>
-          </div>
-
-          {/* Coluna direita — Seta centralizada entre os textos */}
+          {/* Coluna direita — Seta */}
           <div
             style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               paddingLeft: 32,
-              paddingTop: 8,
               paddingBottom: 8,
             }}
           >
@@ -144,6 +123,27 @@ const ContinuitySection = () => {
                 transform: 'scaleX(-1)',
               }}
             />
+          </div>
+
+          {/* Coluna direita — Texto */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              paddingLeft: 32,
+              paddingTop: 8,
+              paddingBottom: 8,
+            }}
+          >
+            <p
+              className="font-display"
+              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6 }}
+            >
+              A imersão <span style={{ fontWeight: 700 }}>funciona sozinha.</span>
+              <br />
+              Você pode parar no diagnóstico e seguir por conta própria.
+            </p>
           </div>
 
           {/* Coluna direita linha 2 — Seta 2 */}
