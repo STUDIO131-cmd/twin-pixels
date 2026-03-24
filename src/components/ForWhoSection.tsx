@@ -108,10 +108,10 @@ const ForWhoSection = () => {
               {/* Header: title left, icon right */}
               <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
                 <div>
-                  <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#1a1a1a", marginBottom: "4px" }}>
+                  <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#eaeaea", marginBottom: "4px" }}>
                     {card.title}
                   </h3>
-                  <p style={{ fontWeight: 400, fontSize: "13px", color: "#777" }}>
+                  <p style={{ fontWeight: 400, fontSize: "13px", color: "#eaeaea" }}>
                     {card.subtitle}
                   </p>
                 </div>
@@ -134,12 +134,12 @@ const ForWhoSection = () => {
               <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", margin: "0 0 20px 0", width: "100%" }} />
 
               {/* Body */}
-              <p style={{ fontWeight: 400, fontSize: "14px", lineHeight: 1.8, color: "#333333", marginBottom: "20px" }}>
+              <p style={{ fontWeight: 400, fontSize: "14px", lineHeight: 1.8, color: "#eaeaea", marginBottom: "20px" }}>
                 {card.body}
               </p>
 
               {/* Quote */}
-              <p style={{ fontWeight: 700, fontSize: "14px", color: "#1a1a1a" }}>
+              <p style={{ fontWeight: 700, fontSize: "14px", color: "#eaeaea" }}>
                 {card.quote}
               </p>
             </motion.div>
