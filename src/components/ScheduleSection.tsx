@@ -10,27 +10,15 @@ const schedule = [
 
 const ScheduleSection = () => {
   return (
-    <section className="relative py-20 overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0"
-        style={{
-          zIndex: 0,
-          backgroundImage: "url('/backgrounds/Background-9.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
-          width: "100%",
-          height: "100%",
-        }}
-      />
-      {/* Dark overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          zIndex: 1,
-          background: "linear-gradient(to bottom, rgba(10,8,6,0.80) 0%, rgba(10,8,6,0.72) 50%, rgba(10,8,6,0.85) 100%)",
-        }}
-      />
+    <section
+      className="relative py-20 overflow-hidden"
+      style={{
+        backgroundImage: "url('/backgrounds/Background-10.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
 
       {/* Content */}
       <div className="relative px-4" style={{ zIndex: 2 }}>
@@ -38,13 +26,13 @@ const ScheduleSection = () => {
           className="mx-auto"
           style={{
             maxWidth: "680px",
-            background: "rgba(30, 22, 14, 0.65)",
+            background: "rgba(255, 255, 255, 0.08)",
             backdropFilter: "blur(24px)",
             WebkitBackdropFilter: "blur(24px)",
-            border: "1px solid rgba(255,255,255,0.08)",
+            border: "1px solid rgba(255, 255, 255, 0.15)",
             borderRadius: "24px",
             padding: "48px 52px 52px",
-            boxShadow: "0 32px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06)",
+            boxShadow: "0 8px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)",
           }}
         >
           {/* Label */}
