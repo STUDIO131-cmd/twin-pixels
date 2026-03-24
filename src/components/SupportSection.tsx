@@ -67,7 +67,7 @@ const SupportSection = () => {
             Suporte
           </p>
           <p
-            className="font-display text-white"
+            className="font-display text-white text-center mx-auto"
             style={{
               fontWeight: 600,
               fontSize: 20,
