@@ -34,7 +34,7 @@ const ProblemSection = () => {
       <div className="container max-w-5xl mx-auto px-4">
         {/* Label */}
         <p
-          className="text-center uppercase mb-4"
+          className="text-center mb-3"
           style={{ fontWeight: 300, fontSize: "13px", color: "#888", letterSpacing: "0.1em" }}
         >
           O que ninguém fala

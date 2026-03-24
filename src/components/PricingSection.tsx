@@ -28,7 +28,7 @@ const PricingSection = () => {
         {/* Label */}
         <p style={{
           textAlign: "center", fontWeight: 300, fontSize: "13px", color: "#aaa",
-          letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "12px"
+          letterSpacing: "0.1em", marginBottom: "10px"
         }}>Investimento</p>
 
         {/* Título */}

@@ -21,7 +21,7 @@ const OutcomeSection = () => {
       <div className="container max-w-[900px] mx-auto px-4">
         {/* Label */}
         <p
-          className="text-center uppercase mb-3"
+          className="text-center mb-2"
           style={{ fontWeight: 300, fontSize: "13px", color: "#888", letterSpacing: "0.1em" }}
         >
           O que muda

@@ -66,8 +66,8 @@ const WhatIsSection = () => {
       <div className="container max-w-5xl mx-auto px-4 relative z-10">
         {/* Label */}
         <p
-          className="text-center uppercase"
-          style={{ fontWeight: 300, fontSize: "13px", color: "#aaa", letterSpacing: "0.1em", marginBottom: "16px" }}
+          className="text-center"
+          style={{ fontWeight: 300, fontSize: "13px", color: "#aaa", letterSpacing: "0.1em", marginBottom: "13px" }}
         >
           O que é a Jornada?
         </p>
