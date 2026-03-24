@@ -19,7 +19,7 @@ const PricingSection = () => {
       {/* Background */}
       <div style={{
         position: "absolute", inset: 0, zIndex: 0,
-        backgroundImage: "url('/backgrounds/Background.png')",
+        backgroundImage: "url('/backgrounds/Background_Pricing.png')",
         backgroundSize: "cover", backgroundPosition: "center",
         backgroundColor: "#1a1a1a"
       }} />
