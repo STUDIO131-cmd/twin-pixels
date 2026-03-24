@@ -96,7 +96,7 @@ const ContinuitySection = () => {
                 mixBlendMode: 'multiply',
                 display: 'block',
                 filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
-                transform: 'translateY(calc(-20% - 40px))',
+                transform: 'translateY(calc(-20% - 80px))',
               }}
             />
           </div>
@@ -120,7 +120,7 @@ const ContinuitySection = () => {
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
                 display: 'block',
-                transform: 'scaleX(-1) translateX(90%) translateY(calc(-20% - 40px))',
+                transform: 'scaleX(-1) translateX(90%) translateY(calc(-20% - 80px))',
               }}
             />
           </div>
@@ -138,7 +138,7 @@ const ContinuitySection = () => {
           >
             <p
               className="font-display"
-              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6, transform: 'translateY(calc(-180% - 40px))' }}
+              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6, transform: 'translateY(calc(-180% - 80px))' }}
             >
               A imersão <span style={{ fontWeight: 700 }}>funciona sozinha.</span>
               <br />
@@ -164,7 +164,7 @@ const ContinuitySection = () => {
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
                 display: 'block',
-                transform: 'translateY(calc(-20% - 40px))',
+                transform: 'translateY(calc(-20% - 80px))',
               }}
             />
           </div>
@@ -183,7 +183,7 @@ const ContinuitySection = () => {
             color: '#444',
             lineHeight: 1.7,
             textAlign: 'center',
-            transform: 'translateY(calc(-20% - 40px))',
+            transform: 'translateY(calc(-20% - 80px))',
           }}
         >
           Mas se quiser continuar com estrutura, o próximo passo será apresentado no final da imersão —{' '}
@@ -205,7 +205,7 @@ const ContinuitySection = () => {
             padding: '16px 40px',
             textAlign: 'center',
             boxShadow: '0 0 20px rgba(217,119,6,0.4), 0 0 40px rgba(217,119,6,0.2)',
-            transform: 'translateY(calc(-20% - 40px))',
+            transform: 'translateY(calc(-20% - 80px))',
           }}
         >
           <p className="font-display" style={{ fontWeight: 400, fontSize: 15, color: '#1a1a1a', margin: 0 }}>
