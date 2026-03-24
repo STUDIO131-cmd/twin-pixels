@@ -83,8 +83,14 @@ const IdentificationSection = () => {
               }}
             >
 
+              {/* Ícone acima do título */}
+              {i === 0 && (
+                <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="/icons/cerebro_copy2.png" alt="Ícone" className="w-full h-full object-contain" />
+                </div>
+              )}
 
-              {/* Título — independente do ícone */}
+              {/* Título */}
               <h3
                 style={{ fontWeight: 700, fontSize: "15px", color: "white", textAlign: "center", width: "100%", marginBottom: "12px", lineHeight: 1.3 }}
               >
