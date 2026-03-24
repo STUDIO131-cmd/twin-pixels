@@ -75,111 +75,36 @@ const ProblemSection = () => {
           ))}
         </div>
 
-        {/* Elipse SVG + texto */}
-        <div
-          className="relative mx-auto flex items-center justify-center"
-          style={{ width: "640px", maxWidth: "90vw", minHeight: "100px", marginTop: "32px" }}
-        >
-          <img src="/icons/Circulo-2.png" alt="" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "640px", maxWidth: "90vw", height: "auto", zIndex: 0, mixBlendMode: "multiply" }} />
-          <p
-            style={{
-              position: "relative",
-              zIndex: 1,
-              fontWeight: 700,
-              fontSize: "17px",
-              color: "white",
-              textAlign: "center",
-              padding: "0 48px",
-              lineHeight: 1.4,
-            }}
-          >
-            Você precisa saber qual parte do seu negócio está travando o resto:
-          </p>
+        {/* Círculo PNG + texto */}
+        <div style={{ position: 'relative', width: '100%', maxWidth: '700px', margin: '32px auto 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div style={{ position: 'relative', display: 'inline-block', margin: '0 auto' }}>
+            <p style={{ position: 'relative', zIndex: 2, fontWeight: 700, fontSize: '17px', color: '#1a1a1a', textAlign: 'center', padding: '12px 48px', lineHeight: 1.4 }}>
+              Você precisa saber qual parte do seu<br />negócio está travando o resto:
+            </p>
+            <img src="/icons/Circulo-2.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '110%', height: '140%', objectFit: 'fill', mixBlendMode: 'multiply', zIndex: 1, pointerEvents: 'none' }} />
+          </div>
         </div>
 
-        {/* Setas SVG */}
-        <div
-          className="mx-auto flex justify-between items-start"
-          style={{ width: "640px", maxWidth: "90vw" }}
-        >
-          {/* Seta esquerda */}
-          <motion.svg
-            width="160" height="160" viewBox="0 0 160 160" fill="none"
-            initial={{ opacity: 0, y: -16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <path d="M100 8 Q40 60 36 130"
-              stroke="white" strokeWidth="2.5" strokeLinecap="round"
-              strokeDasharray="160" strokeDashoffset="160"
-              className="draw-arrow-s1"/>
-            <path d="M20 120 L36 130 L48 118"
-              stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-              strokeDasharray="30" strokeDashoffset="30"
-              className="draw-arrowhead-s1"/>
-          </motion.svg>
-
-          {/* Seta central */}
-          <motion.svg
-            width="80" height="160" viewBox="0 0 80 160" fill="none"
-            initial={{ opacity: 0, y: -16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <path d="M40 8 Q48 72 40 136"
-              stroke="white" strokeWidth="2.5" strokeLinecap="round"
-              strokeDasharray="150" strokeDashoffset="150"
-              className="draw-arrow-s2"/>
-            <path d="M26 124 L40 136 L54 124"
-              stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-              strokeDasharray="30" strokeDashoffset="30"
-              className="draw-arrowhead-s2"/>
-          </motion.svg>
-
-          {/* Seta direita */}
-          <motion.svg
-            width="160" height="160" viewBox="0 0 160 160" fill="none"
-            initial={{ opacity: 0, y: -16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-          >
-            <path d="M60 8 Q120 60 124 130"
-              stroke="white" strokeWidth="2.5" strokeLinecap="round"
-              strokeDasharray="160" strokeDashoffset="160"
-              className="draw-arrow-s3"/>
-            <path d="M112 118 L124 130 L140 120"
-              stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-              strokeDasharray="30" strokeDashoffset="30"
-              className="draw-arrowhead-s3"/>
-          </motion.svg>
+        {/* Setas PNG */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', width: '100%', maxWidth: '700px', margin: '8px auto 0', alignItems: 'flex-start' }}>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img src="/icons/Setas.png" alt="" style={{ width: '120px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1)' }} />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img src="/icons/Seta_1.png" alt="" style={{ width: '60px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img src="/icons/Seta_2.png" alt="" style={{ width: '120px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+          </div>
         </div>
 
         {/* Ícones + Cards */}
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto"
-          style={{ maxWidth: "860px", alignItems: "start" }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto" style={{ maxWidth: '860px', alignItems: 'start' }}>
           {cards.map((card, i) => (
             <div key={i}>
               {/* Ícone flutuante acima do card */}
-              <div
-                className="flex justify-center w-full"
-                style={{ marginBottom: "-20px", position: "relative", zIndex: 2 }}
-              >
-                <img
-                  src={card.icon}
-                  alt=""
-                  style={{
-                    width: "110px",
-                    height: "110px",
-                    objectFit: "contain",
-                    mixBlendMode: "multiply",
-                    display: "block",
-                  }}
-                />
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', height: '140px', overflow: 'visible', marginBottom: '-20px', position: 'relative', zIndex: 2 }}>
+                <img src={card.icon} alt="" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', display: 'block' }} />
               </div>
 
               {/* Card */}
@@ -187,59 +112,35 @@ const ProblemSection = () => {
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: i * 0.15,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
+                transition={{ duration: 0.6, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
                 className="transition-all duration-300 cursor-pointer"
                 style={{
-                  background: "rgba(50,42,35,0.88)",
-                  backdropFilter: "blur(12px)",
-                  WebkitBackdropFilter: "blur(12px)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  borderRadius: "16px",
-                  padding: "28px 24px 32px",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  position: "relative",
+                  background: 'rgba(50,42,35,0.88)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  borderRadius: '16px',
+                  padding: '28px 24px 32px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  textAlign: 'left',
+                  position: 'relative',
                   zIndex: 1,
                 }}
-                whileHover={{
-                  y: -6,
-                  borderColor: "rgba(217,119,6,0.25)",
-                }}
+                whileHover={{ y: -6, borderColor: 'rgba(217,119,6,0.25)' }}
               >
-                <h3 style={{ fontWeight: 700, color: "white", fontSize: "16px", marginBottom: "12px" }}>
-                  {card.title}
-                </h3>
-                <p style={{ fontWeight: 400, color: "#bbb", fontSize: "14px", lineHeight: 1.7 }}>
-                  {card.text}
-                </p>
+                <h3 style={{ fontWeight: 700, color: 'white', fontSize: '16px', marginBottom: '12px' }}>{card.title}</h3>
+                <p style={{ fontWeight: 400, color: '#bbb', fontSize: '14px', lineHeight: 1.7 }}>{card.text}</p>
               </motion.div>
             </div>
           ))}
         </div>
 
         {/* Texto final */}
-        <p
-          className="text-center mx-auto"
-          style={{
-            marginTop: "52px",
-            maxWidth: "560px",
-            fontSize: "18px",
-            lineHeight: 1.7,
-            fontWeight: 400,
-            color: "#555",
-          }}
-        >
-          Enquanto não souber qual é o seu gargalo,
-          <br />
-          vai continuar tentando resolver tudo
-          <br />
-          <span style={{ fontWeight: 700, color: "#1a1a1a" }}>— e não resolver nada.</span>
+        <p className="text-center mx-auto" style={{ marginTop: '52px', maxWidth: '560px', fontSize: '18px', lineHeight: 1.7, fontWeight: 400, color: '#555' }}>
+          Enquanto não souber qual é o seu gargalo,<br />vai continuar tentando resolver tudo<br />
+          <span style={{ fontWeight: 700, color: '#1a1a1a' }}>— e não resolver nada.</span>
         </p>
 
         {/* CTA */}
@@ -247,68 +148,16 @@ const ProblemSection = () => {
           <a
             href="#preco"
             className="inline-block cursor-pointer transition-all duration-200"
-            style={{
-              fontWeight: 700,
-              fontSize: "14px",
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-              color: "#1a1a1a",
-              background: "#D97706",
-              borderRadius: "999px",
-              padding: "18px 48px",
-              border: "none",
-              boxShadow:
-                "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28)",
-            }}
-            onMouseEnter={(e) => {
-              const t = e.currentTarget;
-              t.style.boxShadow =
-                "0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5)";
-              t.style.transform = "translateY(-2px) scale(1.02)";
-            }}
-            onMouseLeave={(e) => {
-              const t = e.currentTarget;
-              t.style.boxShadow =
-                "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28)";
-              t.style.transform = "none";
-            }}
-            onMouseDown={(e) => {
-              e.currentTarget.style.transform = "scale(0.98)";
-            }}
-            onMouseUp={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px) scale(1.02)";
-            }}
+            style={{ fontWeight: 700, fontSize: '14px', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#1a1a1a', background: '#D97706', borderRadius: '999px', padding: '18px 48px', border: 'none', boxShadow: '0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28)' }}
+            onMouseEnter={(e) => { const t = e.currentTarget; t.style.boxShadow = '0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5)'; t.style.transform = 'translateY(-2px) scale(1.02)'; }}
+            onMouseLeave={(e) => { const t = e.currentTarget; t.style.boxShadow = '0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28)'; t.style.transform = 'none'; }}
+            onMouseDown={(e) => { e.currentTarget.style.transform = 'scale(0.98)'; }}
+            onMouseUp={(e) => { e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)'; }}
           >
             QUERO DESCOBRIR O MEU GARGALO · R$47
           </a>
         </div>
       </div>
-      <style>{`
-        @keyframes drawLine {
-          to { stroke-dashoffset: 0; }
-        }
-        .draw-ellipse {
-          animation: drawLine 1.5s ease forwards 0.5s;
-        }
-        .draw-arrow-s1 {
-          animation: drawLine 0.8s ease forwards 1.2s;
-        }
-        .draw-arrowhead-s1 {
-          animation: drawLine 0.3s ease forwards 2s;
-        }
-        .draw-arrow-s2 {
-          animation: drawLine 0.8s ease forwards 1.4s;
-        }
-        .draw-arrowhead-s2 {
-          animation: drawLine 0.3s ease forwards 2.2s;
-        }
-        .draw-arrow-s3 {
-          animation: drawLine 0.8s ease forwards 1.6s;
-        }
-        .draw-arrowhead-s3 {
-          animation: drawLine 0.3s ease forwards 2.4s;
-        }
-      `}</style>
     </section>
   );
 };
