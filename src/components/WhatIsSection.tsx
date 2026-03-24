@@ -118,19 +118,19 @@ const WhatIsSection = () => {
               {/* Ícone cérebro acima do primeiro card */}
               {i === 0 && (
                 <div className="flex items-center justify-center mb-3" style={{ width: '64px', height: '64px', filter: 'drop-shadow(0 0 8px #d87e5f) drop-shadow(0 0 20px #d87e5f) drop-shadow(0 0 40px #d87e5f) drop-shadow(0 0 80px rgba(216,126,95,0.5))' }}>
-                  <img src="/icons/cerebro_copy2-2.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(1.3) drop-shadow(0 0 6px #d87e5f)' }} />
+                  <img src="/icons/cerebro_copy2-2.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 6px #d87e5f)' }} />
                 </div>
               )}
               {/* Ícone dólar acima do terceiro card */}
               {i === 2 && (
                 <div className="flex items-center justify-center mb-3" style={{ width: '64px', height: '64px', filter: 'drop-shadow(0 0 8px #d87e5f) drop-shadow(0 0 20px #d87e5f) drop-shadow(0 0 40px #d87e5f) drop-shadow(0 0 80px rgba(216,126,95,0.5))' }}>
-                  <img src="/icons/Layer_12_copy.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(1.3) drop-shadow(0 0 6px #d87e5f)' }} />
+                  <img src="/icons/Layer_12_copy.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 6px #d87e5f)' }} />
                 </div>
               )}
               {/* Ícone megaphone acima do segundo card */}
               {i === 1 && (
                 <div className="flex items-center justify-center mb-3" style={{ width: '64px', height: '64px', filter: 'drop-shadow(0 0 8px #d87e5f) drop-shadow(0 0 20px #d87e5f) drop-shadow(0 0 40px #d87e5f) drop-shadow(0 0 80px rgba(216,126,95,0.5))' }}>
-                  <img src="/icons/megaphone.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(1.3) drop-shadow(0 0 6px #d87e5f)' }} />
+                  <img src="/icons/megaphone.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 6px #d87e5f)' }} />
                 </div>
               )}
               <motion.div
