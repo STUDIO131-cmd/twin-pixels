@@ -8,25 +8,6 @@ const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false,
     <div className="relative overflow-hidden rounded-[20px] shadow-2xl">
       <img src={img} alt="" className="w-full h-auto object-cover" />
       
-      {/* Text Overlay Container */}
-      <div className={`absolute inset-0 flex flex-col justify-center p-8 md:p-12 ${reverse ? 'items-start text-left' : 'items-end text-right'}`}>
-        <div
-          className="max-w-[50%] space-y-2"
-        >
-          <div className="mb-4">
-            <span className="block text-white text-[32px] md:text-[56px] font-bold leading-none">Pilar {num}</span>
-            <span className="block text-[#D87E5F] text-[14px] md:text-[18px] font-semibold uppercase">{title}</span>
-          </div>
-          
-          <div className="hidden md:block space-y-3">
-             <p className="text-white font-medium text-[15px]">{subtitle}</p>
-             <p className="text-neutral-300 text-[13px] leading-relaxed">{desc}</p>
-             <div className="pt-2 text-neutral-400 text-[12px] space-y-1">
-               {items.map((item: string, idx: number) => <p key={idx}>{item}</p>)}
-             </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 );
