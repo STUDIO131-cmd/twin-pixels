@@ -66,7 +66,7 @@ const IdentificationSection = () => {
                 delay: i * 0.12,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="identification-card relative cursor-pointer h-full"
+              className="identification-card relative cursor-pointer h-full flex flex-col items-center"
               style={{
                 background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%)",
                 backdropFilter: "blur(40px) saturate(1.4)",
