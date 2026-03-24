@@ -127,7 +127,12 @@ const WhatIsSection = () => {
                   <img src="/icons/megaphone.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
-              {i === 1 && <div style={{ height: '76px' }} />}
+              {/* Ícone dólar acima do segundo card */}
+              {i === 1 && (
+                <div className="flex items-center justify-center mb-3" style={{ width: '64px', height: '64px' }}>
+                  <img src="/icons/Layer_12_copy.png" alt="Ícone" className="w-full h-full object-contain" />
+                </div>
+              )}
               <motion.div
               key={i}
               initial={{ opacity: 0, y: 24 }}
