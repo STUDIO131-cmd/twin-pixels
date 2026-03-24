@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false, iconPos = "left" }: any) => (
+const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false, iconPos = "left", textOffset }: any) => (
   <div className="relative w-full max-w-[860px] mx-auto mb-12">
 
 
@@ -12,7 +12,7 @@ const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false,
       <div className={`absolute inset-0 flex flex-col justify-center p-8 md:p-12 ${reverse ? 'items-start text-left' : 'items-end text-right'}`}>
         <div
           className="max-w-[50%] space-y-2"
-          style={!reverse ? { transform: 'translateX(-60%) translateY(10%)' } : { transform: 'translateX(15%)' }}
+          style={{ transform: textOffset || (!reverse ? 'translateX(-60%) translateY(10%)' : 'translateX(15%)') }}
         >
           <div className="mb-4">
             <span className="block text-white text-[32px] md:text-[56px] font-bold leading-none">Pilar {num}</span>
@@ -99,6 +99,7 @@ const PillarsSection = () => {
           icon="/icons/Cifrao.png"
           reverse={false}
           iconPos="left"
+          textOffset="translateX(-60%) translateY(0%)"
         />
 
         {/* Botão CTA */}
