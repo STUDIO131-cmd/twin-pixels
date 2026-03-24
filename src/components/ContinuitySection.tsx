@@ -184,6 +184,7 @@ const ContinuitySection = () => {
             color: '#444',
             lineHeight: 1.7,
             textAlign: 'center',
+            transform: 'translateY(-20%)',
           }}
         >
           Mas se quiser continuar com estrutura, o próximo passo será apresentado no final da imersão —{' '}
