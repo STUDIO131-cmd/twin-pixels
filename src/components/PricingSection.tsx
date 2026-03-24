@@ -52,7 +52,7 @@ const PricingSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          style={{ position: "relative", maxWidth: "760px", margin: "0 auto 24px" }}
+          style={{ position: "relative", maxWidth: "760px", margin: "0 auto 12px" }}
         >
           <img
             src="/images/Ingresso_1.png"
