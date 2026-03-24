@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false, iconPos = "left", textOffset }: any) => (
-  <div className="relative w-full max-w-[860px] mx-auto mb-12">
+  <div className="relative w-full max-w-[860px] mx-auto" style={{ marginBottom: 60 }}>
 
 
     
@@ -57,10 +57,10 @@ const PillarsSection = () => {
         WebkitBackdropFilter: 'blur(40px) saturate(1.4)',
         border: '1px solid rgba(255,255,255,0.4)',
         borderRadius: '28px',
-        padding: '48px 0px',
+        padding: '36px 0px',
         boxShadow: '0 8px 32px rgba(0,0,0,0.08), inset 0 1px 1px rgba(255,255,255,0.5), inset 0 -1px 1px rgba(255,255,255,0.1)',
       }}>
-        <div className="text-center mb-20">
+        <div className="text-center mb-14">
           <p className="text-[13px] tracking-widest text-neutral-500 mb-3">A estrutura</p>
           <h2 className="text-[32px] md:text-[48px] font-bold text-neutral-900 leading-tight">Três perguntas.<br />Um diagnóstico.</h2>
         </div>
