@@ -126,9 +126,6 @@ const ForWhoSection = () => {
                   <p style={{ fontWeight: 400, fontSize: "13px", color: "#eaeaea" }}>
                     {card.subtitle}
                   </p>
-                </div>
-
-
               </div>
 
               {/* Separator */}
