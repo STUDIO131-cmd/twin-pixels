@@ -118,8 +118,8 @@ const ForWhoSection = () => {
                   src={card.icon}
                   alt={card.title}
                   style={{
-                    width: "270px",
-                    height: "270px",
+                    width: "72px",
+                    height: "72px",
                     objectFit: "contain",
                     mixBlendMode: "multiply",
                     flexShrink: 0,
