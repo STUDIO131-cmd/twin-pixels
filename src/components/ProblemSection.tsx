@@ -77,7 +77,7 @@ const ProblemSection = () => {
 
         {/* Círculo PNG + texto */}
         <div style={{ position: 'relative', width: '100%', maxWidth: '700px', margin: '32px auto 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', minHeight: '80px', overflow: 'visible', margin: '0 auto' }}>
+          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', minHeight: '80px', overflow: 'visible', margin: '0 auto', transform: 'scale(1.08) translateX(6%) translateY(5%)' }}>
             <p style={{ position: 'relative', zIndex: 2, fontWeight: 700, fontSize: '17px', color: '#1a1a1a', textAlign: 'center', padding: '0 60px', lineHeight: 1.4, margin: '0 auto' }}>
               Você precisa saber qual parte do seu<br />negócio está travando o resto:
             </p>
