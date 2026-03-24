@@ -5,7 +5,7 @@ const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false,
 
 
     
-    <div className="relative overflow-hidden rounded-[20px] shadow-2xl">
+    <div className="relative overflow-hidden rounded-[20px]">
       <img src={img} alt="" className="w-full h-auto object-cover" />
       
       {/* Text Overlay Container */}
