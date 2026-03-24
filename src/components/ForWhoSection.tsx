@@ -111,7 +111,7 @@ const ForWhoSection = () => {
                   <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#eaeaea", marginBottom: "4px" }}>
                     {card.title}
                   </h3>
-                  <p style={{ fontWeight: 400, fontSize: "13px", color: "#777" }}>
+                  <p style={{ fontWeight: 400, fontSize: "13px", color: "#eaeaea" }}>
                     {card.subtitle}
                   </p>
                 </div>
