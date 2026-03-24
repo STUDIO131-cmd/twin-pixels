@@ -193,6 +193,27 @@ const ContinuitySection = () => {
         </p>
 
         {/* Badge bônus */}
+        <div
+          style={{
+            marginTop: 36,
+            display: 'block',
+            width: 'fit-content',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            background: '#D97706',
+            borderRadius: 999,
+            padding: '16px 40px',
+            textAlign: 'center',
+            boxShadow: '0 0 20px rgba(217,119,6,0.4), 0 0 40px rgba(217,119,6,0.2)',
+            transform: 'translateY(calc(-20% - 80px))',
+          }}
+        >
+          <p className="font-display" style={{ fontWeight: 400, fontSize: 15, color: '#1a1a1a', margin: 0 }}>
+            Os 5 primeiros a garantir a metodologia
+            <br />
+            no dia da imersão levam um <span style={{ fontWeight: 700 }}>BÔNUS ESPECIAL.</span>
+          </p>
+        </div>
 
         {/* Botão BÔNUS ESPECIAL */}
         <a
