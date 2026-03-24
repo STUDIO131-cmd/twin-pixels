@@ -69,7 +69,7 @@ const ContinuitySection = () => {
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
-            gridTemplateRows: 'auto auto',
+            gridTemplateRows: 'auto auto auto',
             gap: 0,
             alignItems: 'center',
             position: 'relative',
