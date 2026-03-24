@@ -67,10 +67,7 @@ const PillarsSection = () => {
 
         {/* Seta 1→2 */}
         <div className="flex justify-end pr-[8%] py-2">
-          <svg width="120" height="160" viewBox="0 0 120 160" fill="none">
-            <path d="M90 8 Q110 60 100 100 Q90 130 30 148" stroke="#D15E4A" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="220" strokeDashoffset={p1InView ? "0" : "220"} style={{ transition: "stroke-dashoffset 0.9s ease-out" }} />
-            <path d="M18 142 L30 148 L34 136" stroke="#D15E4A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="25" strokeDashoffset={p1InView ? "0" : "25"} style={{ transition: "stroke-dashoffset 0.3s ease-out 0.9s" }} />
-          </svg>
+          <img src="/icons/arrow_pillar.png" alt="" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
         </div>
 
         {/* ══════ PILAR 02 ══════ */}
