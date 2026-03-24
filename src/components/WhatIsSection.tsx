@@ -103,6 +103,7 @@ const WhatIsSection = () => {
             mixBlendMode: "screen",
             display: "block",
             margin: "16px auto 32px",
+            filter: "brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 8px rgba(216,126,95,0.7)) drop-shadow(0 0 20px rgba(216,126,95,0.4)) drop-shadow(0 0 40px rgba(216,126,95,0.2))",
           }}
         />
 
