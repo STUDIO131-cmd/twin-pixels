@@ -34,7 +34,7 @@ const PillarsSection = () => {
     <section className="bg-[#EFE7DA] py-24 px-6 overflow-hidden">
       <div className="max-w-[900px] mx-auto">
         <div className="text-center mb-20">
-          <p className="text-[13px] uppercase tracking-widest text-neutral-500 mb-4">A ESTRUTURA</p>
+          <p className="text-[13px] tracking-widest text-neutral-500 mb-3">A estrutura</p>
           <h2 className="text-[32px] md:text-[48px] font-bold text-neutral-900 leading-tight">Três perguntas. Um diagnóstico.</h2>
         </div>
 

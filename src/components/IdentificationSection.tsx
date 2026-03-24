@@ -32,7 +32,7 @@ const IdentificationSection = () => {
       <div className="container max-w-[1100px] mx-auto px-4">
         {/* Label */}
         <p
-          className="text-center uppercase mb-4"
+          className="text-center mb-3"
           style={{ fontSize: "13px", fontWeight: 300, color: "#aaa", letterSpacing: "0.1em" }}
         >
           Isso é sobre você?

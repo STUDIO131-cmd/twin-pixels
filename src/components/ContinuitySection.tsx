@@ -19,9 +19,8 @@ const ContinuitySection = () => {
             fontSize: 13,
             color: '#888',
             letterSpacing: '0.1em',
-            textTransform: 'uppercase',
             textAlign: 'center',
-            marginBottom: 12,
+            marginBottom: 10,
           }}
         >
           E depois?

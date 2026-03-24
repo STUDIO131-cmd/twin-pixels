@@ -47,8 +47,8 @@ const ForWhoSection = () => {
       <div className="relative z-10 max-w-[900px] mx-auto px-4" style={{ isolation: "isolate" }}>
         {/* Label */}
         <p
-          className="text-center uppercase"
-          style={{ fontWeight: 300, fontSize: "13px", color: "#aaa", letterSpacing: "0.1em", marginBottom: "10px" }}
+          className="text-center"
+          style={{ fontWeight: 300, fontSize: "13px", color: "#aaa", letterSpacing: "0.1em", marginBottom: "8px" }}
         >
           Para quem é
         </p>
