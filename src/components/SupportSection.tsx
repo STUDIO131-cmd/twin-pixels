@@ -55,7 +55,7 @@ const SupportSection = () => {
           }}
         >
           <p
-            className="font-display"
+            className="font-display text-center"
             style={{
               fontWeight: 300,
               fontSize: 13,
