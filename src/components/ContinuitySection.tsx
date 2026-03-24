@@ -121,7 +121,7 @@ const ContinuitySection = () => {
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
                 display: 'block',
-                transform: 'scaleX(-1) translateX(30%)',
+                transform: 'scaleX(-1) translateX(30%) translateY(-20%)',
               }}
             />
           </div>
