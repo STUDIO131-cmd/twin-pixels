@@ -88,11 +88,11 @@ const ForWhoSection = () => {
                 boxShadow: "0 16px 48px rgba(0,0,0,0.3)",
               }}
               style={{
-                background: "rgba(239, 225, 202, 0.6)",
-                backdropFilter: "blur(16px)",
-                WebkitBackdropFilter: "blur(16px)",
-                borderRadius: "20px",
-                padding: "24px 24px 28px",
+                background: "rgba(239, 225, 202, 0.35)",
+                backdropFilter: "blur(20px)",
+                WebkitBackdropFilter: "blur(20px)",
+                borderRadius: "28px",
+                padding: "32px 32px 36px",
                 border: "1px solid rgba(255, 255, 255, 0.5)",
                 boxShadow: "0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)",
                 display: "flex",
@@ -106,7 +106,7 @@ const ForWhoSection = () => {
               }}
             >
               {/* Header: title left, icon right */}
-              <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "16px" }}>
+              <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
                 <div>
                   <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#1a1a1a", marginBottom: "4px" }}>
                     {card.title}
@@ -119,8 +119,8 @@ const ForWhoSection = () => {
                   src={card.icon}
                   alt={card.title}
                   style={{
-                    width: "108px",
-                    height: "108px",
+                    width: "216px",
+                    height: "216px",
                     objectFit: "contain",
                     mixBlendMode: "multiply",
                     flexShrink: 0,
@@ -131,15 +131,15 @@ const ForWhoSection = () => {
               </div>
 
               {/* Separator */}
-              <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", margin: "0 0 16px 0", width: "100%" }} />
+              <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", margin: "0 0 20px 0", width: "100%" }} />
 
               {/* Body */}
-              <p style={{ fontWeight: 400, fontSize: "13px", lineHeight: 1.7, color: "#333333", marginBottom: "16px" }}>
+              <p style={{ fontWeight: 400, fontSize: "14px", lineHeight: 1.8, color: "#333333", marginBottom: "20px" }}>
                 {card.body}
               </p>
 
               {/* Quote */}
-              <p style={{ fontWeight: 700, fontSize: "13px", color: "#1a1a1a" }}>
+              <p style={{ fontWeight: 700, fontSize: "14px", color: "#1a1a1a" }}>
                 {card.quote}
               </p>
             </motion.div>
