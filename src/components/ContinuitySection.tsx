@@ -219,7 +219,7 @@ const ContinuitySection = () => {
             textTransform: 'uppercase' as const,
             cursor: 'pointer',
             boxShadow: '0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3)',
-            transform: 'translateY(calc(-20% - 80px))',
+            transform: 'translateY(calc(-20% - 40px))',
             transition: 'all 0.2s ease',
           }}
           onMouseEnter={e => {
