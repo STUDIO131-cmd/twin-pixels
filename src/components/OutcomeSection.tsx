@@ -92,8 +92,9 @@ const OutcomeSection = () => {
                 style={{
                   mixBlendMode: "multiply",
                   maxWidth: "100%",
-                  width: "1260px",
+                  width: "640px",
                   height: "auto",
+                  objectFit: "contain" as const,
                 }}
               />
               {/* Screen glow overlay */}
