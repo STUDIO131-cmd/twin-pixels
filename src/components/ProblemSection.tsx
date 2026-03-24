@@ -79,7 +79,7 @@ const ProblemSection = () => {
 
               {/* Ícone acima do card */}
               {i === 1 && (
-                <div className="absolute flex items-center justify-center" style={{ width: '512px', height: '512px', top: '-140px', left: '-80%' }}>
+                <div className="absolute flex items-center justify-center" style={{ width: '205px', height: '205px', top: '-203px', left: '-125%' }}>
                   <img src="/icons/Cerebro-3.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
