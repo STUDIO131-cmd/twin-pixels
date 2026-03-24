@@ -84,6 +84,11 @@ const ProblemSection = () => {
                 </div>
               )}
 
+              {/* Ícone dinheiro centralizado com o card */}
+              {i === 1 && (
+                <div className="absolute flex items-center justify-center" style={{ width: '205px', height: '205px', top: '-162px', left: '50%', transform: 'translateX(-50%)' }}>
+                  <img src="/icons/Dinheiro-2.png" alt="Ícone Dinheiro" className="w-full h-full object-contain" />
+                </div>
               )}
 
               {/* Ícone alto-falante centralizado com o terceiro card */}
@@ -92,8 +97,6 @@ const ProblemSection = () => {
                   <img src="/icons/Alto_Falante-2.png" alt="Ícone Alto-Falante" className="w-full h-full object-contain" />
                 </div>
               )}
-
-
                 <div className="absolute flex items-center justify-center" style={{ width: '205px', height: '205px', top: '-162px', left: '50%', transform: 'translateX(-50%)' }}>
                   <img src="/icons/Dinheiro-2.png" alt="Ícone Dinheiro" className="w-full h-full object-contain" />
                 </div>
