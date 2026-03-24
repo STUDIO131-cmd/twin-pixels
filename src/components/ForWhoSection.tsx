@@ -88,8 +88,7 @@ const ForWhoSection = () => {
                 boxShadow: "0 16px 48px rgba(0,0,0,0.3)",
               }}
               style={{
-                background: "rgba(235, 228, 215, 0.25)",
-                backdropFilter: "blur(24px)",
+                background: "#EFE1CA",
                 WebkitBackdropFilter: "blur(24px)",
                 borderRadius: "20px",
                 padding: "24px 24px 28px",
