@@ -23,7 +23,7 @@ const cards = [
     quote: '"Preciso de cliente entrando, mas não sei como atrair sem depender de sorte."',
   },
   {
-    icon: "/icons/Artesão.png",
+    icon: "/icons/personalizado.png",
     title: "Artesão-Especialista",
     subtitle: "Você é o diferencial.",
     body: 'Produto 100% personalizado. Capacidade limitada. Você faz o que pouca gente faz. Mas compete como se fosse igual a todo mundo. Precisa posicionar seu trabalho como premium, justificar seu preço e criar desejo em quem pode pagar — sem precisar convencer.',
