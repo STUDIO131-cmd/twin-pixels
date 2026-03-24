@@ -84,19 +84,19 @@ const HeroSection = () => {
                 overflow: 'hidden',
               }}
             />
-            {/* Light sweep overlay */}
-            <div
-              className="hero-light-sweep"
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                borderRadius: 999,
-                pointerEvents: 'none',
-              }}
-            />
+              {/* Light sweep overlay */}
+              <div
+                className="hero-light-sweep"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: 999,
+                  pointerEvents: 'none',
+                }}
+              />
           </div>
           <p className="font-display" style={{ fontWeight: 300, fontSize: 12, color: '#aaa', textAlign: 'center', marginTop: 6 }}>
             81% das vagas preenchidas a R$47,00
