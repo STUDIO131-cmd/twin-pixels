@@ -57,6 +57,8 @@ const ScheduleSection = () => {
             Um dia. Online.
             <br />
             Direto ao que importa.
+            <br />
+            <br />
           </h2>
 
           {/* Date */}
