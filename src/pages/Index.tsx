@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import TickerBar from "@/components/TickerBar";
 import HeroSection from "@/components/HeroSection";
 import IdentificationSection from "@/components/IdentificationSection";
@@ -15,6 +16,35 @@ import FinalCTASection from "@/components/FinalCTASection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
+  useEffect(() => {
+    const sections = document.querySelectorAll('section, [class*="py-"]');
+
+    sections.forEach((section) => {
+      const el = section as HTMLElement;
+      const children = el.children;
+      if (!children.length) return;
+
+      const firstChild = children[0];
+      const lastChild = children[children.length - 1];
+
+      const sectionRect = el.getBoundingClientRect();
+      const firstRect = firstChild.getBoundingClientRect();
+      const lastRect = lastChild.getBoundingClientRect();
+
+      const topGap = firstRect.top - sectionRect.top;
+      const bottomGap = sectionRect.bottom - lastRect.bottom;
+
+      const maxGap = 60;
+      const targetGap = 40;
+
+      if (topGap > maxGap) {
+        el.style.paddingTop = `${targetGap}px`;
+      }
+      if (bottomGap > maxGap) {
+        el.style.paddingBottom = `${targetGap}px`;
+      }
+    });
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       <TickerBar />
