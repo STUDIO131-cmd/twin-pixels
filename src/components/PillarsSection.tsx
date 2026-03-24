@@ -50,13 +50,13 @@ const PillarsSection = () => {
         {/* Overlay escuro para legibilidade */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(239,231,218,0.92) 0%, rgba(239,231,218,0.75) 30%, rgba(239,231,218,0.75) 70%, rgba(239,231,218,0.92) 100%)' }} />
       </div>
-      <div className="max-w-[900px] mx-auto relative z-10" style={{
+      <div className="max-w-[860px] mx-auto relative z-10" style={{
         background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 100%)',
         backdropFilter: 'blur(40px) saturate(1.4)',
         WebkitBackdropFilter: 'blur(40px) saturate(1.4)',
         border: '1px solid rgba(255,255,255,0.4)',
         borderRadius: '28px',
-        padding: '48px 40px',
+        padding: '48px 0px',
         boxShadow: '0 8px 32px rgba(0,0,0,0.08), inset 0 1px 1px rgba(255,255,255,0.5), inset 0 -1px 1px rgba(255,255,255,0.1)',
       }}>
         <div className="text-center mb-20">
