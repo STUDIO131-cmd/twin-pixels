@@ -54,7 +54,7 @@ const IdentificationSection = () => {
         </h2>
 
         {/* Grid 4 cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
           {cards.map((card, i) => (
             <motion.div
               key={i}
@@ -66,29 +66,34 @@ const IdentificationSection = () => {
                 delay: i * 0.12,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="identification-card relative cursor-pointer"
+              className="identification-card relative cursor-pointer h-full"
               style={{
                 background: "rgba(255,255,255,0.05)",
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
                 border: "1px solid rgba(255,255,255,0.08)",
                 borderRadius: "20px",
-                padding: "28px 20px 32px",
+                padding: "32px 20px",
                 boxShadow:
                   "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                justifyContent: "flex-start",
               }}
             >
               {/* Ícone com glow */}
-              <div className="relative mb-5">
+              <div className="relative" style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "24px" }}>
                 <img
                   src={card.icon}
                   alt=""
                   style={{
-                    width: "100px",
-                    height: "auto",
+                    width: "120px",
+                    height: "120px",
+                    objectFit: "contain",
                     mixBlendMode: "screen",
                     display: "block",
-                    margin: "0 auto",
                   }}
                 />
                 <div
@@ -110,20 +115,21 @@ const IdentificationSection = () => {
 
               {/* Título */}
               <h3
-                className="text-white text-center mb-3"
-                style={{ fontWeight: 700, fontSize: "16px" }}
+                style={{ fontWeight: 700, fontSize: "15px", color: "white", textAlign: "center", width: "100%", marginBottom: "12px", lineHeight: 1.3 }}
               >
                 {card.title}
               </h3>
 
               {/* Texto */}
               <p
-                className="text-center"
                 style={{
                   fontWeight: 400,
-                  fontSize: "14px",
+                  fontSize: "13px",
                   lineHeight: 1.7,
                   color: "#bbb",
+                  textAlign: "center",
+                  width: "100%",
+                  margin: 0,
                 }}
               >
                 {card.text}
