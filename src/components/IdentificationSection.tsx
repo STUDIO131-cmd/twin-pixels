@@ -68,14 +68,13 @@ const IdentificationSection = () => {
               }}
               className="identification-card relative cursor-pointer h-full"
               style={{
-                background: "rgba(255,255,255,0.05)",
-                backdropFilter: "blur(16px)",
-                WebkitBackdropFilter: "blur(16px)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "20px",
+                background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%)",
+                backdropFilter: "blur(40px) saturate(1.4)",
+                WebkitBackdropFilter: "blur(40px) saturate(1.4)",
+                border: "1px solid rgba(255,255,255,0.3)",
+                borderRadius: "24px",
                 padding: "32px 20px",
-                boxShadow:
-                  "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.15), inset 0 1px 1px rgba(255,255,255,0.35), inset 0 -1px 1px rgba(255,255,255,0.05)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
