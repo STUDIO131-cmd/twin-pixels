@@ -115,12 +115,12 @@ const ContinuitySection = () => {
               src="/icons/Seta.png"
               alt=""
               style={{
-                width: 210,
+                width: 273,
                 height: 'auto',
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
                 display: 'block',
-                transform: 'scaleX(-1) translateX(30%) translateY(-20%)',
+                transform: 'scaleX(-1) translateX(90%) translateY(-20%)',
               }}
             />
           </div>
@@ -138,7 +138,7 @@ const ContinuitySection = () => {
           >
             <p
               className="font-display"
-              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6, transform: 'translateY(-30%)' }}
+              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6, transform: 'translateY(-80%)' }}
             >
               A imersão <span style={{ fontWeight: 700 }}>funciona sozinha.</span>
               <br />
