@@ -10,27 +10,15 @@ const schedule = [
 
 const ScheduleSection = () => {
   return (
-    <section className="relative py-20 overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0"
-        style={{
-          zIndex: 0,
-          backgroundImage: "url('/backgrounds/Background-9.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
-          width: "100%",
-          height: "100%",
-        }}
-      />
-      {/* Dark overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          zIndex: 1,
-          background: "linear-gradient(to bottom, rgba(10,8,6,0.80) 0%, rgba(10,8,6,0.72) 50%, rgba(10,8,6,0.85) 100%)",
-        }}
-      />
+    <section
+      className="relative py-20 overflow-hidden"
+      style={{
+        backgroundImage: "url('/backgrounds/Background-10.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
 
       {/* Content */}
       <div className="relative px-4" style={{ zIndex: 2 }}>
