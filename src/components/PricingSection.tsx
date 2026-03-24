@@ -88,7 +88,7 @@ const PricingSection = () => {
         {/* Urgência */}
         <p style={{
           textAlign: "center", fontWeight: 700, fontSize: "20px",
-          color: "white", marginBottom: "32px"
+          color: "white", marginBottom: "32px", transform: "translateY(-40px)"
         }}>
           Lote 1 encerra em 06/04 · <span style={{ color: "#D15E4A" }}>Vagas limitadas</span>
         </p>
@@ -98,7 +98,7 @@ const PricingSection = () => {
           href="#"
           style={{
             display: "block", width: "fit-content",
-            margin: "0 auto 16px",
+            margin: "0 auto 16px", transform: "translateY(-40px)",
             fontWeight: 700, fontSize: "16px",
             letterSpacing: "0.06em", textTransform: "uppercase" as const,
             color: "#1a1a1a", background: "#D97706",
@@ -109,18 +109,18 @@ const PricingSection = () => {
           }}
           onMouseEnter={e => {
             (e.currentTarget as HTMLElement).style.boxShadow = "0 0 30px rgba(217,119,6,0.95), 0 0 60px rgba(217,119,6,0.55), 0 0 120px rgba(217,119,6,0.3)";
-            (e.currentTarget as HTMLElement).style.transform = "translateY(-2px) scale(1.02)";
+            (e.currentTarget as HTMLElement).style.transform = "translateY(calc(-40px - 2px)) scale(1.02)";
           }}
           onMouseLeave={e => {
             (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3), 0 0 80px rgba(217,119,6,0.15)";
-            (e.currentTarget as HTMLElement).style.transform = "none";
+            (e.currentTarget as HTMLElement).style.transform = "translateY(-40px)";
           }}
         >
           GARANTIR MINHA VAGA · R$47
         </a>
 
         {/* Barra de vagas */}
-        <div style={{ width: "320px", margin: "0 auto", textAlign: "center" }}>
+        <div style={{ width: "320px", margin: "0 auto", textAlign: "center", transform: "translateY(-40px)" }}>
           <div style={{ background: "#333", borderRadius: "999px", height: "6px", overflow: "hidden" }}>
             <div style={{ width: "81%", background: "#D97706", borderRadius: "999px", height: "100%" }} />
           </div>
