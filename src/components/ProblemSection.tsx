@@ -77,6 +77,13 @@ const ProblemSection = () => {
           {cards.map((card, i) => (
             <div key={i} className="flex flex-col items-center">
 
+              {/* Ícone acima do card */}
+              {i === 1 && (
+                <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="/icons/Cerebro-3.png" alt="Ícone" className="w-full h-full object-contain" />
+                </div>
+              )}
+
               {/* Card Independente */}
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
