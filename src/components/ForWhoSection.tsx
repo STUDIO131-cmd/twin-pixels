@@ -87,11 +87,13 @@ const ForWhoSection = () => {
                 boxShadow: "0 16px 48px rgba(0,0,0,0.3)",
               }}
               style={{
-                background: "#EFE7DA",
+                background: "rgba(240, 235, 225, 0.45)",
+                backdropFilter: "blur(12px)",
+                WebkitBackdropFilter: "blur(12px)",
                 borderRadius: "20px",
                 padding: "24px 24px 28px",
-                border: "1px solid rgba(0,0,0,0.06)",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+                border: "1px solid rgba(255, 255, 255, 0.5)",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
