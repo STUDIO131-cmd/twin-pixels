@@ -84,7 +84,7 @@ const IdentificationSection = () => {
               }}
             >
               {/* Ícone com glow */}
-              <div className="relative" style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "12px", marginTop: "-20px", minHeight: "auto", overflow: "hidden" }}>
+              <div className="relative" style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "-4px", marginTop: "-28px", minHeight: "auto", overflow: "hidden" }}>
                 <img
                   src={card.icon}
                   alt=""
@@ -94,7 +94,7 @@ const IdentificationSection = () => {
                     objectFit: "contain",
                     mixBlendMode: "screen",
                     display: "block",
-                    margin: "-50px auto",
+                    margin: "-80px auto",
                   }}
                 />
                 <div
