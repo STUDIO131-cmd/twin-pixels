@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const cards = [
   {
-    icon: "/icons/Liberal-2.png",
+    icon: "/icons/Layer_13.png",
     title: "Profissional-Marca",
     subtitle: "Você é o produto.",
     body: 'Nutricionista, psicólogo, arquiteto, advogado, contador, consultor. Seu nome é a marca. Sabe que precisa aparecer mais, mas na hora de se posicionar, trava. Não sabe como traduzir sua expertise em comunicação que o mercado entende — e que converte em cliente.',
