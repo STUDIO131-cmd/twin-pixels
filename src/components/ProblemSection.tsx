@@ -75,11 +75,11 @@ const ProblemSection = () => {
         {/* Ícones + Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto" style={{ maxWidth: '860px', alignItems: 'start' }}>
           {cards.map((card, i) => (
-            <div key={i} className="flex flex-col items-center">
+            <div key={i} className="relative flex flex-col items-center">
 
               {/* Ícone acima do card */}
               {i === 1 && (
-                <div className="w-32 h-32 mb-4 flex items-center justify-center" style={{ marginRight: 'auto', marginLeft: '-30%' }}>
+                <div className="absolute w-32 h-32 flex items-center justify-center" style={{ top: '-140px', left: '-30%' }}>
                   <img src="/icons/Cerebro-3.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
