@@ -48,12 +48,12 @@ const ScheduleSection = () => {
           }}
         >
           {/* Label */}
-          <p style={{ fontWeight: 300, fontSize: "13px", color: "#aaa", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "10px", textAlign: "left" }}>
+          <p className="text-center text-xs" style={{ fontWeight: 300, color: "#aaa", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "10px" }}>
             Como funciona
           </p>
 
           {/* Title */}
-          <h2 style={{ fontWeight: 700, fontSize: "clamp(24px, 3.5vw, 36px)", color: "white", lineHeight: 1.2, marginBottom: "28px", textAlign: "left" }}>
+          <h2 className="text-center text-3xl" style={{ fontWeight: 700, color: "white", lineHeight: 1.2, marginBottom: "28px" }}>
             Um dia. Online.
             <br />
             Direto ao que importa.
