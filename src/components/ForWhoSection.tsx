@@ -106,23 +106,10 @@ const ForWhoSection = () => {
             >
               {/* Header: title left, icon in fixed container right */}
               <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <div>
                   <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#eaeaea", marginBottom: "4px" }}>
                     {card.title}
                   </h3>
-                  {i === 0 && (
-                    <img
-                      src="/icons/personalizado-6.png"
-                      alt=""
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                        objectFit: "contain",
-                        filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                      }}
-                    />
-                  )}
-                </div>
                   <p style={{ fontWeight: 400, fontSize: "13px", color: "#eaeaea" }}>
                     {card.subtitle}
                   </p>
