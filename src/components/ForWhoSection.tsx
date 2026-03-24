@@ -106,7 +106,7 @@ const ForWhoSection = () => {
               }}
             >
               {/* Header: title left, icon right */}
-              <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
+              <div style={{ display: "flex", flexDirection: i % 2 === 1 ? "row-reverse" : "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
                 <div>
                   <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#eaeaea", marginBottom: "4px" }}>
                     {card.title}
