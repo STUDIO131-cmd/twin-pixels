@@ -42,7 +42,7 @@ const IdentificationSection = () => {
         <h2
           className="text-center text-white mx-auto mb-14"
           style={{
-            fontSize: "clamp(26px, 4vw, 44px)",
+            fontSize: "clamp(18px, 2.8vw, 31px)",
             fontWeight: 700,
             lineHeight: 1.2,
             maxWidth: "800px",
