@@ -1,182 +1,268 @@
 import { motion } from "framer-motion";
 
+const cards = [
+  {
+    icon: "/icons/Cérebro.png",
+    title: "Pode ser marca",
+    text: "O cliente não entende por que escolher você. Você parece igual a todo mundo.",
+  },
+  {
+    icon: "/icons/Dinheiro.png",
+    title: "Pode ser vendas",
+    text: "A demanda existe, mas não converte. Você perde cliente por falta de processo.",
+  },
+  {
+    icon: "/icons/Alto_Falante.png",
+    title: "Pode ser conteúdo",
+    text: "Você posta, mas não atrai quem deveria. O esforço não vira resultado.",
+  },
+];
+
+const arrowRotations = [
+  "rotate(-30deg) translateX(-20px)",
+  "rotate(5deg)",
+  "rotate(30deg) scaleX(-1) translateX(20px)",
+];
+
 const ProblemSection = () => {
   return (
     <section
-      className="relative py-24"
+      className="relative py-24 overflow-visible"
       style={{
-        backgroundColor: "#1C1917",
+        backgroundColor: "#EFE7DA",
+        backgroundImage:
+          "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
+        backgroundSize: "32px 32px",
         borderTopLeftRadius: "32px",
         borderTopRightRadius: "32px",
       }}
     >
       <div className="container max-w-5xl mx-auto px-4">
         {/* Label */}
-        <p className="text-center text-[13px] font-light tracking-[0.1em] uppercase text-[#888] mb-5">
+        <p
+          className="text-center uppercase mb-4"
+          style={{ fontWeight: 300, fontSize: "13px", color: "#888", letterSpacing: "0.1em" }}
+        >
           O que ninguém fala
         </p>
 
         {/* Título */}
         <h2
-          className="text-center font-bold mx-auto mb-12 leading-[1.2]"
-          style={{ fontSize: "clamp(28px, 4vw, 44px)", maxWidth: "720px" }}
+          className="text-center mx-auto mb-12"
+          style={{
+            fontSize: "clamp(24px, 3.5vw, 40px)",
+            maxWidth: "720px",
+            lineHeight: 1.2,
+            fontWeight: 700,
+          }}
         >
-          <span>O problema </span>
-          <span className="text-[#D97706]">não é falta de esforço.</span>
+          <span style={{ color: "#1a1a1a" }}>O problema </span>
+          <span style={{ color: "#D97706", fontWeight: 700 }}>não é falta de esforço.</span>
           <br />
-          <span className="text-white">É não saber onde está o gargalo.</span>
+          <span style={{ color: "#1a1a1a" }}>É não saber onde está o gargalo.</span>
         </h2>
 
         {/* 3 negações */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 mb-2">
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto mb-2"
+          style={{ maxWidth: "700px", textAlign: "center" }}
+        >
           {[
             { pre: "Não precisa de", bold: "mais", post: "conteúdo." },
             { pre: "Não precisa de", bold: "mais", post: "informação." },
             { pre: "Você não precisa de", bold: "mais", post: "curso." },
           ].map((item, i) => (
-            <p key={i} className="text-[15px] font-light text-[#aaa]">
-              {item.pre} <span className="font-bold text-white">{item.bold}</span> {item.post}
+            <p key={i} style={{ fontSize: "16px", lineHeight: 1.5, color: "#555", fontWeight: 300 }}>
+              {item.pre}{" "}
+              <span style={{ fontWeight: 700, color: "#1a1a1a" }}>{item.bold}</span>{" "}
+              {item.post}
             </p>
           ))}
         </div>
 
-        {/* Elipse com texto */}
-        <div className="relative mx-auto my-6" style={{ maxWidth: "500px" }}>
-          <svg viewBox="0 0 500 80" className="w-full h-auto">
-            <ellipse
-              cx="250" cy="40" rx="240" ry="34"
-              stroke="white" strokeWidth="2" fill="none"
-              strokeDasharray="1600" strokeDashoffset="1600"
-              className="animate-[drawEllipse_1.2s_ease_forwards_0.3s]"
-            />
-          </svg>
-          <p className="absolute inset-0 flex items-center justify-center text-center text-white text-[15px] md:text-[16px] font-normal px-10">
+        {/* Elipse com imagem PNG */}
+        <div
+          className="relative mx-auto"
+          style={{ maxWidth: "580px", height: "90px", marginTop: "32px" }}
+        >
+          <img
+            src="/icons/Círculo.png"
+            alt=""
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              mixBlendMode: "multiply",
+              opacity: 0.7,
+            }}
+          />
+          <p
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "90%",
+              textAlign: "center",
+              fontWeight: 600,
+              fontSize: "16px",
+              color: "#1a1a1a",
+              lineHeight: 1.4,
+            }}
+          >
             Você precisa saber qual parte do seu negócio está travando o resto:
           </p>
         </div>
 
-        {/* Setas desenhadas */}
-        <div className="grid grid-cols-3 gap-6 max-w-3xl mx-auto mb-2">
-          {[1.0, 1.2, 1.4].map((delay, i) => (
-            <div key={i} className="flex justify-center">
-              <svg width="40" height="60" viewBox="0 0 40 60" fill="none">
-                <path
-                  d="M20 4 Q26 28 18 52"
-                  stroke="white" strokeWidth="1.5" strokeLinecap="round"
-                  strokeDasharray="60" strokeDashoffset="60"
-                  style={{ animation: `drawArrow 0.6s ease forwards ${delay}s` }}
+        {/* Setas PNG */}
+        <div
+          className="relative mx-auto flex justify-around items-start"
+          style={{ maxWidth: "700px", height: "80px" }}
+        >
+          {arrowRotations.map((rot, i) => (
+            <motion.img
+              key={i}
+              src="/icons/Setas.png"
+              alt=""
+              initial={{ opacity: 0, y: -16 }}
+              whileInView={{ opacity: 0.65, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 + i * 0.2 }}
+              style={{
+                width: "80px",
+                height: "auto",
+                objectFit: "contain",
+                mixBlendMode: "multiply",
+                transform: rot,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Ícones + Cards */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto"
+          style={{ maxWidth: "860px", alignItems: "start" }}
+        >
+          {cards.map((card, i) => (
+            <div key={i}>
+              {/* Ícone flutuante acima do card */}
+              <div
+                className="flex justify-center w-full"
+                style={{ marginBottom: "-20px", position: "relative", zIndex: 2 }}
+              >
+                <img
+                  src={card.icon}
+                  alt=""
+                  style={{
+                    width: "110px",
+                    height: "110px",
+                    objectFit: "contain",
+                    mixBlendMode: "multiply",
+                    display: "block",
+                  }}
                 />
-                <path
-                  d="M12 46 L18 52 L24 46"
-                  stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-                  strokeDasharray="20" strokeDashoffset="20"
-                  style={{ animation: `drawArrow 0.3s ease forwards ${delay + 0.6}s` }}
-                />
-              </svg>
+              </div>
+
+              {/* Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: i * 0.15,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className="transition-all duration-300 cursor-pointer"
+                style={{
+                  background: "rgba(50,42,35,0.88)",
+                  backdropFilter: "blur(12px)",
+                  WebkitBackdropFilter: "blur(12px)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px 32px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  textAlign: "left",
+                  position: "relative",
+                  zIndex: 1,
+                }}
+                whileHover={{
+                  y: -6,
+                  borderColor: "rgba(217,119,6,0.25)",
+                }}
+              >
+                <h3 style={{ fontWeight: 700, color: "white", fontSize: "16px", marginBottom: "12px" }}>
+                  {card.title}
+                </h3>
+                <p style={{ fontWeight: 400, color: "#bbb", fontSize: "14px", lineHeight: 1.7 }}>
+                  {card.text}
+                </p>
+              </motion.div>
             </div>
           ))}
         </div>
 
-        {/* Ícones ilustrativos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-2">
-          {[
-            /* Cérebro */
-            <svg key="brain" width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#ccc" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M40 60V44" />
-              <path d="M28 44c-6-2-10-8-10-14 0-8 6-14 14-14 2 0 4 0.5 6 1.2" />
-              <path d="M52 44c6-2 10-8 10-14 0-8-6-14-14-14-2 0-4 0.5-6 1.2" />
-              <path d="M32 16c0-4 4-8 8-8s8 4 8 8" />
-              <path d="M24 34c-2 0-4-2-4-4s2-4 4-4" />
-              <path d="M56 34c2 0 4-2 4-4s-2-4-4-4" />
-              <path d="M34 30c0 3 3 6 6 6s6-3 6-6" />
-              <path d="M30 44h20" />
-              <path d="M32 48h16" />
-              <path d="M34 52h12" />
-            </svg>,
-            /* Dinheiro */
-            <svg key="money" width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#ccc" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="12" y="22" width="40" height="28" rx="3" />
-              <circle cx="32" cy="36" r="8" />
-              <path d="M32 30v12M28 34h8" />
-              <path d="M20 26v0M44 46v0" />
-              <path d="M52 22l12-6v28l-12 6" />
-              <path d="M56 18l8-4" />
-              <path d="M56 50l8-4" />
-              <path d="M48 16l-4 2" />
-              <path d="M58 28c2 2 2 6 0 8" />
-            </svg>,
-            /* Megafone */
-            <svg key="megaphone" width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#ccc" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M18 32h8v16h-8z" />
-              <path d="M26 30l24-10v40L26 50V30z" />
-              <path d="M50 30c4 2 6 6 6 10s-2 8-6 10" />
-              <path d="M54 24c6 4 10 10 10 16s-4 12-10 16" />
-              <path d="M22 48v10c0 2 2 4 4 4h4c2 0 4-2 4-4V50" />
-            </svg>,
-          ].map((icon, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="flex justify-center"
-            >
-              {icon}
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-          {[
-            {
-              title: "Pode ser marca",
-              text: "O cliente não entende por que escolher você. Você parece igual a todo mundo.",
-            },
-            {
-              title: "Pode ser vendas",
-              text: "A demanda existe, mas não converte. Você perde cliente por falta de processo.",
-            },
-            {
-              title: "Pode ser conteúdo",
-              text: "Você posta, mas não atrai quem deveria. O esforço não vira resultado.",
-            },
-          ].map((card, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="rounded-2xl p-5 pb-7 text-center"
-              style={{
-                background: "rgba(255,255,255,0.06)",
-                backdropFilter: "blur(8px)",
-                WebkitBackdropFilter: "blur(8px)",
-                border: "1px solid rgba(255,255,255,0.1)",
-              }}
-            >
-              <h3 className="font-semibold text-white text-[16px] mb-2.5">{card.title}</h3>
-              <p className="font-normal text-[#bbb] text-[14px] leading-[1.6]">{card.text}</p>
-            </motion.div>
-          ))}
-        </div>
-
         {/* Texto final */}
-        <p className="text-center font-light text-[#aaa] text-[17px] leading-[1.7] max-w-[560px] mx-auto mt-14">
+        <p
+          className="text-center mx-auto"
+          style={{
+            marginTop: "52px",
+            maxWidth: "560px",
+            fontSize: "18px",
+            lineHeight: 1.7,
+            fontWeight: 400,
+            color: "#555",
+          }}
+        >
           Enquanto não souber qual é o seu gargalo,
           <br />
           vai continuar tentando resolver tudo
           <br />
-          <span className="font-bold text-white">— e não resolver nada.</span>
+          <span style={{ fontWeight: 700, color: "#1a1a1a" }}>— e não resolver nada.</span>
         </p>
 
         {/* CTA */}
-        <div className="mt-10 text-center">
+        <div className="mt-11 text-center">
           <a
             href="#preco"
-            className="hero-cta-btn inline-block px-12 py-[18px] rounded-lg font-bold text-[15px] tracking-[0.06em] uppercase text-[#1a1a1a] bg-[#D97706] cursor-pointer transition-all duration-200"
+            className="inline-block cursor-pointer transition-all duration-200"
+            style={{
+              fontWeight: 700,
+              fontSize: "14px",
+              letterSpacing: "0.06em",
+              textTransform: "uppercase",
+              color: "#1a1a1a",
+              background: "#D97706",
+              borderRadius: "999px",
+              padding: "18px 48px",
+              border: "none",
+              boxShadow:
+                "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28)",
+            }}
+            onMouseEnter={(e) => {
+              const t = e.currentTarget;
+              t.style.boxShadow =
+                "0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5)";
+              t.style.transform = "translateY(-2px) scale(1.02)";
+            }}
+            onMouseLeave={(e) => {
+              const t = e.currentTarget;
+              t.style.boxShadow =
+                "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28)";
+              t.style.transform = "none";
+            }}
+            onMouseDown={(e) => {
+              e.currentTarget.style.transform = "scale(0.98)";
+            }}
+            onMouseUp={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px) scale(1.02)";
+            }}
           >
             QUERO DESCOBRIR O MEU GARGALO · R$47
           </a>
