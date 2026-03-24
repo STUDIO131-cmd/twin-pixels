@@ -92,7 +92,7 @@ const OutcomeSection = () => {
                 style={{
                   mixBlendMode: "multiply",
                   maxWidth: "100%",
-                  width: "640px",
+                  width: "1920px",
                   height: "auto",
                   objectFit: "contain" as const,
                 }}
