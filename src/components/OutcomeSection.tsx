@@ -149,26 +149,6 @@ const OutcomeSection = () => {
       </div>
 
       <style>{`
-        .tv-float-container {
-          animation: tvFloat 5s ease-in-out infinite;
-          animation-delay: 1.2s;
-        }
-        .tv-float-container:hover {
-          transform: scale(1.04) rotate(1deg);
-          filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
-          transition: all 0.4s ease;
-        }
-        @keyframes tvFloat {
-          0%, 100% { transform: translateY(0px) rotate(-1deg); }
-          50%       { transform: translateY(-12px) rotate(1deg); }
-        }
-        .screen-glow {
-          animation: screenGlow 3s ease-in-out infinite;
-        }
-        @keyframes screenGlow {
-          0%, 100% { opacity: 0.3; }
-          50%       { opacity: 0.7; }
-        }
         .clarity-cta:hover {
           box-shadow: 0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5), 0 0 120px rgba(217,119,6,0.25) !important;
           transform: translateY(-2px) scale(1.02);
