@@ -77,6 +77,7 @@ const ForWhoSection = () => {
         >
           {cards.map((card, i) => (
             <motion.div
+              className="text-[#efe0c8]"
               key={i}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
