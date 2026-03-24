@@ -291,6 +291,32 @@ const ProblemSection = () => {
           </a>
         </div>
       </div>
+      <style>{`
+        @keyframes drawLine {
+          to { stroke-dashoffset: 0; }
+        }
+        .draw-ellipse {
+          animation: drawLine 1.5s ease forwards 0.5s;
+        }
+        .draw-arrow-s1 {
+          animation: drawLine 0.8s ease forwards 1.2s;
+        }
+        .draw-arrowhead-s1 {
+          animation: drawLine 0.3s ease forwards 2s;
+        }
+        .draw-arrow-s2 {
+          animation: drawLine 0.8s ease forwards 1.4s;
+        }
+        .draw-arrowhead-s2 {
+          animation: drawLine 0.3s ease forwards 2.2s;
+        }
+        .draw-arrow-s3 {
+          animation: drawLine 0.8s ease forwards 1.6s;
+        }
+        .draw-arrowhead-s3 {
+          animation: drawLine 0.3s ease forwards 2.4s;
+        }
+      `}</style>
     </section>
   );
 };
