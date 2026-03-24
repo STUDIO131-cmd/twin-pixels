@@ -2,13 +2,8 @@ import { motion } from "framer-motion";
 
 const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false, iconPos = "left" }: any) => (
   <div className="relative w-full max-w-[860px] mx-auto mb-12">
-    {/* Floating Decorative Icon */}
-    <motion.img 
-      src={icon} 
-      className={`absolute -top-12 ${iconPos === 'left' ? 'left-4' : 'right-4'} w-20 h-20 z-20 mix-blend-screen hidden md:block`}
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 4, repeat: Infinity }}
-    />
+
+
     
     <div className="relative overflow-hidden rounded-[20px] shadow-2xl">
       <img src={img} alt="" className="w-full h-auto object-cover" />
