@@ -16,7 +16,7 @@ const ScheduleSection = () => {
         className="absolute inset-0"
         style={{
           zIndex: 0,
-          backgroundImage: "url('/backgrounds/Background-3.png')",
+          backgroundImage: "url('/backgrounds/Background-9.png')",
           backgroundSize: "cover",
           backgroundPosition: "center top",
           width: "100%",
