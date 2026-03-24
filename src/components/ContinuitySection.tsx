@@ -96,7 +96,7 @@ const ContinuitySection = () => {
                 mixBlendMode: 'multiply',
                 display: 'block',
                 filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
-                transform: 'translateY(calc(-20% - 40px))',
+                transform: 'translateY(calc(-20% - 80px))',
               }}
             />
           </div>
