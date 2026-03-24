@@ -73,7 +73,7 @@ const ProblemSection = () => {
         </div>
 
         {/* Ícones + Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto" style={{ maxWidth: '860px', alignItems: 'start', marginTop: '40%' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto" style={{ maxWidth: '860px', alignItems: 'start', marginTop: '24%' }}>
           {cards.map((card, i) => (
             <div key={i} className="relative flex flex-col items-center">
 
