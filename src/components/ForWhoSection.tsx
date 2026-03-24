@@ -88,9 +88,8 @@ const ForWhoSection = () => {
                 boxShadow: "0 16px 48px rgba(0,0,0,0.3)",
               }}
               style={{
-                background: "rgba(235, 228, 215, 0.25)",
-                backdropFilter: "blur(24px)",
-                WebkitBackdropFilter: "blur(24px)",
+                background: "#EFE1CA",
+                
                 borderRadius: "20px",
                 padding: "24px 24px 28px",
                 border: "1px solid rgba(255, 255, 255, 0.35)",
@@ -119,8 +118,8 @@ const ForWhoSection = () => {
                   src={card.icon}
                   alt={card.title}
                   style={{
-                    width: "270px",
-                    height: "270px",
+                    width: "72px",
+                    height: "72px",
                     objectFit: "contain",
                     mixBlendMode: "multiply",
                     flexShrink: 0,
