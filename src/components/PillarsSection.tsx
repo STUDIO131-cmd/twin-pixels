@@ -60,7 +60,7 @@ const PillarsSection = () => {
         padding: '36px 0px',
         boxShadow: '0 8px 32px rgba(0,0,0,0.08), inset 0 1px 1px rgba(255,255,255,0.5), inset 0 -1px 1px rgba(255,255,255,0.1)',
       }}>
-        <div className="text-center mb-20">
+        <div className="text-center mb-14">
           <p className="text-[13px] tracking-widest text-neutral-500 mb-3">A estrutura</p>
           <h2 className="text-[32px] md:text-[48px] font-bold text-neutral-900 leading-tight">Três perguntas.<br />Um diagnóstico.</h2>
         </div>
