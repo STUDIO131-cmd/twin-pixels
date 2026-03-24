@@ -2,35 +2,33 @@ import { motion } from "framer-motion";
 
 const schedule = [
   { time: "9:00h", color: "#D15E4A", title: "Clareza de Marca", desc: "Por que o cliente te escolheria? Você analisa diferencial, promessa e posicionamento." },
-  { time: "11:00h", color: "#C96840", title: "Conteúdo Inteligente", desc: "O que você posta está atraindo? Você analisa pilares, formatos e rotina." },
-  { time: "12:00h", color: "#C07235", title: "Pausa", desc: "Intervalo para processar." },
-  { time: "13:00h", color: "#B87C2A", title: "Receita Estruturada", desc: "Onde está perdendo dinheiro? Você analisa preço, conversão e relacionamento." },
+  { time: "11:00h", color: "#C86840", title: "Conteúdo Inteligente", desc: "O que você posta está atraindo? Você analisa pilares, formatos e rotina." },
+  { time: "12:00h", color: "#BF7235", title: "Pausa", desc: "Intervalo para processar." },
+  { time: "13:00h", color: "#B67C2B", title: "Receita Estruturada", desc: "Onde está perdendo dinheiro? Você analisa preço, conversão e relacionamento." },
   { time: "15:00h", color: "#D97706", title: "Diagnóstico", desc: "Você identifica o gargalo e define o próximo passo." },
 ];
 
 const ScheduleSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden" style={{ background: "#1a1008" }}>
-      {/* Light leak */}
+    <section className="relative py-20 overflow-hidden">
+      {/* Background image */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0"
         style={{
           zIndex: 0,
-          background: [
-            "radial-gradient(ellipse at top left, rgba(180,60,30,0.35) 0%, transparent 55%)",
-            "radial-gradient(ellipse at bottom right, rgba(120,40,20,0.25) 0%, transparent 50%)",
-            "radial-gradient(ellipse at top right, rgba(80,30,10,0.15) 0%, transparent 40%)",
-          ].join(", "),
+          backgroundImage: "url('/backgrounds/Background-3.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          width: "100%",
+          height: "100%",
         }}
       />
-      {/* Noise */}
+      {/* Dark overlay */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0"
         style={{
           zIndex: 1,
-          opacity: 0.06,
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-          backgroundSize: "200px 200px",
+          background: "linear-gradient(to bottom, rgba(10,8,6,0.80) 0%, rgba(10,8,6,0.72) 50%, rgba(10,8,6,0.85) 100%)",
         }}
       />
 
@@ -39,28 +37,30 @@ const ScheduleSection = () => {
         <div
           className="mx-auto"
           style={{
-            maxWidth: "720px",
-            background: "rgba(40,30,20,0.6)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
+            maxWidth: "680px",
+            background: "rgba(30, 22, 14, 0.65)",
+            backdropFilter: "blur(24px)",
+            WebkitBackdropFilter: "blur(24px)",
             border: "1px solid rgba(255,255,255,0.08)",
             borderRadius: "24px",
-            padding: "48px 52px",
-            boxShadow: "0 32px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)",
+            padding: "48px 52px 52px",
+            boxShadow: "0 32px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06)",
           }}
         >
           {/* Label */}
-          <p className="text-center uppercase mb-3" style={{ fontWeight: 300, fontSize: "13px", color: "#aaa", letterSpacing: "0.1em" }}>
+          <p style={{ fontWeight: 300, fontSize: "13px", color: "#aaa", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "10px", textAlign: "left" }}>
             Como funciona
           </p>
 
           {/* Title */}
-          <h2 className="text-center mb-8" style={{ fontWeight: 700, fontSize: "clamp(24px, 3.5vw, 38px)", color: "white" }}>
-            Um dia. Online. Direto ao que importa.
+          <h2 style={{ fontWeight: 700, fontSize: "clamp(24px, 3.5vw, 36px)", color: "white", lineHeight: 1.2, marginBottom: "28px", textAlign: "left" }}>
+            Um dia. Online.
+            <br />
+            Direto ao que importa.
           </h2>
 
           {/* Date */}
-          <p className="text-center mb-9" style={{ fontWeight: 600, fontSize: "15px", color: "#ccc" }}>
+          <p className="text-center" style={{ fontWeight: 600, fontSize: "15px", color: "#ccc", marginBottom: "24px" }}>
             11 de abril · Online
           </p>
 
@@ -69,33 +69,34 @@ const ScheduleSection = () => {
             {schedule.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -16 }}
+                initial={{ opacity: 0, x: -12 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.12 }}
               >
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }} />
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }} />
                 <div
-                  className="flex items-center gap-8"
-                  style={{ padding: "20px 0", cursor: "default" }}
+                  className="flex items-center"
+                  style={{ padding: "18px 0", gap: "28px", cursor: "default" }}
                 >
                   <span
                     style={{
                       fontWeight: 700,
-                      fontSize: "clamp(32px, 5vw, 52px)",
+                      fontSize: "clamp(28px, 4.5vw, 46px)",
                       color: item.color,
-                      minWidth: "160px",
+                      minWidth: "140px",
                       lineHeight: 1,
                       letterSpacing: "-0.02em",
+                      flexShrink: 0,
                     }}
                   >
                     {item.time}
                   </span>
-                  <div>
-                    <p style={{ fontWeight: 600, fontSize: "16px", color: "white", marginBottom: "4px" }}>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "4px" }}>
+                    <p style={{ fontWeight: 600, fontSize: "15px", color: "white" }}>
                       {item.title}
                     </p>
-                    <p style={{ fontWeight: 400, fontSize: "14px", color: "#aaa", lineHeight: 1.6 }}>
+                    <p style={{ fontWeight: 400, fontSize: "13px", color: "#aaa", lineHeight: 1.6 }}>
                       {item.desc}
                     </p>
                   </div>
@@ -103,11 +104,11 @@ const ScheduleSection = () => {
               </motion.div>
             ))}
             {/* Final divider */}
-            <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }} />
+            <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }} />
           </div>
 
           {/* CTA */}
-          <div className="text-center" style={{ marginTop: "44px" }}>
+          <div style={{ marginTop: "40px", textAlign: "center" }}>
             <a
               href="#preco"
               className="schedule-cta inline-block"
@@ -124,6 +125,7 @@ const ScheduleSection = () => {
                 cursor: "pointer",
                 transition: "all 0.2s ease",
                 boxShadow: "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28), 0 0 80px rgba(217,119,6,0.12)",
+                textDecoration: "none",
               }}
             >
               RESERVAR MEU LUGAR · R$47
@@ -139,6 +141,13 @@ const ScheduleSection = () => {
         }
         .schedule-cta:active {
           transform: translateY(0px) scale(0.98) !important;
+        }
+        @media (max-width: 640px) {
+          .schedule-card-inner {
+            padding: 32px 24px 40px !important;
+            border-radius: 16px !important;
+            margin: 0 16px !important;
+          }
         }
       `}</style>
     </section>
