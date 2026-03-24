@@ -75,52 +75,50 @@ const ForWhoSection = () => {
           style={{ gridTemplateColumns: "repeat(2, 1fr)", maxWidth: "900px", margin: "0 auto", alignItems: "stretch" }}
         >
           {cards.map((card, i) => (
-            <motion.div
-              className="text-[#efe0c8]"
-              key={i}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 16px 48px rgba(0,0,0,0.3)",
-              }}
-              style={{
-                background: "linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
-                backdropFilter: "blur(40px) saturate(1.4)",
-                WebkitBackdropFilter: "blur(40px) saturate(1.4)",
-                borderRadius: "28px",
-                padding: "32px 32px 36px",
-                border: "1px solid rgba(255,255,255,0.45)",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.06), inset 0 1px 1px rgba(255,255,255,0.6), inset 0 -1px 1px rgba(255,255,255,0.1)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                textAlign: "left",
-                position: "relative",
-                overflow: "hidden",
-                cursor: "pointer",
-                transition: "border-color 0.3s ease",
-              }}
-            >
-              {/* Icon top-left corner for first card */}
+            <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+              {/* Icon above card for first card */}
               {i === 0 && (
                 <img
                   src="/icons/personalizado-7.png"
                   alt=""
                   style={{
-                    position: "absolute",
-                    top: "-8px",
-                    left: "-8px",
                     width: "64px",
                     height: "64px",
                     objectFit: "contain",
                     filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                    zIndex: 1,
+                    marginBottom: "8px",
                   }}
                 />
               )}
+              <motion.div
+                className="text-[#efe0c8]"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{
+                  y: -6,
+                  boxShadow: "0 16px 48px rgba(0,0,0,0.3)",
+                }}
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
+                  backdropFilter: "blur(40px) saturate(1.4)",
+                  WebkitBackdropFilter: "blur(40px) saturate(1.4)",
+                  borderRadius: "28px",
+                  padding: "32px 32px 36px",
+                  border: "1px solid rgba(255,255,255,0.45)",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.06), inset 0 1px 1px rgba(255,255,255,0.6), inset 0 -1px 1px rgba(255,255,255,0.1)",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  textAlign: "left",
+                  position: "relative",
+                  overflow: "hidden",
+                  cursor: "pointer",
+                  transition: "border-color 0.3s ease",
+                  width: "100%",
+                }}
+              >
               {/* Header: title left, icon in fixed container right */}
               <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
                 <div>
