@@ -88,7 +88,19 @@ const IdentificationSection = () => {
                 <img
                   src={card.icon}
                   alt=""
-                  style={{
+                  style={card.icon.includes('Loja') ? {
+                    width: '280px',
+                    height: '280px',
+                    objectFit: 'contain',
+                    mixBlendMode: 'screen',
+                    display: 'block',
+                    margin: '0 auto',
+                    position: 'relative',
+                    left: '0',
+                    transform: 'translateX(0)',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                  } : {
                     width: '280px',
                     height: '280px',
                     objectFit: 'contain',
