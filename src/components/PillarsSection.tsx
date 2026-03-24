@@ -59,7 +59,7 @@ const PillarsSection = () => {
         {/* Overlay escuro para legibilidade */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(239,231,218,0.92) 0%, rgba(239,231,218,0.75) 30%, rgba(239,231,218,0.75) 70%, rgba(239,231,218,0.92) 100%)' }} />
       </div>
-      <div className="max-w-[900px] mx-auto">
+      <div className="max-w-[900px] mx-auto relative z-10">
         <div className="text-center mb-20">
           <p className="text-[13px] tracking-widest text-neutral-500 mb-3">A estrutura</p>
           <h2 className="text-[32px] md:text-[48px] font-bold text-neutral-900 leading-tight">Três perguntas. Um diagnóstico.</h2>
