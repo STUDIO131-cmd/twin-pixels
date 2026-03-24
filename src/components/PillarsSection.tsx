@@ -57,7 +57,7 @@ const PillarsSection = () => {
         WebkitBackdropFilter: 'blur(40px) saturate(1.4)',
         border: '1px solid rgba(255,255,255,0.4)',
         borderRadius: '28px',
-        padding: '48px 0px',
+        padding: '36px 0px',
         boxShadow: '0 8px 32px rgba(0,0,0,0.08), inset 0 1px 1px rgba(255,255,255,0.5), inset 0 -1px 1px rgba(255,255,255,0.1)',
       }}>
         <div className="text-center mb-20">
