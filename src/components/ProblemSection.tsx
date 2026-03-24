@@ -80,15 +80,7 @@ const ProblemSection = () => {
           className="relative mx-auto flex items-center justify-center"
           style={{ width: "640px", maxWidth: "90vw", minHeight: "100px", marginTop: "32px" }}
         >
-          <svg viewBox="0 0 640 100" width="640" height="100" style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", zIndex: 0 }}>
-            <ellipse cx="320" cy="50" rx="310" ry="44"
-              stroke="white" strokeWidth="2.5" fill="none"
-              strokeLinecap="round"
-              strokeDasharray="2000"
-              strokeDashoffset="2000"
-              className="draw-ellipse"
-            />
-          </svg>
+          <img src="/icons/Circulo-2.png" alt="" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "640px", maxWidth: "90vw", height: "auto", zIndex: 0, mixBlendMode: "multiply" }} />
           <p
             style={{
               position: "relative",
