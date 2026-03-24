@@ -69,18 +69,19 @@ const ContinuitySection = () => {
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
-            gridTemplateRows: 'auto auto auto',
             gap: 0,
-            alignItems: 'center',
+            alignItems: 'start',
             position: 'relative',
             maxWidth: 780,
             margin: '0 auto',
           }}
         >
-          {/* TV — coluna esquerda, ocupa 2 linhas */}
+          {/* TV — coluna esquerda, container de altura fixa */}
           <div
             style={{
               gridRow: '1 / 4',
+              position: 'relative',
+              height: '400px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -89,49 +90,51 @@ const ContinuitySection = () => {
             <img
               src="/images/TV.png"
               alt="TV vintage"
-              className="continuity-tv-float"
+              className="continuity-tv-float absolute"
               style={{
                 width: 340,
                 height: 'auto',
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
-                display: 'block',
                 filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
-                transform: 'translateY(-20%)',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
               }}
             />
           </div>
 
-          {/* Coluna direita — Seta */}
+          {/* Coluna direita — Container de seta com altura fixa */}
           <div
             style={{
+              height: '80px',
+              position: 'relative',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               paddingLeft: 32,
-              paddingBottom: 8,
             }}
           >
             <img
               src="/icons/Seta.png"
               alt=""
+              className="absolute"
               style={{
                 width: 210,
                 height: 'auto',
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
-                display: 'block',
-                transform: 'scaleX(-1) translateX(30%) translateY(-20%)',
+                transform: 'scaleX(-1)',
+                left: '30%',
+                top: '50%',
+                translate: '0 -50%',
               }}
             />
           </div>
 
-          {/* Coluna direita — Texto */}
+          {/* Coluna direita — Texto independente */}
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
               paddingLeft: 32,
               paddingTop: 8,
               paddingBottom: 8,
@@ -139,7 +142,7 @@ const ContinuitySection = () => {
           >
             <p
               className="font-display"
-              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6, transform: 'translateY(-20%)' }}
+              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6 }}
             >
               A imersão <span style={{ fontWeight: 700 }}>funciona sozinha.</span>
               <br />
@@ -147,31 +150,32 @@ const ContinuitySection = () => {
             </p>
           </div>
 
-          {/* Coluna direita linha 2 — Seta 2 */}
+          {/* Coluna direita — Container de seta 2 com altura fixa */}
           <div
             style={{
-              display: 'flex',
-              alignItems: 'flex-start',
+              height: '60px',
+              position: 'relative',
               paddingLeft: 32,
-              paddingTop: 16,
             }}
           >
             <img
               src="/icons/Seta_2.png"
               alt=""
+              className="absolute"
               style={{
                 width: 140,
                 height: 'auto',
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
-                display: 'block',
-                transform: 'translateY(-20%)',
+                left: '32px',
+                top: '50%',
+                translate: '0 -50%',
               }}
             />
           </div>
         </div>
 
-        {/* Texto final */}
+        {/* Texto final — independente */}
         <p
           className="font-display"
           style={{
@@ -184,7 +188,6 @@ const ContinuitySection = () => {
             color: '#444',
             lineHeight: 1.7,
             textAlign: 'center',
-            transform: 'translateY(-20%)',
           }}
         >
           Mas se quiser continuar com estrutura, o próximo passo será apresentado no final da imersão —{' '}
@@ -206,7 +209,6 @@ const ContinuitySection = () => {
             padding: '16px 40px',
             textAlign: 'center',
             boxShadow: '0 0 20px rgba(217,119,6,0.4), 0 0 40px rgba(217,119,6,0.2)',
-            transform: 'translateY(-20%)',
           }}
         >
           <p className="font-display" style={{ fontWeight: 400, fontSize: 15, color: '#1a1a1a', margin: 0 }}>
@@ -220,8 +222,8 @@ const ContinuitySection = () => {
       {/* Responsive styles */}
       <style>{`
         @keyframes tvFloat {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-8px); }
+          0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+          50% { transform: translate(-50%, -50%) translateY(-8px); }
         }
         .continuity-tv-float {
           animation: tvFloat 4s ease-in-out infinite;
@@ -232,20 +234,22 @@ const ContinuitySection = () => {
           }
           .continuity-grid > div:first-child {
             grid-row: auto !important;
+            height: 280px !important;
             margin-bottom: 32px;
           }
           .continuity-grid > div:first-child img {
             width: 240px !important;
-            margin: 0 auto !important;
           }
           .continuity-grid > div:nth-child(2),
-          .continuity-grid > div:nth-child(3) {
+          .continuity-grid > div:nth-child(3),
+          .continuity-grid > div:nth-child(4) {
             padding-left: 0 !important;
-            align-items: center !important;
             text-align: center;
           }
-          .continuity-grid > div:nth-child(2) img,
-          .continuity-grid > div:nth-child(3) img {
+          .continuity-grid > div:nth-child(2) img {
+            width: 100px !important;
+          }
+          .continuity-grid > div:nth-child(4) img {
             width: 100px !important;
           }
         }

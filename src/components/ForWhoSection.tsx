@@ -43,7 +43,6 @@ const ForWhoSection = () => {
         backgroundColor: "transparent",
       }}
     >
-
       {/* Content */}
       <div className="relative z-10 max-w-[900px] mx-auto px-4" style={{ isolation: "isolate" }}>
         {/* Label */}
@@ -72,7 +71,7 @@ const ForWhoSection = () => {
 
         {/* Cards Grid 2x2 */}
         <div
-          className="grid gap-5"
+          className="forwho-grid grid gap-5"
           style={{ gridTemplateColumns: "repeat(2, 1fr)", maxWidth: "900px", margin: "0 auto", alignItems: "stretch" }}
         >
           {cards.map((card, i) => (
@@ -105,7 +104,7 @@ const ForWhoSection = () => {
                 transition: "border-color 0.3s ease",
               }}
             >
-              {/* Header: title left, icon right */}
+              {/* Header: title left, icon in fixed container right */}
               <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
                 <div>
                   <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#eaeaea", marginBottom: "4px" }}>
@@ -115,30 +114,29 @@ const ForWhoSection = () => {
                     {card.subtitle}
                   </p>
                 </div>
-                <img
-                  src={card.icon}
-                  alt={card.title}
-                  style={{
-                    width: "216px",
-                    height: "216px",
-                    objectFit: "contain",
-                    flexShrink: 0,
-                    marginLeft: "12px",
-                    marginTop: "-4px",
-                    filter: "brightness(0) invert(0.95) drop-shadow(0 0 8px rgba(234,234,234,0.6)) drop-shadow(0 0 20px rgba(234,234,234,0.3))",
-                  }}
-                />
+                {/* Container de ícone fixo */}
+                <div className="relative flex-shrink-0" style={{ width: '80px', height: '80px' }}>
+                  <img
+                    src={card.icon}
+                    alt={card.title}
+                    className="absolute inset-0 w-full h-full"
+                    style={{
+                      objectFit: "contain",
+                      filter: "brightness(0) invert(0.95) drop-shadow(0 0 8px rgba(234,234,234,0.6)) drop-shadow(0 0 20px rgba(234,234,234,0.3))",
+                    }}
+                  />
+                </div>
               </div>
 
               {/* Separator */}
               <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", margin: "0 0 20px 0", width: "100%" }} />
 
-              {/* Body */}
+              {/* Body — independente do ícone */}
               <p style={{ fontWeight: 400, fontSize: "14px", lineHeight: 1.8, color: "#eaeaea", marginBottom: "20px" }}>
                 {card.body}
               </p>
 
-              {/* Quote */}
+              {/* Quote — independente do ícone */}
               <p style={{ fontWeight: 700, fontSize: "14px", color: "#eaeaea" }}>
                 {card.quote}
               </p>
@@ -162,44 +160,36 @@ const ForWhoSection = () => {
         <div className="text-center" style={{ marginTop: "48px" }}>
           <a
             href="#preco"
+            className="forwho-cta inline-block uppercase cursor-pointer"
             style={{
-              display: "inline-block",
               fontWeight: 700,
               fontSize: "15px",
               letterSpacing: "0.06em",
-              textTransform: "uppercase",
               color: "#1a1a1a",
               background: "#D97706",
               borderRadius: "999px",
               padding: "18px 52px",
               border: "none",
-              cursor: "pointer",
               boxShadow: "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28), 0 0 80px rgba(217,119,6,0.12)",
               transition: "all 0.2s ease",
               textDecoration: "none",
             }}
-            onMouseEnter={(e) => {
-              const t = e.currentTarget;
-              t.style.boxShadow = "0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5), 0 0 120px rgba(217,119,6,0.25)";
-              t.style.transform = "translateY(-2px) scale(1.02)";
-            }}
-            onMouseLeave={(e) => {
-              const t = e.currentTarget;
-              t.style.boxShadow = "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28), 0 0 80px rgba(217,119,6,0.12)";
-              t.style.transform = "translateY(0) scale(1)";
-            }}
-            onMouseDown={(e) => { e.currentTarget.style.transform = "translateY(0px) scale(0.98)"; }}
-            onMouseUp={(e) => { e.currentTarget.style.transform = "translateY(-2px) scale(1.02)"; }}
           >
             ISSO SOU EU · R$47
           </a>
         </div>
       </div>
 
-      {/* Responsive mobile override */}
       <style>{`
+        .forwho-cta:hover {
+          box-shadow: 0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5), 0 0 120px rgba(217,119,6,0.25) !important;
+          transform: translateY(-2px) scale(1.02);
+        }
+        .forwho-cta:active {
+          transform: translateY(0px) scale(0.98) !important;
+        }
         @media (max-width: 640px) {
-          .grid { grid-template-columns: 1fr !important; }
+          .forwho-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>

@@ -18,7 +18,6 @@ const cards = [
   },
 ];
 
-
 const ProblemSection = () => {
   return (
     <section
@@ -73,25 +72,36 @@ const ProblemSection = () => {
           ))}
         </div>
 
-
-
-
         {/* Ícones + Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto" style={{ maxWidth: '860px', alignItems: 'start' }}>
           {cards.map((card, i) => (
-            <div key={i}>
-              {/* Ícone flutuante acima do card */}
-              <div style={{ width: '100%', height: '160px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', overflow: 'visible', marginBottom: '-20px' }}>
-                <img src={card.icon} alt="" style={{ width: '240px', height: '240px', objectFit: 'contain', mixBlendMode: 'multiply', display: 'block', margin: '0 auto', transform: 'translateY(20%)' }} />
+            <div key={i} className="flex flex-col items-center">
+              {/* Container de Ícone com Altura Fixa */}
+              <div className="w-full relative flex items-center justify-center" style={{ height: '160px', overflow: 'visible' }}>
+                <img
+                  src={card.icon}
+                  alt=""
+                  className="absolute"
+                  style={{
+                    width: '240px',
+                    height: '240px',
+                    objectFit: 'contain',
+                    mixBlendMode: 'multiply',
+                    bottom: '-20px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    zIndex: 10,
+                  }}
+                />
               </div>
 
-              {/* Card */}
+              {/* Card Independente */}
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                className="transition-all duration-300 cursor-pointer"
+                className="w-full transition-all duration-300 cursor-pointer"
                 style={{
                   background: 'rgba(50,42,35,0.88)',
                   backdropFilter: 'blur(12px)',
@@ -104,7 +114,7 @@ const ProblemSection = () => {
                   alignItems: 'flex-start',
                   textAlign: 'left',
                   position: 'relative',
-                  zIndex: 1,
+                  zIndex: 0,
                 }}
                 whileHover={{ y: -6, borderColor: 'rgba(217,119,6,0.25)' }}
               >
@@ -125,17 +135,23 @@ const ProblemSection = () => {
         <div className="mt-11 text-center">
           <a
             href="#preco"
-            className="inline-block cursor-pointer transition-all duration-200"
-            style={{ fontWeight: 700, fontSize: '14px', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#1a1a1a', background: '#D97706', borderRadius: '999px', padding: '18px 48px', border: 'none', boxShadow: '0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28)' }}
-            onMouseEnter={(e) => { const t = e.currentTarget; t.style.boxShadow = '0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5)'; t.style.transform = 'translateY(-2px) scale(1.02)'; }}
-            onMouseLeave={(e) => { const t = e.currentTarget; t.style.boxShadow = '0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28)'; t.style.transform = 'none'; }}
-            onMouseDown={(e) => { e.currentTarget.style.transform = 'scale(0.98)'; }}
-            onMouseUp={(e) => { e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)'; }}
+            className="problem-cta inline-block cursor-pointer uppercase"
+            style={{ fontWeight: 700, fontSize: '14px', letterSpacing: '0.06em', color: '#1a1a1a', background: '#D97706', borderRadius: '999px', padding: '18px 48px', border: 'none', boxShadow: '0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28)', transition: 'all 0.2s ease', textDecoration: 'none' }}
           >
             QUERO DESCOBRIR O MEU GARGALO · R$47
           </a>
         </div>
       </div>
+
+      <style>{`
+        .problem-cta:hover {
+          box-shadow: 0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5) !important;
+          transform: translateY(-2px) scale(1.02);
+        }
+        .problem-cta:active {
+          transform: scale(0.98) !important;
+        }
+      `}</style>
     </section>
   );
 };
