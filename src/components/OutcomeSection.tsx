@@ -37,7 +37,7 @@ const OutcomeSection = () => {
             maxWidth: "700px",
           }}
         >
-          <span style={{ fontWeight: 400 }}>Você sai sabendo o problema.</span>
+          <span style={{ fontWeight: 700 }}>Você sai sabendo o problema.</span>
           <br />
           <span style={{ fontWeight: 700 }}>E o próximo passo.</span>
         </h2>

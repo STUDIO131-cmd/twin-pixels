@@ -51,10 +51,10 @@ const ProblemSection = () => {
             fontWeight: 700,
           }}
         >
-          <span style={{ color: "#1a1a1a" }}>O problema </span>
+          <span style={{ color: "#1a1a1a", fontWeight: 700 }}>O problema </span>
           <span style={{ color: "#D97706", fontWeight: 700 }}>não é falta de esforço.</span>
           <br />
-          <span style={{ color: "#1a1a1a" }}>É não saber onde está o gargalo.</span>
+          <span style={{ color: "#1a1a1a", fontWeight: 700 }}>É não saber onde está o gargalo.</span>
         </h2>
 
         {/* 3 negações */}

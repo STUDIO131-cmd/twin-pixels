@@ -85,7 +85,7 @@ const HeroSection = () => {
           Você trabalha demais
           <br />
           para depender de{' '}
-          <span style={{ color: '#D97706', fontStyle: 'italic', fontWeight: 700 }}>sorte</span>
+          <span style={{ color: '#D97706', fontWeight: 700 }}>sorte</span>
         </h1>
 
         {/* Subtitle */}
