@@ -51,7 +51,7 @@ const HeroSection = () => {
             src="/images/Produto.png"
             alt="Diagnóstico de próximo passo em um dia"
             style={{
-              width: 320,
+              width: 440,
               height: 'auto',
               display: 'block',
               margin: '0 auto 8px',
