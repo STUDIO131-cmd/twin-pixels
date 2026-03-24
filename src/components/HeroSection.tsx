@@ -51,7 +51,7 @@ const HeroSection = () => {
           alt="Produto"
           className="hero-float"
           style={{
-            width: 320,
+            width: 384,
             height: 'auto',
             display: 'block',
             margin: '0 auto 0',
@@ -81,21 +81,22 @@ const HeroSection = () => {
                 height: '100%',
                 position: 'relative',
                 boxShadow: '0 0 12px rgba(217,119,6,0.8), 0 0 24px rgba(217,119,6,0.4)',
+                overflow: 'hidden',
               }}
             />
-            {/* Light sweep overlay */}
-            <div
-              className="hero-light-sweep"
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                borderRadius: 999,
-                pointerEvents: 'none',
-              }}
-            />
+              {/* Light sweep overlay */}
+              <div
+                className="hero-light-sweep"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: 999,
+                  pointerEvents: 'none',
+                }}
+              />
           </div>
           <p className="font-display" style={{ fontWeight: 300, fontSize: 12, color: '#aaa', textAlign: 'center', marginTop: 6 }}>
             81% das vagas preenchidas a R$47,00
@@ -108,7 +109,7 @@ const HeroSection = () => {
           style={{
             fontWeight: 700,
             color: 'white',
-            fontSize: 'clamp(36px, 5.5vw, 64px)',
+            fontSize: 'clamp(29px, 4.4vw, 51px)',
             lineHeight: 1.15,
             textAlign: 'center',
             marginTop: 40,
