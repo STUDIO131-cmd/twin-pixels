@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const cards = [
   {
-    icon: "/icons/Cérebro.png",
+    icon: "/icons/Cerebro-2.png",
     title: "Pode ser marca",
     text: "O cliente não entende por que escolher você. Você parece igual a todo mundo.",
   },
