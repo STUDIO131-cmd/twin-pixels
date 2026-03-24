@@ -113,7 +113,7 @@ const PricingSection = () => {
           }}
           onMouseLeave={e => {
             (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3), 0 0 80px rgba(217,119,6,0.15)";
-            (e.currentTarget as HTMLElement).style.transform = "translateY(-40px)";
+            (e.currentTarget as HTMLElement).style.transform = "translateY(-90px)";
           }}
         >
           GARANTIR MINHA VAGA · R$47
