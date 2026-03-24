@@ -90,7 +90,7 @@ const IdentificationSection = () => {
                 </div>
               )}
               {i === 1 && (
-                <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                <div className="w-16 h-[100px] mb-4 flex items-center justify-center">
                   <img src="/icons/Layer_13-2.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
