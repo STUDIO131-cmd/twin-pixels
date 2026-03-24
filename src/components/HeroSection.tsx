@@ -82,7 +82,8 @@ const HeroSection = () => {
             marginTop: 40,
           }}
         >
-          Você trabalha demais<br />
+          Você trabalha demais
+          <br />
           para depender de{' '}
           <span style={{ color: '#D97706', fontStyle: 'italic', fontWeight: 700 }}>sorte</span>
         </h1>
