@@ -83,19 +83,26 @@ const IdentificationSection = () => {
               }}
             >
 
-              {/* Ícone acima do título */}
-              {i === 0 && (
-                <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                  <img src="/icons/personalizado-5.png" alt="Ícone" className="w-full h-full object-contain" />
-                </div>
+              {/* Ícone + Título */}
+              {i === 0 ? (
+                <>
+                  <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                    <img src="/icons/personalizado-5.png" alt="Ícone" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center gap-3 w-full mb-3">
+                    <img src="/icons/Layer_14.png" alt="Ícone loja" className="w-6 h-6 object-contain" />
+                    <h3 style={{ fontWeight: 700, fontSize: "15px", color: "white", lineHeight: 1.3, margin: 0 }}>
+                      {card.title}
+                    </h3>
+                  </div>
+                </>
+              ) : (
+                <h3
+                  style={{ fontWeight: 700, fontSize: "15px", color: "white", textAlign: "center", width: "100%", marginBottom: "12px", lineHeight: 1.3 }}
+                >
+                  {card.title}
+                </h3>
               )}
-
-              {/* Título */}
-              <h3
-                style={{ fontWeight: 700, fontSize: "15px", color: "white", textAlign: "center", width: "100%", marginBottom: "12px", lineHeight: 1.3 }}
-              >
-                {card.title}
-              </h3>
 
               {/* Texto — independente do ícone */}
               <p
