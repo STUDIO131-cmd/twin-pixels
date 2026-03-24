@@ -37,8 +37,8 @@ const OutcomeSection = () => {
             maxWidth: "700px",
           }}
         >
-          <span style={{ fontWeight: 700 }}>Você sai sabendo o problema.</span>{' '}
-          <span style={{ fontWeight: 700 }}>E o próximo passo.</span>
+          <span style={{ fontWeight: 700, fontSize: "clamp(19.6px, 2.8vw, 33.6px)" }}>Você sai sabendo o problema.</span>{' '}
+          <span style={{ fontWeight: 700, fontSize: "clamp(19.6px, 2.8vw, 33.6px)" }}>E o próximo passo.</span>
         </h2>
 
         {/* Grid 2 colunas */}
