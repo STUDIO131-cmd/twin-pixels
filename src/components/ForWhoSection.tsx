@@ -36,7 +36,7 @@ const ForWhoSection = () => {
     <section
       className="relative py-24"
       style={{
-        backgroundImage: "url('/backgrounds/Background.png')",
+        backgroundImage: "url('/backgrounds/Background_ForWho.png')",
         backgroundSize: "cover",
         backgroundPosition: "center top",
         backgroundRepeat: "no-repeat",
