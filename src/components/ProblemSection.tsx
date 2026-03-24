@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const cards = [
   {
-    icon: "/icons/Cérebro.png",
+    icon: "/icons/Cerebro-2.png",
     title: "Pode ser marca",
     text: "O cliente não entende por que escolher você. Você parece igual a todo mundo.",
   },
@@ -104,7 +104,7 @@ const ProblemSection = () => {
             <div key={i}>
               {/* Ícone flutuante acima do card */}
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', height: '140px', overflow: 'visible', marginBottom: '-20px', position: 'relative', zIndex: 2 }}>
-                <img src={card.icon} alt="" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', display: 'block' }} />
+                <img src={card.icon} alt="" style={{ width: '180px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', display: 'block', marginBottom: '-20px' }} />
               </div>
 
               {/* Card */}
