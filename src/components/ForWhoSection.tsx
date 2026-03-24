@@ -9,7 +9,7 @@ const cards = [
     quote: '"Sou bom no que faço, mas não sei mostrar isso."',
   },
   {
-    icon: "/icons/Clínica-2.png",
+    icon: "/icons/Homem.png",
     title: "Dono Operacional",
     subtitle: "Você é a face de um negócio com equipe.",
     body: 'Clínica, escritório, estúdio. Tem diferencial técnico, método próprio, resultado comprovado — mas ninguém sabe. O cliente chega por indicação e não entende o valor antes de experimentar. Você quer atrair o cliente certo antes dele precisar perguntar pra alguém.',
