@@ -232,18 +232,6 @@ const ForWhoSection = () => {
         </div>
       </div>
 
-      <style>{`
-        .forwho-cta:hover {
-          box-shadow: 0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5), 0 0 120px rgba(217,119,6,0.25) !important;
-          transform: translateY(-2px) scale(1.02);
-        }
-        .forwho-cta:active {
-          transform: translateY(0px) scale(0.98) !important;
-        }
-        @media (max-width: 640px) {
-          .forwho-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 };
