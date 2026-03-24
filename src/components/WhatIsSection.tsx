@@ -46,7 +46,7 @@ const WhatIsSection = () => {
           className="text-center mx-auto"
           style={{
             fontWeight: 700,
-            fontSize: "clamp(26px, 4vw, 44px)",
+            fontSize: "clamp(21px, 3.2vw, 35px)",
             color: "white",
             lineHeight: 1.2,
             maxWidth: "720px",
