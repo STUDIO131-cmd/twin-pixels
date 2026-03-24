@@ -61,9 +61,41 @@ const HeroSection = () => {
         />
 
         {/* Progress bar */}
-        <div style={{ width: 320, margin: '0 auto 0' }}>
-          <div style={{ background: '#333', borderRadius: 999, height: 6, overflow: 'hidden' }}>
-            <div style={{ width: '81%', background: '#D97706', borderRadius: 999, height: '100%' }} />
+        <div style={{ width: 320, margin: '0 auto 0', position: 'relative' }}>
+          <div
+            className="hero-progress-neon"
+            style={{
+              background: '#333',
+              borderRadius: 999,
+              height: 6,
+              overflow: 'hidden',
+              position: 'relative',
+              boxShadow: '0 0 8px rgba(217,119,6,0.4), 0 0 20px rgba(217,119,6,0.2), 0 0 40px rgba(217,119,6,0.1)',
+            }}
+          >
+            <div
+              style={{
+                width: '81%',
+                background: 'linear-gradient(90deg, #D97706, #f59e0b)',
+                borderRadius: 999,
+                height: '100%',
+                position: 'relative',
+                boxShadow: '0 0 12px rgba(217,119,6,0.8), 0 0 24px rgba(217,119,6,0.4)',
+              }}
+            />
+            {/* Light sweep overlay */}
+            <div
+              className="hero-light-sweep"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                borderRadius: 999,
+                pointerEvents: 'none',
+              }}
+            />
           </div>
           <p className="font-display" style={{ fontWeight: 300, fontSize: 12, color: '#aaa', textAlign: 'center', marginTop: 6 }}>
             81% das vagas preenchidas a R$47,00
