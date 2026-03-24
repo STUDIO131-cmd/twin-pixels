@@ -114,18 +114,8 @@ const ForWhoSection = () => {
                     {card.subtitle}
                   </p>
                 </div>
-                {/* Container de ícone fixo */}
-                <div className="relative flex-shrink-0" style={{ width: '80px', height: '80px' }}>
-                  <img
-                    src={card.icon}
-                    alt={card.title}
-                    className="absolute inset-0 w-full h-full"
-                    style={{
-                      objectFit: "contain",
-                      filter: "brightness(0) invert(0.95) drop-shadow(0 0 8px rgba(234,234,234,0.6)) drop-shadow(0 0 20px rgba(234,234,234,0.3))",
-                    }}
-                  />
-                </div>
+
+
               </div>
 
               {/* Separator */}
