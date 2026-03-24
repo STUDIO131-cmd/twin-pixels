@@ -101,29 +101,16 @@ const ContinuitySection = () => {
             />
           </div>
 
-          {/* Coluna direita linha 1 — Seta 1 + Texto */}
+          {/* Coluna direita linha 1 — Texto */}
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
               paddingLeft: 32,
-              paddingBottom: 32,
+              paddingBottom: 16,
             }}
           >
-            <img
-              src="/icons/Seta.png"
-              alt=""
-              style={{
-                width: 140,
-                height: 'auto',
-                objectFit: 'contain',
-                mixBlendMode: 'multiply',
-                display: 'block',
-                marginBottom: 16,
-                transform: 'scaleX(-1)',
-              }}
-            />
             <p
               className="font-display"
               style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6 }}
@@ -132,6 +119,31 @@ const ContinuitySection = () => {
               <br />
               Você pode parar no diagnóstico e seguir por conta própria.
             </p>
+          </div>
+
+          {/* Coluna direita — Seta centralizada entre os textos */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingLeft: 32,
+              paddingTop: 8,
+              paddingBottom: 8,
+            }}
+          >
+            <img
+              src="/icons/Seta.png"
+              alt=""
+              style={{
+                width: 210,
+                height: 'auto',
+                objectFit: 'contain',
+                mixBlendMode: 'multiply',
+                display: 'block',
+                transform: 'scaleX(-1)',
+              }}
+            />
           </div>
 
           {/* Coluna direita linha 2 — Seta 2 */}
