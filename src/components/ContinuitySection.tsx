@@ -138,7 +138,7 @@ const ContinuitySection = () => {
           >
             <p
               className="font-display"
-              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6, transform: 'translateY(-180%)' }}
+              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6, transform: 'translateY(calc(-180% - 40px))' }}
             >
               A imersão <span style={{ fontWeight: 700 }}>funciona sozinha.</span>
               <br />
