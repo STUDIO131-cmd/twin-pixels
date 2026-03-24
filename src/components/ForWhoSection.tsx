@@ -88,13 +88,13 @@ const ForWhoSection = () => {
                 boxShadow: "0 16px 48px rgba(0,0,0,0.3)",
               }}
               style={{
-                background: "rgba(239, 225, 202, 0.35)",
-                backdropFilter: "blur(20px)",
-                WebkitBackdropFilter: "blur(20px)",
+                background: "linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
+                backdropFilter: "blur(40px) saturate(1.4)",
+                WebkitBackdropFilter: "blur(40px) saturate(1.4)",
                 borderRadius: "28px",
                 padding: "32px 32px 36px",
-                border: "1px solid rgba(255, 255, 255, 0.5)",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)",
+                border: "1px solid rgba(255,255,255,0.45)",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.06), inset 0 1px 1px rgba(255,255,255,0.6), inset 0 -1px 1px rgba(255,255,255,0.1)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
