@@ -228,7 +228,7 @@ const ContinuitySection = () => {
           }}
           onMouseLeave={e => {
             (e.currentTarget as HTMLElement).style.boxShadow = '0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3)';
-            (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 80px))';
+            (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 40px))';
           }}
         >
           BÔNUS ESPECIAL
