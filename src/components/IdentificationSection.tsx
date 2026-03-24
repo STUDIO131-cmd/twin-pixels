@@ -94,7 +94,7 @@ const IdentificationSection = () => {
                     display: 'block',
                     position: 'absolute',
                     left: '50%',
-                    top: '0',
+                    top: '-30%',
                     transform: 'translateX(-50%)',
                     filter: 'brightness(1.1) sepia(0.3) hue-rotate(-10deg) saturate(1.8) drop-shadow(0 0 18px rgba(216,126,95,0.8)) drop-shadow(0 0 40px rgba(216,126,95,0.5)) drop-shadow(0 0 80px rgba(216,126,95,0.3))',
                   }}

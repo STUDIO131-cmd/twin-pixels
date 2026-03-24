@@ -304,13 +304,13 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255,255,255,0.4) 45%,
-    rgba(255,255,255,0.6) 50%,
-    rgba(255,255,255,0.4) 55%,
+    rgba(255,255,255,0.24) 45%,
+    rgba(255,255,255,0.36) 50%,
+    rgba(255,255,255,0.24) 55%,
     transparent 100%
   );
   background-size: 200% 100%;
-  animation: lightSweep 3s ease-in-out infinite;
+  animation: lightSweep 5s ease-in-out infinite;
 }
 
 @keyframes lightSweep {
