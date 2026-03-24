@@ -85,23 +85,23 @@ const IdentificationSection = () => {
 
               {/* Ícone acima do título */}
               {i === 0 && (
-                <div className="w-[100px] h-[100px] mb-4 flex items-center justify-center">
-                  <img src="/icons/personalizado-5.png" alt="Ícone" className="w-full h-full object-contain" />
+                <div className="w-[100px] h-[100px] mb-4 flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 8px #eaeaea) drop-shadow(0 0 20px #eaeaea) drop-shadow(0 0 40px rgba(234,234,234,0.5))' }}>
+                  <img src="/icons/personalizado-5.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(90%)' }} />
                 </div>
               )}
               {i === 1 && (
-                <div className="w-16 h-[100px] mb-4 flex items-center justify-center">
-                  <img src="/icons/Layer_13-2.png" alt="Ícone" className="w-full h-full object-contain" />
+                <div className="w-16 h-[100px] mb-4 flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 8px #eaeaea) drop-shadow(0 0 20px #eaeaea) drop-shadow(0 0 40px rgba(234,234,234,0.5))' }}>
+                  <img src="/icons/Layer_13-2.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(90%)' }} />
                 </div>
               )}
               {i === 2 && (
-                <div className="w-16 h-[100px] mb-4 flex items-center justify-center">
-                  <img src="/icons/loja-2.png" alt="Ícone" className="w-full h-full object-contain" />
+                <div className="w-16 h-[100px] mb-4 flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 8px #eaeaea) drop-shadow(0 0 20px #eaeaea) drop-shadow(0 0 40px rgba(234,234,234,0.5))' }}>
+                  <img src="/icons/loja-2.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(90%)' }} />
                 </div>
               )}
               {i === 3 && (
-                <div className="w-[100px] h-[100px] mb-4 flex items-center justify-center">
-                  <img src="/icons/Liberal-2.svg" alt="Ícone" className="w-full h-full object-contain" />
+                <div className="w-[100px] h-[100px] mb-4 flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 8px #eaeaea) drop-shadow(0 0 20px #eaeaea) drop-shadow(0 0 40px rgba(234,234,234,0.5))' }}>
+                  <img src="/icons/Liberal-2.svg" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(90%)' }} />
                 </div>
               )}
 
