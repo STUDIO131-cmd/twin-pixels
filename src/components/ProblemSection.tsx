@@ -76,24 +76,6 @@ const ProblemSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto" style={{ maxWidth: '860px', alignItems: 'start' }}>
           {cards.map((card, i) => (
             <div key={i} className="flex flex-col items-center">
-              {/* Container de Ícone com Altura Fixa */}
-              <div className="w-full relative flex items-center justify-center" style={{ height: '160px', overflow: 'visible' }}>
-                <img
-                  src={card.icon}
-                  alt=""
-                  className="absolute"
-                  style={{
-                    width: '240px',
-                    height: '240px',
-                    objectFit: 'contain',
-                    mixBlendMode: 'multiply',
-                    bottom: '-20px',
-                    left: '50%',
-                    transform: 'translateX(-50%) translateY(20%)',
-                    zIndex: 10,
-                  }}
-                />
-              </div>
 
               {/* Card Independente */}
               <motion.div

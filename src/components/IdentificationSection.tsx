@@ -82,40 +82,7 @@ const IdentificationSection = () => {
                 justifyContent: "flex-start",
               }}
             >
-              {/* Container de ícone com altura fixa e overflow visible para glow */}
-              <div className="w-full relative flex-shrink-0" style={{ height: '140px', overflow: 'visible', marginBottom: '12px' }}>
-                {/* Glow effect */}
-                <div
-                  className="absolute pointer-events-none"
-                  style={{
-                    bottom: "0",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    width: "120px",
-                    height: "24px",
-                    background: "radial-gradient(ellipse, rgba(216,126,95,0.7) 0%, transparent 70%)",
-                    borderRadius: "50%",
-                    filter: "blur(10px)",
-                    zIndex: 1,
-                  }}
-                />
-                {/* Icon */}
-                <img
-                  src={card.icon}
-                  alt=""
-                  className="absolute"
-                  style={{
-                    width: '280px',
-                    height: '280px',
-                    objectFit: 'contain',
-                    left: '50%',
-                    bottom: '-40px',
-                    transform: 'translateX(-50%)',
-                    zIndex: 2,
-                    filter: 'brightness(1.1) sepia(0.3) hue-rotate(-10deg) saturate(1.8) drop-shadow(0 0 18px rgba(216,126,95,0.8)) drop-shadow(0 0 40px rgba(216,126,95,0.5)) drop-shadow(0 0 80px rgba(216,126,95,0.3))',
-                  }}
-                />
-              </div>
+
 
               {/* Título — independente do ícone */}
               <h3
