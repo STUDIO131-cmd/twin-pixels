@@ -18,11 +18,6 @@ const cards = [
   },
 ];
 
-const arrowRotations = [
-  "rotate(-30deg) translateX(-20px)",
-  "rotate(5deg)",
-  "rotate(30deg) scaleX(-1) translateX(20px)",
-];
 
 const ProblemSection = () => {
   return (
@@ -80,36 +75,29 @@ const ProblemSection = () => {
           ))}
         </div>
 
-        {/* Elipse com imagem PNG */}
+        {/* Elipse SVG + texto */}
         <div
-          className="relative mx-auto"
-          style={{ maxWidth: "580px", height: "90px", marginTop: "32px" }}
+          className="relative mx-auto flex items-center justify-center"
+          style={{ width: "640px", maxWidth: "90vw", minHeight: "100px", marginTop: "32px" }}
         >
-          <img
-            src="/icons/Círculo.png"
-            alt=""
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-              mixBlendMode: "multiply",
-              opacity: 0.7,
-            }}
-          />
+          <svg viewBox="0 0 640 100" width="640" height="100" style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", zIndex: 0 }}>
+            <ellipse cx="320" cy="50" rx="310" ry="44"
+              stroke="white" strokeWidth="2.5" fill="none"
+              strokeLinecap="round"
+              strokeDasharray="2000"
+              strokeDashoffset="2000"
+              className="draw-ellipse"
+            />
+          </svg>
           <p
             style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "90%",
+              position: "relative",
+              zIndex: 1,
+              fontWeight: 700,
+              fontSize: "17px",
+              color: "white",
               textAlign: "center",
-              fontWeight: 600,
-              fontSize: "16px",
-              color: "#1a1a1a",
+              padding: "0 48px",
               lineHeight: 1.4,
             }}
           >
@@ -117,29 +105,64 @@ const ProblemSection = () => {
           </p>
         </div>
 
-        {/* Setas PNG */}
+        {/* Setas SVG */}
         <div
-          className="relative mx-auto flex justify-around items-start"
-          style={{ maxWidth: "700px", height: "80px" }}
+          className="mx-auto flex justify-between items-start"
+          style={{ width: "640px", maxWidth: "90vw" }}
         >
-          {arrowRotations.map((rot, i) => (
-            <motion.img
-              key={i}
-              src="/icons/Setas.png"
-              alt=""
-              initial={{ opacity: 0, y: -16 }}
-              whileInView={{ opacity: 0.65, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 + i * 0.2 }}
-              style={{
-                width: "80px",
-                height: "auto",
-                objectFit: "contain",
-                mixBlendMode: "multiply",
-                transform: rot,
-              }}
-            />
-          ))}
+          {/* Seta esquerda */}
+          <motion.svg
+            width="160" height="160" viewBox="0 0 160 160" fill="none"
+            initial={{ opacity: 0, y: -16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <path d="M100 8 Q40 60 36 130"
+              stroke="white" strokeWidth="2.5" strokeLinecap="round"
+              strokeDasharray="160" strokeDashoffset="160"
+              className="draw-arrow-s1"/>
+            <path d="M20 120 L36 130 L48 118"
+              stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+              strokeDasharray="30" strokeDashoffset="30"
+              className="draw-arrowhead-s1"/>
+          </motion.svg>
+
+          {/* Seta central */}
+          <motion.svg
+            width="80" height="160" viewBox="0 0 80 160" fill="none"
+            initial={{ opacity: 0, y: -16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <path d="M40 8 Q48 72 40 136"
+              stroke="white" strokeWidth="2.5" strokeLinecap="round"
+              strokeDasharray="150" strokeDashoffset="150"
+              className="draw-arrow-s2"/>
+            <path d="M26 124 L40 136 L54 124"
+              stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+              strokeDasharray="30" strokeDashoffset="30"
+              className="draw-arrowhead-s2"/>
+          </motion.svg>
+
+          {/* Seta direita */}
+          <motion.svg
+            width="160" height="160" viewBox="0 0 160 160" fill="none"
+            initial={{ opacity: 0, y: -16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+          >
+            <path d="M60 8 Q120 60 124 130"
+              stroke="white" strokeWidth="2.5" strokeLinecap="round"
+              strokeDasharray="160" strokeDashoffset="160"
+              className="draw-arrow-s3"/>
+            <path d="M112 118 L124 130 L140 120"
+              stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+              strokeDasharray="30" strokeDashoffset="30"
+              className="draw-arrowhead-s3"/>
+          </motion.svg>
         </div>
 
         {/* Ícones + Cards */}
@@ -268,6 +291,32 @@ const ProblemSection = () => {
           </a>
         </div>
       </div>
+      <style>{`
+        @keyframes drawLine {
+          to { stroke-dashoffset: 0; }
+        }
+        .draw-ellipse {
+          animation: drawLine 1.5s ease forwards 0.5s;
+        }
+        .draw-arrow-s1 {
+          animation: drawLine 0.8s ease forwards 1.2s;
+        }
+        .draw-arrowhead-s1 {
+          animation: drawLine 0.3s ease forwards 2s;
+        }
+        .draw-arrow-s2 {
+          animation: drawLine 0.8s ease forwards 1.4s;
+        }
+        .draw-arrowhead-s2 {
+          animation: drawLine 0.3s ease forwards 2.2s;
+        }
+        .draw-arrow-s3 {
+          animation: drawLine 0.8s ease forwards 1.6s;
+        }
+        .draw-arrowhead-s3 {
+          animation: drawLine 0.3s ease forwards 2.4s;
+        }
+      `}</style>
     </section>
   );
 };
