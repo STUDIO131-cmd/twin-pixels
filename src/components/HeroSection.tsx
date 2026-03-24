@@ -54,14 +54,14 @@ const HeroSection = () => {
             width: 320,
             height: 'auto',
             display: 'block',
-            margin: '0 auto 8px',
+            margin: '0 auto 0',
             mixBlendMode: 'screen',
             filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.7))',
           }}
         />
 
         {/* Progress bar */}
-        <div style={{ width: 320, margin: '0 auto 8px' }}>
+        <div style={{ width: 320, margin: '0 auto 0' }}>
           <div style={{ background: '#333', borderRadius: 999, height: 6, overflow: 'hidden' }}>
             <div style={{ width: '81%', background: '#D97706', borderRadius: 999, height: '100%' }} />
           </div>
