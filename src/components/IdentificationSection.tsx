@@ -100,7 +100,7 @@ const IdentificationSection = () => {
                 </div>
               )}
               {i === 3 && (
-                <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                <div className="w-[77px] h-[77px] mb-4 flex items-center justify-center">
                   <img src="/icons/Liberal-2.svg" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
