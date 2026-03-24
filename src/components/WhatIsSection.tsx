@@ -79,6 +79,7 @@ const WhatIsSection = () => {
             mixBlendMode: "screen",
             display: "block",
             margin: "0 auto 20px",
+            filter: "brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 8px rgba(216,126,95,0.7)) drop-shadow(0 0 20px rgba(216,126,95,0.4)) drop-shadow(0 0 40px rgba(216,126,95,0.2))",
           }}
         />
 
@@ -102,6 +103,7 @@ const WhatIsSection = () => {
             mixBlendMode: "screen",
             display: "block",
             margin: "16px auto 32px",
+            filter: "brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 8px rgba(216,126,95,0.7)) drop-shadow(0 0 20px rgba(216,126,95,0.4)) drop-shadow(0 0 40px rgba(216,126,95,0.2))",
           }}
         />
 
@@ -147,7 +149,7 @@ const WhatIsSection = () => {
                   transition: "opacity 0.3s ease",
                 }}
               />
-              <h3 style={{ fontWeight: 700, fontSize: "16px", color: "white", marginBottom: "10px", width: "100%" }}>
+              <h3 style={{ fontWeight: 700, fontSize: "16px", color: "white", marginBottom: "10px", width: "100%", textShadow: "0 0 8px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.2), 0 0 40px rgba(255,255,255,0.1)" }}>
                 {card.title}
               </h3>
               <p style={{ fontWeight: 400, fontSize: "14px", color: "#ccc", lineHeight: 1.6, width: "100%" }}>
