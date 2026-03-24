@@ -165,6 +165,7 @@ const WhatIsSection = () => {
                 {card.text}
               </p>
             </motion.div>
+            </div>
           ))}
         </div>
 
