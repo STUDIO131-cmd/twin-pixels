@@ -20,6 +20,32 @@ const PillarsSection = () => {
         backgroundSize: "32px 32px",
       }}
     >
+      {/* Ícones decorativos absolutos à SECTION */}
+      <motion.img
+        src="/icons/Ce.png"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={p1InView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="absolute pointer-events-none"
+        style={{ top: "120px", left: "5%", width: "90px", height: "auto", objectFit: "contain", mixBlendMode: "screen", zIndex: 20 }}
+      />
+      <motion.img
+        src="/icons/Mega.png"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={p2InView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="absolute pointer-events-none"
+        style={{ top: "50%", right: "2%", width: "90px", height: "auto", objectFit: "contain", mixBlendMode: "screen", zIndex: 20 }}
+      />
+      <motion.img
+        src="/icons/Cifrao.png"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={p3InView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="absolute pointer-events-none"
+        style={{ bottom: "200px", left: "3%", width: "90px", height: "auto", objectFit: "contain", mixBlendMode: "screen", zIndex: 20 }}
+      />
+
       <div className="max-w-[900px] mx-auto px-4 relative z-10">
         <p className="text-center uppercase tracking-[0.1em] mb-3" style={{ fontWeight: 300, fontSize: "13px", color: "#888" }}>
           A estrutura
@@ -29,14 +55,7 @@ const PillarsSection = () => {
         </h2>
 
         {/* ══════ PILAR 01 ══════ */}
-        <div ref={pillar1Ref} style={{ position: "relative", width: "100%", maxWidth: "860px", margin: "0 auto", overflow: "visible" }}>
-          <motion.img
-            src="/icons/Ce.png"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={p1InView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            style={{ position: "absolute", top: "-50px", left: "20px", width: "90px", height: "auto", objectFit: "contain", mixBlendMode: "screen", zIndex: 20 }}
-          />
+        <div ref={pillar1Ref} style={{ position: "relative", width: "100%", maxWidth: "860px", margin: "0 auto" }}>
           <motion.div
             initial={{ x: "-120%", opacity: 0 }}
             animate={p1InView ? { x: 0, opacity: 1 } : {}}
@@ -65,20 +84,13 @@ const PillarsSection = () => {
           </motion.div>
         </div>
 
-        {/* Seta 1→2 */}
-        <div className="flex justify-end pr-[8%] py-2">
-          <img src="/icons/arrow_pillar.png" alt="" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1)' }} />
+        {/* Container de seta com largura/altura fixa */}
+        <div className="flex justify-end pr-[8%]" style={{ height: '60px', position: 'relative' }}>
+          <img src="/icons/arrow_pillar.png" alt="" className="absolute" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1)', right: '8%', top: '50%', translate: '0 -50%' }} />
         </div>
 
         {/* ══════ PILAR 02 ══════ */}
-        <div ref={pillar2Ref} style={{ position: "relative", width: "100%", maxWidth: "860px", margin: "0 auto", overflow: "visible" }}>
-          <motion.img
-            src="/icons/Mega.png"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={p2InView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            style={{ position: "absolute", top: "-50px", right: "20px", width: "90px", height: "auto", objectFit: "contain", mixBlendMode: "screen", zIndex: 20 }}
-          />
+        <div ref={pillar2Ref} style={{ position: "relative", width: "100%", maxWidth: "860px", margin: "0 auto" }}>
           <motion.div
             initial={{ x: "120%", opacity: 0 }}
             animate={p2InView ? { x: 0, opacity: 1 } : {}}
@@ -106,20 +118,13 @@ const PillarsSection = () => {
           </motion.div>
         </div>
 
-        {/* Seta 2→3 */}
-        <div className="flex justify-start pl-[8%] py-2">
-          <img src="/icons/arrow_pillar.png" alt="" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+        {/* Container de seta com largura/altura fixa */}
+        <div className="flex justify-start pl-[8%]" style={{ height: '60px', position: 'relative' }}>
+          <img src="/icons/arrow_pillar.png" alt="" className="absolute" style={{ width: '140px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', left: '8%', top: '50%', translate: '0 -50%' }} />
         </div>
 
         {/* ══════ PILAR 03 ══════ */}
-        <div ref={pillar3Ref} style={{ position: "relative", width: "100%", maxWidth: "860px", margin: "0 auto", overflow: "visible" }}>
-          <motion.img
-            src="/icons/Cifrao.png"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={p3InView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            style={{ position: "absolute", top: "-50px", left: "20px", width: "90px", height: "auto", objectFit: "contain", mixBlendMode: "screen", zIndex: 20 }}
-          />
+        <div ref={pillar3Ref} style={{ position: "relative", width: "100%", maxWidth: "860px", margin: "0 auto" }}>
           <motion.div
             initial={{ x: "-120%", opacity: 0 }}
             animate={p3InView ? { x: 0, opacity: 1 } : {}}
@@ -159,20 +164,28 @@ const PillarsSection = () => {
         <div className="text-center mt-4">
           <a
             href="#preco"
-            className="inline-block cursor-pointer uppercase"
+            className="pillars-cta inline-block cursor-pointer uppercase"
             style={{
               fontWeight: 700, fontSize: "15px", letterSpacing: "0.06em", color: "white", backgroundColor: "#D15E4A",
               borderRadius: "8px", padding: "18px 48px", border: "none",
               boxShadow: "0 0 20px rgba(209,94,74,0.55), 0 0 40px rgba(209,94,74,0.28), 0 0 80px rgba(209,94,74,0.12)",
-              transition: "all 0.2s ease",
+              transition: "all 0.2s ease", textDecoration: "none",
             }}
-            onMouseEnter={(e) => { const t = e.currentTarget; t.style.boxShadow = "0 0 30px rgba(209,94,74,0.9), 0 0 60px rgba(209,94,74,0.5), 0 0 120px rgba(209,94,74,0.25)"; t.style.transform = "translateY(-2px)"; }}
-            onMouseLeave={(e) => { const t = e.currentTarget; t.style.boxShadow = "0 0 20px rgba(209,94,74,0.55), 0 0 40px rgba(209,94,74,0.28), 0 0 80px rgba(209,94,74,0.12)"; t.style.transform = "translateY(0)"; }}
           >
             QUERO FAZER ESSE DIAGNÓSTICO · R$47
           </a>
         </div>
       </div>
+
+      <style>{`
+        .pillars-cta:hover {
+          box-shadow: 0 0 30px rgba(209,94,74,0.9), 0 0 60px rgba(209,94,74,0.5), 0 0 120px rgba(209,94,74,0.25) !important;
+          transform: translateY(-2px);
+        }
+        .pillars-cta:active {
+          transform: scale(0.98) !important;
+        }
+      `}</style>
     </section>
   );
 };

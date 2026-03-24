@@ -43,7 +43,7 @@ const OutcomeSection = () => {
 
         {/* Grid 2 colunas */}
         <div
-          className="grid items-center gap-12"
+          className="outcome-grid grid items-center gap-12"
           style={{ gridTemplateColumns: "55% 45%" }}
         >
           {/* Coluna esquerda — texto */}
@@ -76,7 +76,7 @@ const OutcomeSection = () => {
             </div>
           </div>
 
-          {/* Coluna direita — TV */}
+          {/* Coluna direita — Container fixo para TV */}
           <motion.div
             className="relative flex justify-center"
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
@@ -84,21 +84,19 @@ const OutcomeSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative cursor-pointer group">
+            <div className="relative w-full" style={{ maxWidth: '400px', aspectRatio: '4/3' }}>
               <img
                 src={vintageTv}
                 alt="TV vintage"
+                className="absolute inset-0 w-full h-full"
                 style={{
                   mixBlendMode: "multiply",
-                  maxWidth: "100%",
-                  width: "3840px",
-                  height: "auto",
-                  objectFit: "contain" as const,
+                  objectFit: "contain",
                 }}
               />
               {/* Screen glow overlay */}
               <div
-                className="absolute screen-glow pointer-events-none"
+                className="absolute pointer-events-none"
                 style={{
                   top: "38%",
                   left: "12%",
@@ -140,6 +138,7 @@ const OutcomeSection = () => {
               transition: "all 0.2s ease",
               boxShadow:
                 "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28), 0 0 80px rgba(217,119,6,0.12)",
+              textDecoration: "none",
             }}
           >
             QUERO ESSA CLAREZA · R$47
@@ -156,7 +155,7 @@ const OutcomeSection = () => {
           transform: translateY(0px) scale(0.98) !important;
         }
         @media (max-width: 768px) {
-          .grid[style*="grid-template-columns"] {
+          .outcome-grid {
             grid-template-columns: 1fr !important;
           }
         }

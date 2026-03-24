@@ -11,9 +11,8 @@ const WhatIsSection = () => {
     <section className="relative py-24 overflow-hidden">
       {/* Background image */}
       <div
+        className="absolute inset-0"
         style={{
-          position: "absolute",
-          inset: 0,
           backgroundImage: "url('/backgrounds/Background.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -22,17 +21,49 @@ const WhatIsSection = () => {
       />
       {/* Dark overlay */}
       <div
+        className="absolute inset-0"
         style={{
-          position: "absolute",
-          inset: 0,
           zIndex: 1,
           background:
             "linear-gradient(to bottom, rgba(15,12,8,0.75) 0%, rgba(15,12,8,0.70) 50%, rgba(15,12,8,0.80) 100%)",
         }}
       />
 
+      {/* Setas como elementos decorativos absolutos à section */}
+      <img
+        src="/icons/Seta-3.png"
+        alt=""
+        className="absolute pointer-events-none"
+        style={{
+          top: "80px",
+          right: "40px",
+          width: "48px",
+          height: "48px",
+          objectFit: "contain",
+          mixBlendMode: "screen",
+          zIndex: 3,
+          filter: "brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 8px rgba(216,126,95,0.7)) drop-shadow(0 0 20px rgba(216,126,95,0.4)) drop-shadow(0 0 40px rgba(216,126,95,0.2))",
+        }}
+      />
+      <img
+        src="/icons/Seta-3.png"
+        alt=""
+        className="absolute pointer-events-none"
+        style={{
+          bottom: "80px",
+          left: "40px",
+          width: "48px",
+          height: "48px",
+          objectFit: "contain",
+          mixBlendMode: "screen",
+          zIndex: 3,
+          transform: "rotate(180deg)",
+          filter: "brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 8px rgba(216,126,95,0.7)) drop-shadow(0 0 20px rgba(216,126,95,0.4)) drop-shadow(0 0 40px rgba(216,126,95,0.2))",
+        }}
+      />
+
       {/* Content */}
-      <div className="container max-w-5xl mx-auto px-4" style={{ position: "relative", zIndex: 2 }}>
+      <div className="container max-w-5xl mx-auto px-4 relative z-10">
         {/* Label */}
         <p
           className="text-center uppercase"
@@ -68,44 +99,14 @@ const WhatIsSection = () => {
           </p>
         </div>
 
-        {/* Seta 1 */}
-        <img
-          src="/icons/Seta-3.png"
-          alt=""
-          style={{
-            width: "48px",
-            height: "48px",
-            objectFit: "contain",
-            mixBlendMode: "screen",
-            display: "block",
-            margin: "0 auto 20px",
-            filter: "brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 8px rgba(216,126,95,0.7)) drop-shadow(0 0 20px rgba(216,126,95,0.4)) drop-shadow(0 0 40px rgba(216,126,95,0.2))",
-          }}
-        />
-
         {/* Texto central */}
-        <div className="text-center mx-auto" style={{ maxWidth: "480px", margin: "0 auto 16px" }}>
+        <div className="text-center mx-auto" style={{ maxWidth: "480px", margin: "0 auto 32px" }}>
           <p style={{ fontWeight: 700, fontSize: "17px", color: "white", lineHeight: 1.5 }}>
             Em 1 dia, você passa pelos 3 pilares
             <br />
             que sustentam qualquer negócio:
           </p>
         </div>
-
-        {/* Seta 2 */}
-        <img
-          src="/icons/Seta-3.png"
-          alt=""
-          style={{
-            width: "48px",
-            height: "48px",
-            objectFit: "contain",
-            mixBlendMode: "screen",
-            display: "block",
-            margin: "16px auto 32px",
-            filter: "brightness(0) saturate(100%) invert(58%) sepia(30%) saturate(600%) hue-rotate(340deg) brightness(95%) contrast(90%) drop-shadow(0 0 8px rgba(216,126,95,0.7)) drop-shadow(0 0 20px rgba(216,126,95,0.4)) drop-shadow(0 0 40px rgba(216,126,95,0.2))",
-          }}
-        />
 
         {/* Cards grid */}
         <div
@@ -173,46 +174,36 @@ const WhatIsSection = () => {
         <div style={{ marginTop: "44px", textAlign: "center" }}>
           <a
             href="#preco"
+            className="whatis-cta inline-block uppercase cursor-pointer"
             style={{
-              display: "inline-block",
               fontWeight: 700,
               fontSize: "15px",
               letterSpacing: "0.06em",
-              textTransform: "uppercase" as const,
               color: "#1a1a1a",
               backgroundColor: "#D97706",
               borderRadius: "999px",
               padding: "18px 52px",
               border: "none",
-              cursor: "pointer",
               boxShadow:
                 "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28), 0 0 80px rgba(217,119,6,0.12)",
               transition: "all 0.2s ease",
               textDecoration: "none",
-            }}
-            onMouseEnter={(e) => {
-              const t = e.currentTarget;
-              t.style.boxShadow =
-                "0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5), 0 0 120px rgba(217,119,6,0.25)";
-              t.style.transform = "translateY(-2px) scale(1.02)";
-            }}
-            onMouseLeave={(e) => {
-              const t = e.currentTarget;
-              t.style.boxShadow =
-                "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28), 0 0 80px rgba(217,119,6,0.12)";
-              t.style.transform = "none";
-            }}
-            onMouseDown={(e) => {
-              e.currentTarget.style.transform = "translateY(0px) scale(0.98)";
-            }}
-            onMouseUp={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px) scale(1.02)";
             }}
           >
             QUERO PARTICIPAR · R$47
           </a>
         </div>
       </div>
+
+      <style>{`
+        .whatis-cta:hover {
+          box-shadow: 0 0 30px rgba(217,119,6,0.9), 0 0 60px rgba(217,119,6,0.5), 0 0 120px rgba(217,119,6,0.25) !important;
+          transform: translateY(-2px) scale(1.02);
+        }
+        .whatis-cta:active {
+          transform: translateY(0px) scale(0.98) !important;
+        }
+      `}</style>
     </section>
   );
 };
