@@ -147,7 +147,7 @@ const WhatIsSection = () => {
                   transition: "opacity 0.3s ease",
                 }}
               />
-              <h3 style={{ fontWeight: 700, fontSize: "16px", color: "white", marginBottom: "10px", width: "100%" }}>
+              <h3 style={{ fontWeight: 700, fontSize: "16px", color: "white", marginBottom: "10px", width: "100%", textShadow: "0 0 8px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.2), 0 0 40px rgba(255,255,255,0.1)" }}>
                 {card.title}
               </h3>
               <p style={{ fontWeight: 400, fontSize: "14px", color: "#ccc", lineHeight: 1.6, width: "100%" }}>

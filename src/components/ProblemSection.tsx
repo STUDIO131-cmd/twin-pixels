@@ -45,7 +45,7 @@ const ProblemSection = () => {
         <h2
           className="text-center mx-auto mb-12"
           style={{
-            fontSize: "clamp(24px, 3.5vw, 40px)",
+            fontSize: "clamp(19px, 2.8vw, 32px)",
             maxWidth: "720px",
             lineHeight: 1.2,
             fontWeight: 700,
