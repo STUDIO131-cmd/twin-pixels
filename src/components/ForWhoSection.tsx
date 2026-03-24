@@ -134,7 +134,7 @@ const ForWhoSection = () => {
               <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", margin: "0 0 20px 0", width: "100%" }} />
 
               {/* Body */}
-              <p style={{ fontWeight: 400, fontSize: "14px", lineHeight: 1.8, color: "#333333", marginBottom: "20px" }}>
+              <p style={{ fontWeight: 400, fontSize: "14px", lineHeight: 1.8, color: "#eaeaea", marginBottom: "20px" }}>
                 {card.body}
               </p>
 
