@@ -10,7 +10,18 @@ const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false,
       
       {/* Text Overlay Container */}
       <div className={`absolute inset-0 flex flex-col justify-center p-8 md:p-12 ${reverse ? 'items-start text-left' : 'items-end text-right'}`}>
-        <div className="max-w-[50%] space-y-2">
+        <div
+          className="max-w-[50%] space-y-2"
+          style={{
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 100%)',
+            backdropFilter: 'blur(40px) saturate(1.6)',
+            WebkitBackdropFilter: 'blur(40px) saturate(1.6)',
+            border: '1px solid rgba(255,255,255,0.4)',
+            borderRadius: '24px',
+            padding: '28px 28px',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.12), inset 0 1px 1px rgba(255,255,255,0.5), inset 0 -1px 1px rgba(255,255,255,0.08)',
+          }}
+        >
           <div className="mb-4">
             <span className="block text-white text-[32px] md:text-[56px] font-bold leading-none">Pilar {num}</span>
             <span className="block text-[#D87E5F] text-[14px] md:text-[18px] font-semibold uppercase">{title}</span>
@@ -18,8 +29,8 @@ const Pillar = ({ num, title, subtitle, desc, items, img, icon, reverse = false,
           
           <div className="hidden md:block space-y-3">
              <p className="text-white font-medium text-[15px]">{subtitle}</p>
-             <p className="text-neutral-400 text-[13px] leading-relaxed">{desc}</p>
-             <div className="pt-2 text-neutral-500 text-[12px] space-y-1">
+             <p className="text-neutral-300 text-[13px] leading-relaxed">{desc}</p>
+             <div className="pt-2 text-neutral-400 text-[12px] space-y-1">
                {items.map((item: string, idx: number) => <p key={idx}>{item}</p>)}
              </div>
           </div>
