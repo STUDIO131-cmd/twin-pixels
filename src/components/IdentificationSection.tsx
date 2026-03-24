@@ -83,47 +83,34 @@ const IdentificationSection = () => {
               }}
             >
               {/* Ícone com glow */}
-              <div className="relative" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '120px', overflow: 'hidden', marginBottom: '12px' }}>
+              <div className="relative" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', height: '140px', overflow: 'visible', marginBottom: '12px' }}>
                 <img
                   src={card.icon}
                   alt=""
-                  style={card.icon.includes('Loja') ? {
+                  style={{
                     width: '280px',
                     height: '280px',
                     objectFit: 'contain',
-                    mixBlendMode: 'screen',
-                    display: 'block',
-                    margin: '0 auto',
-                    position: 'relative',
-                    left: '0',
-                    transform: 'translateX(0)',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                  } : {
-                    width: '280px',
-                    height: '280px',
-                    objectFit: 'contain',
-                    mixBlendMode: 'screen',
                     display: 'block',
                     position: 'absolute',
                     left: '50%',
-                    top: '50%',
-                    transform: 'translate(-50%, -50%)',
+                    top: '0',
+                    transform: 'translateX(-50%)',
+                    filter: 'brightness(1.1) sepia(0.3) hue-rotate(-10deg) saturate(1.8) drop-shadow(0 0 18px rgba(216,126,95,0.8)) drop-shadow(0 0 40px rgba(216,126,95,0.5)) drop-shadow(0 0 80px rgba(216,126,95,0.3))',
                   }}
                 />
                 <div
-                  className="icon-glow-pulse"
                   style={{
                     position: "absolute",
-                    bottom: "-8px",
+                    bottom: "0",
                     left: "50%",
                     transform: "translateX(-50%)",
-                    width: "60px",
-                    height: "12px",
+                    width: "120px",
+                    height: "24px",
                     background:
-                      "radial-gradient(ellipse, rgba(217,119,6,0.5) 0%, transparent 70%)",
+                      "radial-gradient(ellipse, rgba(216,126,95,0.7) 0%, transparent 70%)",
                     borderRadius: "50%",
-                    filter: "blur(6px)",
+                    filter: "blur(10px)",
                   }}
                 />
               </div>
