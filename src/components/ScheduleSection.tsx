@@ -12,29 +12,22 @@ const ScheduleSection = () => {
   return (
     <section
       className="relative py-20 overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/backgrounds/Background-10.png')" }}
+      style={{ backgroundImage: "url('/backgrounds/Background-10.webp')" }}
     >
       <div className="relative px-4 z-[2]">
         <div className="glass-card mx-auto max-w-[680px] p-12 pb-[52px]" style={{ borderRadius: 28 }}>
-          {/* Label */}
           <p className="text-center text-xs font-light text-muted-foreground tracking-widest uppercase mb-2.5">
             Como funciona
           </p>
 
-          {/* Title */}
           <h2 className="text-center text-3xl font-bold text-white leading-tight mb-7">
-            Um dia. Online.
-            <br />
-            Direto ao que importa.
-            <br /><br />
+            Um dia. Online.<br />Direto ao que importa.<br /><br />
           </h2>
 
-          {/* Date */}
           <p className="text-center text-[15px] font-semibold text-studio-gray-300 mb-6" style={{ transform: 'translateY(-70%)' }}>
             11 de abril · Online
           </p>
 
-          {/* Timeline */}
           <div>
             {schedule.map((item, i) => (
               <motion.div
@@ -51,7 +44,7 @@ const ScheduleSection = () => {
                     style={{
                       fontSize: 'clamp(28px, 4.5vw, 46px)',
                       color: item.color,
-                      textShadow: `0 0 6px ${item.color}90, 0 0 12px ${item.color}60, 0 0 24px ${item.color}35, 0 0 48px ${item.color}18`,
+                      textShadow: `0 0 6px ${item.color}90, 0 0 12px ${item.color}60, 0 0 24px ${item.color}35`,
                     }}
                   >
                     {item.time}
@@ -66,7 +59,6 @@ const ScheduleSection = () => {
             <div className="border-t border-white/[0.07]" />
           </div>
 
-          {/* CTA */}
           <div className="mt-10 text-center">
             <a href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
               RESERVAR MEU LUGAR · R$47

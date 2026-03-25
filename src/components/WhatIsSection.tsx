@@ -12,7 +12,7 @@ const WhatIsSection = () => {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ backgroundImage: "url('/backgrounds/Background.png')" }}
+        style={{ backgroundImage: "url('/backgrounds/Background.webp')" }}
       />
       {/* Dark overlay */}
       <div
@@ -23,27 +23,19 @@ const WhatIsSection = () => {
       />
 
       {/* Decorative arrows */}
-      <img
-        src="/icons/Seta-3.png"
-        alt=""
+      <img src="/icons/Seta-3.png" alt="" width={48} height={48}
         className="absolute pointer-events-none z-[3] w-12 h-12 object-contain icon-neon-coral"
-        style={{ top: 80, right: 40, mixBlendMode: 'screen' }}
-      />
-      <img
-        src="/icons/Seta-3.png"
-        alt=""
+        style={{ top: 80, right: 40, mixBlendMode: 'screen' }} loading="lazy" />
+      <img src="/icons/Seta-3.png" alt="" width={48} height={48}
         className="absolute pointer-events-none z-[3] w-12 h-12 object-contain rotate-180 icon-neon-coral"
-        style={{ bottom: 80, left: 40, mixBlendMode: 'screen' }}
-      />
+        style={{ bottom: 80, left: 40, mixBlendMode: 'screen' }} loading="lazy" />
 
       {/* Content */}
       <div className="container max-w-5xl mx-auto px-4 relative z-10">
-        {/* Label */}
         <p className="text-center text-[13px] font-light text-muted-foreground tracking-widest mb-3">
           O que é a Jornada?
         </p>
 
-        {/* Título */}
         <h2
           className="text-center mx-auto font-bold text-white leading-tight max-w-[720px] mb-7"
           style={{ fontSize: 'clamp(21px, 3.2vw, 35px)' }}
@@ -53,7 +45,6 @@ const WhatIsSection = () => {
           Não mais um curso de marketing.
         </h2>
 
-        {/* Subtítulo */}
         <div className="text-center mx-auto max-w-[560px] mb-12">
           <p className="text-[17px] text-studio-gray-300">
             A Jornada de Ascensão não vai te encher de informação.
@@ -63,7 +54,6 @@ const WhatIsSection = () => {
           </p>
         </div>
 
-        {/* Texto central */}
         <div className="text-center mx-auto max-w-[480px] mb-8">
           <p className="font-bold text-[17px] text-white leading-normal">
             Em 1 dia, você passa pelos 3 pilares
@@ -72,29 +62,26 @@ const WhatIsSection = () => {
           </p>
         </div>
 
-        {/* Cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mx-auto max-w-[860px] mb-12 items-stretch">
           {cards.map((card, i) => (
             <div key={i} className="relative flex flex-col items-center">
-              {/* Icons */}
               {i === 0 && (
                 <div className="w-16 h-16 mb-3 flex items-center justify-center icon-glow-coral">
-                  <img src="/icons/cerebro_copy2-2.png" alt="Ícone" className="w-full h-full object-contain icon-neon-coral" />
+                  <img src="/icons/cerebro_copy2-2.png" alt="" width={64} height={64} loading="lazy" className="w-full h-full object-contain icon-neon-coral" />
                 </div>
               )}
               {i === 1 && (
                 <div className="w-16 h-16 mb-3 flex items-center justify-center icon-glow-coral">
-                  <img src="/icons/megaphone.png" alt="Ícone" className="w-full h-full object-contain icon-neon-coral" />
+                  <img src="/icons/megaphone.png" alt="" width={64} height={64} loading="lazy" className="w-full h-full object-contain icon-neon-coral" />
                 </div>
               )}
               {i === 2 && (
                 <div className="w-16 h-16 mb-3 flex items-center justify-center icon-glow-coral">
-                  <img src="/icons/Layer_12_copy.png" alt="Ícone" className="w-full h-full object-contain icon-neon-coral" />
+                  <img src="/icons/Layer_12_copy.png" alt="" width={64} height={64} loading="lazy" className="w-full h-full object-contain icon-neon-coral" />
                 </div>
               )}
 
               <motion.div
-                key={i}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -102,7 +89,6 @@ const WhatIsSection = () => {
                 className="glass-card relative group cursor-pointer p-7 flex flex-col items-center text-center transition-all duration-300"
                 whileHover={{ y: -6 }}
               >
-                {/* Glow on hover */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none rounded-2xl transition-opacity duration-300"
                   style={{ background: 'radial-gradient(circle at 50% 0%, hsl(var(--amber) / 0.07) 0%, transparent 65%)' }}
@@ -110,15 +96,12 @@ const WhatIsSection = () => {
                 <h3 className="font-bold text-base text-white mb-2.5 w-full" style={{ textShadow: '0 0 8px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.2)' }}>
                   {card.title}
                 </h3>
-                <p className="text-sm text-studio-gray-300 leading-relaxed w-full">
-                  {card.text}
-                </p>
+                <p className="text-sm text-studio-gray-300 leading-relaxed w-full">{card.text}</p>
               </motion.div>
             </div>
           ))}
         </div>
 
-        {/* Texto final */}
         <div className="text-center mx-auto max-w-[600px] mt-12">
           <p className="text-lg text-studio-gray-300">
             Você sai sabendo qual eixo precisa de atenção primeiro —
@@ -128,7 +111,6 @@ const WhatIsSection = () => {
           </p>
         </div>
 
-        {/* CTA */}
         <div className="mt-11 text-center">
           <a href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
             QUERO PARTICIPAR · R$47
