@@ -18,9 +18,10 @@ const SupportSection = () => {
       {/* Background */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/backgrounds/Background_12.webp')" }}
+        style={{ backgroundImage: "url('/backgrounds/Background_12.png')" }}
       />
 
+      {/* Content */}
       <div className="relative z-[1] py-20 text-center">
         <h2 className="text-white mb-8 font-bold" style={{ fontSize: 'clamp(36px, 5vw, 56px)' }}>
           Dúvida?
@@ -32,10 +33,12 @@ const SupportSection = () => {
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? 'translateY(0)' : 'translateY(24px)',
-            transition: 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)',
+            transition: '0.7s cubic-bezier(0.16,1,0.3,1)',
           }}
         >
-          <p className="text-center text-[13px] font-light text-white/60 tracking-wider mb-3">Suporte</p>
+          <p className="text-center text-[13px] font-light text-white/60 tracking-wider mb-3">
+            Suporte
+          </p>
           <p className="font-semibold text-xl text-white text-center mx-auto max-w-[480px] leading-snug mb-7">
             Se ainda estiver com dúvidas nossa equipe está a disposição:
           </p>

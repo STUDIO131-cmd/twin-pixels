@@ -1,5 +1,5 @@
 /* ============================================
-   FONTES — WOFF2 (smaller, faster)
+   FONTES
    ============================================ */
 @import '@fontsource/inter/400.css';
 @import '@fontsource/inter/500.css';
@@ -8,35 +8,31 @@
 @import '@fontsource/source-sans-3/400.css';
 @import '@fontsource/source-sans-3/600.css';
 
-/* TikTok Sans — WOFF2 */
+/* TikTok Sans */
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/tiktok-regular.woff2') format('woff2'),
-       url('/fonts/tiktok-regular.ttf') format('truetype');
+  src: url('/fonts/tiktok-regular.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/tiktok-regular.woff2') format('woff2'),
-       url('/fonts/tiktok-regular.ttf') format('truetype');
+  src: url('/fonts/tiktok-regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/tiktok-semibold.woff2') format('woff2'),
-       url('/fonts/tiktok-semibold.ttf') format('truetype');
+  src: url('/fonts/tiktok-semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('/fonts/tiktok-bold.woff2') format('woff2'),
-       url('/fonts/tiktok-bold.ttf') format('truetype');
+  src: url('/fonts/tiktok-bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -170,20 +166,12 @@
 
   body {
     @apply bg-background text-foreground;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
   }
 
   h1, h2 { font-weight: 700; }
   h3 { font-weight: 600; }
   p, span, li { font-weight: 400; }
   small, caption, .text-xs { font-weight: 300; }
-
-  /* GPU-accelerated animations only */
-  img, video {
-    content-visibility: auto;
-  }
 }
 
 @layer components {
@@ -251,12 +239,11 @@
       inset 0 -1px 1px rgba(255,255,255,0.1);
   }
 
-  /* ========== CTA buttons — GPU-accelerated transforms ========== */
+  /* ========== CTA buttons ========== */
   .btn-cta {
     @apply inline-block px-8 py-4 rounded-lg font-bold text-lg cursor-pointer text-white;
     background-color: hsl(var(--amber));
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    will-change: transform;
+    transition: all 0.2s ease;
   }
   .btn-cta:hover {
     transform: scale(1.03);
@@ -274,8 +261,7 @@
       0 0 20px hsl(var(--amber) / 0.55),
       0 0 40px hsl(var(--amber) / 0.28),
       0 0 80px hsl(var(--amber) / 0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    will-change: transform;
+    transition: all 0.2s ease;
   }
   .btn-amber:hover {
     box-shadow:
@@ -297,8 +283,7 @@
     box-shadow:
       0 0 20px hsl(var(--studio-red-500) / 0.55),
       0 0 40px hsl(var(--studio-red-500) / 0.28);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    will-change: transform;
+    transition: all 0.2s ease;
   }
   .btn-coral:hover {
     box-shadow:
@@ -321,8 +306,7 @@
     box-shadow: 0 0 20px rgba(37,211,102,0.45), 0 0 40px rgba(37,211,102,0.2), 0 4px 16px rgba(0,0,0,0.3);
     color: white;
     letter-spacing: 0.02em;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    will-change: transform;
+    transition: all 0.25s ease;
     animation: whatsappGlow 2.5s ease-in-out infinite;
   }
   .btn-whatsapp:hover {
@@ -376,8 +360,7 @@
 
   /* ========== Identification card ========== */
   .identification-card {
-    transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease, border-color 0.35s ease;
-    will-change: transform;
+    transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
   }
   .identification-card::before {
     content: '';
@@ -402,16 +385,14 @@
     opacity: 1;
   }
 
-  /* ========== Ticker — GPU composited ========== */
+  /* ========== Ticker ========== */
   .ticker-scroll {
     animation: ticker 30s linear infinite;
-    will-change: transform;
   }
 
-  /* ========== Hero float — GPU composited ========== */
+  /* ========== Hero float ========== */
   .hero-float {
     animation: hero-float 4s ease-in-out infinite;
-    will-change: transform;
   }
 
   /* ========== Hero progress neon ========== */
@@ -451,8 +432,7 @@
       0 0 20px hsl(var(--amber) / 0.5),
       0 0 40px hsl(var(--amber) / 0.25),
       0 0 80px hsl(var(--amber) / 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    will-change: transform;
+    transition: all 0.2s ease;
   }
   .hero-cta-btn:hover {
     box-shadow:
@@ -467,10 +447,9 @@
     animation: logoPulse 2.5s ease-in-out infinite;
   }
 
-  /* ========== TV float — GPU composited ========== */
+  /* ========== TV float ========== */
   .continuity-tv-float {
     animation: tvFloat 4s ease-in-out infinite;
-    will-change: transform;
   }
 
   /* ========== Light leaks ========== */
@@ -498,15 +477,29 @@
     z-index: 0;
   }
 
-  /* ========== Responsive overrides ========== */
+  /* ========== ForWho grid responsive ========== */
   @media (max-width: 640px) {
     .forwho-grid { grid-template-columns: 1fr !important; }
-    .continuity-grid { grid-template-columns: 1fr !important; }
+  }
+
+  /* ========== Outcome grid responsive ========== */
+  @media (max-width: 768px) {
+    .outcome-grid { grid-template-columns: 1fr !important; }
+  }
+
+  /* ========== Continuity grid responsive ========== */
+  @media (max-width: 640px) {
+    .continuity-grid {
+      grid-template-columns: 1fr !important;
+    }
     .continuity-grid > div:first-child {
       grid-row: auto !important;
       margin-bottom: 32px;
     }
-    .continuity-grid > div:first-child img { width: 240px !important; margin: 0 auto !important; }
+    .continuity-grid > div:first-child img {
+      width: 240px !important;
+      margin: 0 auto !important;
+    }
     .continuity-grid > div:nth-child(2),
     .continuity-grid > div:nth-child(3) {
       padding-left: 0 !important;
@@ -514,37 +507,43 @@
       text-align: center;
     }
     .continuity-grid > div:nth-child(2) img,
-    .continuity-grid > div:nth-child(3) img { width: 100px !important; }
+    .continuity-grid > div:nth-child(3) img {
+      width: 100px !important;
+    }
+  }
+
+  /* ========== Schedule card responsive ========== */
+  @media (max-width: 640px) {
     .schedule-card-inner {
       padding: 32px 24px 40px !important;
       border-radius: 16px !important;
       margin: 0 16px !important;
     }
   }
-  @media (max-width: 768px) {
-    .outcome-grid { grid-template-columns: 1fr !important; }
-  }
 
   /* ========== Draw animations ========== */
-  .draw-ellipse { animation: drawEllipse 1.4s ease-out forwards; animation-delay: 0.3s; }
-  .draw-arrow-1 { animation: drawLine 0.5s ease-out forwards; animation-delay: 1.7s; }
-  .draw-arrowhead-1 { animation: drawLine 0.25s ease-out forwards; animation-delay: 2.2s; }
-  .draw-arrow-2 { animation: drawLine 0.5s ease-out forwards; animation-delay: 1.9s; }
-  .draw-arrowhead-2 { animation: drawLine 0.25s ease-out forwards; animation-delay: 2.4s; }
-  .draw-arrow-3 { animation: drawLine 0.5s ease-out forwards; animation-delay: 2.1s; }
-  .draw-arrowhead-3 { animation: drawLine 0.25s ease-out forwards; animation-delay: 2.6s; }
+  .draw-ellipse {
+    animation: drawEllipse 1.4s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  .draw-arrow-1    { animation: drawLine 0.5s ease-out forwards; animation-delay: 1.7s; }
+  .draw-arrowhead-1{ animation: drawLine 0.25s ease-out forwards; animation-delay: 2.2s; }
+  .draw-arrow-2    { animation: drawLine 0.5s ease-out forwards; animation-delay: 1.9s; }
+  .draw-arrowhead-2{ animation: drawLine 0.25s ease-out forwards; animation-delay: 2.4s; }
+  .draw-arrow-3    { animation: drawLine 0.5s ease-out forwards; animation-delay: 2.1s; }
+  .draw-arrowhead-3{ animation: drawLine 0.25s ease-out forwards; animation-delay: 2.6s; }
 }
 
-/* ========== KEYFRAMES — GPU-only transforms ========== */
+/* ========== KEYFRAMES ========== */
 
 @keyframes ticker {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes hero-float {
-  0%, 100% { transform: translate3d(0, 0px, 0) rotate(-0.5deg); }
-  50% { transform: translate3d(0, -10px, 0) rotate(0.5deg); }
+  0%, 100% { transform: translateY(0px) rotate(-0.5deg); }
+  50% { transform: translateY(-10px) rotate(0.5deg); }
 }
 
 @keyframes neonPulse {
@@ -580,8 +579,8 @@
 }
 
 @keyframes tvFloat {
-  0%, 100% { transform: translate3d(0, 0, 0); }
-  50% { transform: translate3d(0, -8px, 0); }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes drawEllipse { to { stroke-dashoffset: 0; } }

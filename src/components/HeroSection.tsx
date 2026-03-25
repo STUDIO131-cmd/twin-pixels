@@ -1,19 +1,12 @@
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden min-h-screen">
-      {/* Background image — LCP element with fetchpriority */}
-      <picture>
-        <source srcSet="/backgrounds/Background-4.webp" type="image/webp" />
-        <img
-          src="/backgrounds/Background-4.png"
-          alt=""
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          decoding="async"
-          className="absolute inset-0 w-full h-full object-cover object-center z-0"
-        />
-      </picture>
+      {/* Background image */}
+      <img
+        src="/backgrounds/Background-4.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover object-center z-0"
+      />
 
       {/* Dark overlay */}
       <div
@@ -26,20 +19,15 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-[2] flex flex-col items-center text-center max-w-[780px] mx-auto px-6 pt-[60px] pb-20">
         {/* Mockup */}
-        <picture>
-          <source srcSet="/images/Produto.webp" type="image/webp" />
-          <img
-            src="/images/Produto.png"
-            alt="Produto"
-            width={384}
-            height={384}
-            className="hero-float block mx-auto w-96 h-auto"
-            style={{
-              mixBlendMode: 'screen',
-              filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.7))',
-            }}
-          />
-        </picture>
+        <img
+          src="/images/Produto.png"
+          alt="Produto"
+          className="hero-float block mx-auto w-96 h-auto"
+          style={{
+            mixBlendMode: 'screen',
+            filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.7))',
+          }}
+        />
 
         {/* Progress bar */}
         <div className="w-80 mx-auto relative">

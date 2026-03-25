@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 const Pillar = ({ num, title, subtitle, desc, items, img, reverse = false, textOffset }: any) => (
   <div className="relative w-full max-w-[860px] mx-auto mb-[60px]">
     <div className="relative overflow-hidden rounded-[20px]">
-      <picture>
-        <source srcSet={img.replace('.png', '.webp')} type="image/webp" />
-        <img src={img} alt="" width={860} height={484} loading="lazy" decoding="async" className="w-full h-auto object-cover" />
-      </picture>
+      <img src={img} alt="" className="w-full h-auto object-cover" />
 
       <div className={`absolute inset-0 flex flex-col justify-center p-8 md:p-12 ${reverse ? 'items-start text-left' : 'items-end text-right'}`}>
         <div
@@ -42,29 +39,38 @@ const PillarsSection = () => {
         </div>
 
         <Pillar
-          num="01" title="Clareza de Marca"
+          num="01"
+          title="Clareza de Marca"
           subtitle="Por que o cliente me escolheria?"
           desc="O cliente entende o que você faz ou você parece mais um no mercado?"
           items={["- Diferencial claro", "- Promessa que faz sentido", "- Facilidade de explicar"]}
-          img="/images/Pasta_Pilar_1.png" reverse={false}
+          img="/images/Pasta_Pilar_1.png"
+          reverse={false}
         />
+
         <Pillar
-          num="02" title="Conteúdo Inteligente"
+          num="02"
+          title="Conteúdo Inteligente"
           subtitle="O que eu falo para atrair e reter?"
           desc="O que você posta está atraindo o cliente certo ou é só esforço sem direção?"
           items={["- Falando o que o cliente quer ouvir", "- Aparecendo o suficiente para ser lembrado", "- Esforço que cabe na sua rotina"]}
-          img="/images/Pasta_Pilar_2.png" reverse={true}
+          img="/images/Pasta_Pilar_2.png"
+          reverse={true}
           textOffset="translateX(15%) translateY(-5%)"
         />
+
         <Pillar
-          num="03" title="Receita e Estrutura"
+          num="03"
+          title="Receita e Estrutura"
           subtitle="Como vender e lucrar mais?"
           desc="Onde está perdendo dinheiro? Na hora de apresentar preço? No follow-up? Na falta de processo?"
           items={["- Saber quanto cobrar e como apresentar", "- Não perder cliente por falta de acompanhamento", "- Vender mais ou vender melhor"]}
-          img="/images/Pasta_Pilar_3.png" reverse={false}
+          img="/images/Pasta_Pilar_3.png"
+          reverse={false}
           textOffset="translateX(-60%) translateY(0%)"
         />
 
+        {/* CTA */}
         <div className="text-center mt-8">
           <a href="#preco" className="btn-coral text-[15px] tracking-wider px-12 py-5">
             QUERO FAZER ESSE DIAGNÓSTICO · R$47
