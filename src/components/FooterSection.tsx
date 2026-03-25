@@ -1,10 +1,10 @@
 const FooterSection = () => {
   return (
-    <footer className="text-center font-display" style={{ background: '#141210', padding: '40px 16px' }}>
-      <p style={{ fontWeight: 600, fontSize: 15, color: 'white', marginBottom: 8 }}>
+    <footer className="text-center py-10 px-4" style={{ background: 'hsl(var(--dark-bg-deep))' }}>
+      <p className="font-semibold text-[15px] text-white mb-2">
         A Jornada de Ascensão · The Journey
       </p>
-      <p style={{ fontWeight: 300, fontSize: 13, color: '#666' }}>
+      <p className="font-light text-[13px] text-studio-gray-700">
         11 de abril · Online · Lote 1 R$47 | Lote 2 R$99
       </p>
     </footer>
