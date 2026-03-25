@@ -133,7 +133,7 @@ const ForWhoSection = () => {
                       height: "116px",
                       objectFit: "contain",
                       filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                      marginBottom: "3px",
+                      marginBottom: "-2px",
                     }}
                   />
                 )}
