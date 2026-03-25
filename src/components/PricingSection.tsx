@@ -17,8 +17,7 @@ const PricingSection = () => {
 
         {/* Título */}
         <h2
-          className="text-center font-bold text-white max-w-[720px] mx-auto mb-5 leading-tight"
-          style={{ fontSize: 'clamp(24px, 3.5vw, 40px)' }}
+          className="text-center font-bold text-white max-w-[720px] mx-auto mb-5 leading-tight text-[clamp(24px,3.5vw,40px)]"
         >
           Menos do que vale uma hora da sua agenda.
         </h2>
@@ -39,8 +38,11 @@ const PricingSection = () => {
           <img
             src="/images/Ingresso_1.png"
             alt="Ingresso Lote 1"
-            className="w-full h-auto block rounded-[20px]"
-            style={{ filter: 'drop-shadow(0 8px 32px rgba(0,0,0,0.4))' }}
+            className="w-full h-auto block rounded-[20px] drop-shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+            width={760}
+            height={400}
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
 
@@ -55,8 +57,11 @@ const PricingSection = () => {
           <img
             src="/images/Ingresso_2.png"
             alt="Ingresso Lote 2"
-            className="w-full h-auto block rounded-[20px]"
-            style={{ filter: 'drop-shadow(0 8px 32px rgba(0,0,0,0.4))' }}
+            className="w-full h-auto block rounded-[20px] drop-shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+            width={760}
+            height={400}
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
 
@@ -74,7 +79,7 @@ const PricingSection = () => {
 
         {/* Barra de vagas */}
         <div className="w-80 mx-auto text-center">
-          <div className="rounded-full h-1.5 overflow-hidden" style={{ background: 'hsl(var(--studio-gray-700))' }}>
+          <div className="rounded-full h-1.5 overflow-hidden bg-studio-gray-700">
             <div className="w-[81%] bg-amber rounded-full h-full" />
           </div>
           <p className="font-light text-xs text-muted-foreground mt-2">
