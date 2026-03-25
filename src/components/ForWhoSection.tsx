@@ -58,7 +58,7 @@ const ForWhoSection = () => {
         {/* Cards Grid 2x2 */}
         <div className="forwho-grid grid gap-5 max-w-[900px] mx-auto items-stretch" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
           {cards.map((card, i) => (
-            <div key={i} className="flex flex-col items-start">
+            <div key={i} className="flex flex-col items-center sm:items-start">
               {/* Icon above card */}
               <div className="h-[94px] flex items-end">
                 {i === 0 && (
