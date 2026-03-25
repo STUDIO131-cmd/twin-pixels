@@ -109,7 +109,7 @@ const PricingSection = () => {
           }}
           onMouseEnter={e => {
             (e.currentTarget as HTMLElement).style.boxShadow = "0 0 30px rgba(217,119,6,0.95), 0 0 60px rgba(217,119,6,0.55), 0 0 120px rgba(217,119,6,0.3)";
-            (e.currentTarget as HTMLElement).style.transform = "translateY(calc(-130px - 2px)) scale(1.02)";
+            (e.currentTarget as HTMLElement).style.transform = "translateY(-2px) scale(1.02)";
           }}
           onMouseLeave={e => {
             (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3), 0 0 80px rgba(217,119,6,0.15)";
