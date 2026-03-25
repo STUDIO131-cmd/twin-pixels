@@ -41,9 +41,6 @@ const ContinuitySection = () => {
                 filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
               }}
             />
-            <img src="/icons/Seta.png" alt="" className="block w-[160px] h-auto"
-              style={{ mixBlendMode: 'multiply', transform: 'scaleX(-1)' }}
-            />
             <p className="text-sm text-studio-gray-700 leading-relaxed text-center px-4">
               A imersão <span className="font-bold">funciona sozinha.</span>
               <br />
