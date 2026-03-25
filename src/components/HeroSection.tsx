@@ -37,7 +37,7 @@ const HeroSection = () => {
           alt="The Journey"
           className="hero-logo-pulse"
           style={{
-            width: 180,
+            width: 220,
             height: 'auto',
             display: 'block',
             margin: '0 auto 32px',
