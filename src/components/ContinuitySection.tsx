@@ -233,7 +233,7 @@ const ContinuitySection = () => {
             (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 40px))';
           }}
         >
-          BÔNUS ESPECIAL
+          {'\n'}
         </a>
       </div>
 
