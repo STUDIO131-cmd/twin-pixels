@@ -80,7 +80,6 @@ const PricingSection = () => {
               width: "100%", height: "auto", display: "block",
               borderRadius: "20px",
               filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.4))"
-              }}
             }}
           />
         </motion.div>
