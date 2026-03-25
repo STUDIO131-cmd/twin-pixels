@@ -129,8 +129,8 @@ const ForWhoSection = () => {
                     src="/icons/Liberal-3.svg"
                     alt=""
                     style={{
-                      width: "86px",
-                      height: "86px",
+                      width: "116px",
+                      height: "116px",
                       objectFit: "contain",
                       filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
                       marginBottom: "8px",
