@@ -9,57 +9,36 @@ const items = [
 
 const OutcomeSection = () => {
   return (
-    <section
-      className="py-24 overflow-hidden"
-      style={{
-        backgroundColor: "#EFE7DA",
-        backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
-        backgroundSize: "32px 32px",
-      }}
-    >
+    <section className="py-24 overflow-hidden bg-studio-sand-100 bg-graph-paper">
       <div className="container max-w-[900px] mx-auto px-4">
         {/* Label */}
-        <p
-          className="text-center mb-2"
-          style={{ fontWeight: 300, fontSize: "13px", color: "#888", letterSpacing: "0.1em" }}
-        >
+        <p className="text-center mb-2 text-[13px] font-light text-studio-gray-500 tracking-widest">
           O que muda
         </p>
 
         {/* Título */}
         <h2
-          className="text-center mx-auto mb-[52px]"
-          style={{
-            fontSize: "clamp(28px, 4vw, 48px)",
-            color: "#1a1a1a",
-            lineHeight: 1.2,
-            maxWidth: "700px",
-          }}
+          className="text-center mx-auto mb-[52px] max-w-[700px] leading-tight"
+          style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}
         >
-          <span style={{ fontWeight: 700, fontSize: "clamp(19.6px, 2.8vw, 33.6px)" }}>Você sai sabendo o problema.</span>
+          <span className="font-bold text-studio-gray-900" style={{ fontSize: 'clamp(19.6px, 2.8vw, 33.6px)' }}>Você sai sabendo o problema.</span>
           <br />
-          <span style={{ fontWeight: 700, fontSize: "clamp(19.6px, 2.8vw, 33.6px)" }}>E o próximo passo.</span>
+          <span className="font-bold text-studio-gray-900" style={{ fontSize: 'clamp(19.6px, 2.8vw, 33.6px)' }}>E o próximo passo.</span>
         </h2>
 
         {/* Grid 2 colunas */}
-        <div
-          className="outcome-grid grid items-center gap-12"
-          style={{ gridTemplateColumns: "55% 45%" }}
-        >
+        <div className="outcome-grid grid items-center gap-12" style={{ gridTemplateColumns: '55% 45%' }}>
           {/* Coluna esquerda — texto */}
           <div>
-            {/* Parágrafo intro */}
-            <p style={{ fontWeight: 400, fontSize: "17px", color: "#333", lineHeight: 1.7, marginBottom: "32px" }}>
-              A imersão não promete que você{"\n"}vai sair com tudo resolvido.
+            <p className="text-[17px] text-studio-gray-700 leading-relaxed mb-8">
+              A imersão não promete que você vai sair com tudo resolvido.
               <br />
               Promete que você vai sair com{" "}
-              <span style={{ fontWeight: 700, fontSize: "20px", color: "#1a1a1a", letterSpacing: "0.04em" }}>
+              <span className="font-bold text-xl text-studio-gray-900 tracking-wide">
                 CLAREZA
               </span>
             </p>
 
-            {/* Lista */}
             <div>
               {items.map((item, i) => (
                 <motion.div
@@ -68,16 +47,16 @@ const OutcomeSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.2 }}
-                  style={{ marginBottom: "24px" }}
+                  className="mb-6"
                 >
-                  <p style={{ fontWeight: 300, fontSize: "15px", color: "#666" }}>{item.label}</p>
-                  <p style={{ fontWeight: 700, fontSize: "16px", color: "#1a1a1a" }}>{item.bold}</p>
+                  <p className="font-light text-[15px] text-studio-gray-500">{item.label}</p>
+                  <p className="font-bold text-base text-studio-gray-900">{item.bold}</p>
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Coluna direita — Container fixo para TV */}
+          {/* Coluna direita — TV */}
           <motion.div
             className="relative flex justify-center"
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
@@ -85,26 +64,19 @@ const OutcomeSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative w-full" style={{ maxWidth: '425px', aspectRatio: '4/3' }}>
+            <div className="relative w-full max-w-[425px] aspect-[4/3]">
               <img
                 src={vintageTv}
                 alt="TV vintage"
-                className="absolute inset-0 w-full h-full"
-                style={{
-                  mixBlendMode: "multiply",
-                  objectFit: "contain",
-                }}
+                className="absolute inset-0 w-full h-full object-contain"
+                style={{ mixBlendMode: 'multiply' }}
               />
-              {/* Screen glow overlay */}
               <div
                 className="absolute pointer-events-none"
                 style={{
-                  top: "38%",
-                  left: "12%",
-                  width: "58%",
-                  height: "46%",
-                  background: "radial-gradient(ellipse at 40% 35%, rgba(255,255,255,0.08) 0%, transparent 70%)",
-                  borderRadius: "12px",
+                  top: '38%', left: '12%', width: '58%', height: '46%',
+                  background: 'radial-gradient(ellipse at 40% 35%, rgba(255,255,255,0.08) 0%, transparent 70%)',
+                  borderRadius: 12,
                 }}
               />
             </div>
@@ -112,41 +84,22 @@ const OutcomeSection = () => {
         </div>
 
         {/* Texto final */}
-        <div className="text-center mx-auto mt-14" style={{ maxWidth: "600px" }}>
-          <p style={{ fontWeight: 400, color: "#555", fontSize: "18px" }}>
+        <div className="text-center mx-auto mt-14 max-w-[600px]">
+          <p className="text-lg text-studio-gray-700">
             Isso é o que a imersão entrega.
           </p>
-          <p style={{ fontWeight: 700, color: "#1a1a1a", fontSize: "20px", marginTop: "6px" }}>
+          <p className="font-bold text-xl text-studio-gray-900 mt-1.5">
             Diagnóstico real.  Não promessa vazia.
           </p>
         </div>
 
         {/* CTA */}
         <div className="mt-11 text-center">
-          <a
-            href="#preco"
-            className="clarity-cta inline-block cursor-pointer"
-            style={{
-              fontWeight: 700,
-              fontSize: "15px",
-              letterSpacing: "0.06em",
-              textTransform: "uppercase" as const,
-              color: "#1a1a1a",
-              backgroundColor: "#D97706",
-              borderRadius: "999px",
-              padding: "18px 52px",
-              border: "none",
-              transition: "all 0.2s ease",
-              boxShadow:
-                "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28), 0 0 80px rgba(217,119,6,0.12)",
-              textDecoration: "none",
-            }}
-          >
+          <a href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
             QUERO ESSA CLAREZA · R$47
           </a>
         </div>
       </div>
-
     </section>
   );
 };
