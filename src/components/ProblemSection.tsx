@@ -59,17 +59,17 @@ const ProblemSection = () => {
           {cards.map((card, i) => (
             <div key={i} className="relative flex flex-col items-center">
               {i === 1 && (
-                <div className="absolute flex items-center justify-center w-[246px] h-[246px]" style={{ top: '-182px', left: '-95%' }}>
+                <div className="absolute hidden md:flex items-center justify-center w-[246px] h-[246px]" style={{ top: '-182px', left: '-95%' }}>
                   <img src="/icons/Cerebro-3.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
               {i === 1 && (
-                <div className="absolute flex items-center justify-center w-[246px] h-[246px] left-1/2 -translate-x-1/2" style={{ top: '-160px' }}>
+                <div className="absolute hidden md:flex items-center justify-center w-[246px] h-[246px] left-1/2 -translate-x-1/2" style={{ top: '-160px' }}>
                   <img src="/icons/Dinheiro-2.png" alt="Ícone Dinheiro" className="w-full h-full object-contain" />
                 </div>
               )}
               {i === 2 && (
-                <div className="absolute flex items-center justify-center w-[246px] h-[246px] left-1/2 -translate-x-1/2" style={{ top: '-191px' }}>
+                <div className="absolute hidden md:flex items-center justify-center w-[246px] h-[246px] left-1/2 -translate-x-1/2" style={{ top: '-191px' }}>
                   <img src="/icons/Alto_Falante-2.png" alt="Ícone Alto-Falante" className="w-full h-full object-contain" />
                 </div>
               )}
