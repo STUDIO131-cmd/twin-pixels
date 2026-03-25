@@ -1,11 +1,15 @@
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden min-h-screen">
-      {/* Background image */}
+      {/* Background image — LCP element */}
       <img
         src="/backgrounds/Background-4.png"
         alt=""
         className="absolute inset-0 w-full h-full object-cover object-center z-0"
+        fetchPriority="high"
+        decoding="async"
+        width={1920}
+        height={1080}
       />
 
       {/* Dark overlay */}
@@ -23,6 +27,10 @@ const HeroSection = () => {
           src="/images/Produto.png"
           alt="Produto"
           className="hero-float block mx-auto w-96 h-auto"
+          width={384}
+          height={384}
+          loading="eager"
+          decoding="async"
           style={{
             mixBlendMode: 'screen',
             filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.7))',
@@ -51,7 +59,7 @@ const HeroSection = () => {
         </div>
 
         {/* Title */}
-        <h1 className="font-bold text-white text-center mt-10 leading-[1.15]" style={{ fontSize: 'clamp(29px, 4.4vw, 51px)' }}>
+        <h1 className="font-bold text-white text-center mt-10 leading-[1.15] text-[clamp(29px,4.4vw,51px)]">
           Você trabalha demais
           <br />
           para depender de{' '}
