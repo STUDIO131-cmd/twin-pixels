@@ -90,8 +90,8 @@ const ForWhoSection = () => {
                     src="/icons/personalizado-7.png"
                     alt=""
                     style={{
-                      width: "64px",
-                      height: "64px",
+                      width: "94px",
+                      height: "94px",
                       objectFit: "contain",
                       filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
                       marginBottom: "8px",
@@ -103,8 +103,8 @@ const ForWhoSection = () => {
                     src="/icons/Layer_13-3.png"
                     alt=""
                     style={{
-                      width: "64px",
-                      height: "64px",
+                      width: "94px",
+                      height: "94px",
                       objectFit: "contain",
                       filter: "drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
                       marginBottom: "8px",
