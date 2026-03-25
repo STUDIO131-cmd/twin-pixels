@@ -79,7 +79,7 @@ const PricingSection = () => {
             style={{
               width: "100%", height: "auto", display: "block",
               borderRadius: "20px",
-              filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.4))",
+              filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.4))"
               position: "relative", left: "7px"
             }}
           />
