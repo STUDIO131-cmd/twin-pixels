@@ -37,16 +37,14 @@ const ForWhoSection = () => {
       {/* Background texture */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.28]"
-        style={{ backgroundImage: "url('/backgrounds/black-graph-paper.jpg')" }}
+        style={{ backgroundImage: "url('/backgrounds/black-graph-paper.webp')" }}
       />
 
       <div className="relative z-10 max-w-[900px] mx-auto px-4" style={{ isolation: 'isolate' }}>
-        {/* Label */}
         <p className="text-center text-[13px] font-light text-muted-foreground tracking-widest mb-2">
           Para quem é
         </p>
 
-        {/* Title */}
         <h2
           className="text-center mx-auto text-white font-bold mb-12 max-w-[800px] leading-tight"
           style={{ fontSize: 'clamp(26px, 4vw, 46px)' }}
@@ -55,29 +53,27 @@ const ForWhoSection = () => {
           <span className="font-bold">é para você.</span>
         </h2>
 
-        {/* Cards Grid 2x2 */}
         <div className="forwho-grid grid gap-5 max-w-[900px] mx-auto items-stretch" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
           {cards.map((card, i) => (
             <div key={i} className="flex flex-col items-start">
-              {/* Icon above card */}
               <div className="h-[94px] flex items-end">
                 {i === 0 && (
-                  <img src="/icons/personalizado-7.png" alt="" className="w-[104px] h-[104px] object-contain mb-2"
+                  <img src="/icons/personalizado-7.png" alt="" width={104} height={104} loading="lazy" className="object-contain mb-2"
                     style={{ filter: 'invert(1) brightness(2) drop-shadow(0 0 6px hsl(var(--studio-gray-100) / 0.6)) drop-shadow(0 0 12px hsl(var(--studio-gray-100) / 0.3))' }}
                   />
                 )}
                 {i === 1 && (
-                  <img src="/icons/Layer_13-3.png" alt="" className="w-[94px] h-[94px] object-contain mb-2"
+                  <img src="/icons/Layer_13-3.png" alt="" width={94} height={94} loading="lazy" className="object-contain mb-2"
                     style={{ filter: 'drop-shadow(0 0 6px hsl(var(--studio-gray-100) / 0.6)) drop-shadow(0 0 12px hsl(var(--studio-gray-100) / 0.3))' }}
                   />
                 )}
                 {i === 2 && (
-                  <img src="/icons/loja-3.png" alt="" className="w-[94px] h-[94px] object-contain mb-2"
+                  <img src="/icons/loja-3.png" alt="" width={94} height={94} loading="lazy" className="object-contain mb-2"
                     style={{ filter: 'drop-shadow(0 0 6px hsl(var(--studio-gray-100) / 0.6)) drop-shadow(0 0 12px hsl(var(--studio-gray-100) / 0.3))' }}
                   />
                 )}
                 {i === 3 && (
-                  <img src="/icons/Liberal-3.svg" alt="" className="w-[116px] h-[116px] object-contain -mb-0.5"
+                  <img src="/icons/Liberal-3.svg" alt="" width={116} height={116} loading="lazy" className="object-contain -mb-0.5"
                     style={{ filter: 'invert(1) brightness(2) drop-shadow(0 0 6px hsl(var(--studio-gray-100) / 0.6)) drop-shadow(0 0 12px hsl(var(--studio-gray-100) / 0.3))' }}
                   />
                 )}
@@ -98,9 +94,7 @@ const ForWhoSection = () => {
                     <p className="text-[13px] text-studio-gray-100">{card.subtitle}</p>
                   </div>
                 </div>
-
                 <div className="border-t border-black/[0.08] w-full mb-5" />
-
                 <p className="text-sm leading-loose text-studio-gray-100 mb-5">{card.body}</p>
                 <p className="font-bold text-sm text-studio-gray-100">{card.quote}</p>
               </motion.div>
@@ -108,7 +102,6 @@ const ForWhoSection = () => {
           ))}
         </div>
 
-        {/* Cut text */}
         <div className="text-center mx-auto max-w-[640px] mt-[52px]">
           <p className="text-lg leading-relaxed text-studio-gray-300">
             Se você já fatura, já atende clientes e quer crescer com mais clareza e estrutura —{" "}
@@ -120,7 +113,6 @@ const ForWhoSection = () => {
           </p>
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <a href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
             ISSO SOU EU · R$47
