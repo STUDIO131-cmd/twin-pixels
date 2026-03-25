@@ -33,205 +33,100 @@ const cards = [
 
 const ForWhoSection = () => {
   return (
-    <section
-      className="relative py-24"
-      style={{
-        backgroundColor: "#0a0a0a",
-      }}
-    >
-      {/* Background texture with reduced opacity */}
+    <section className="relative py-24 bg-[hsl(var(--dark-bg-deep))]">
+      {/* Background texture */}
       <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "url('/backgrounds/black-graph-paper.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
-          backgroundRepeat: "no-repeat",
-          opacity: 0.28,
-        }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.28]"
+        style={{ backgroundImage: "url('/backgrounds/black-graph-paper.jpg')" }}
       />
-      {/* Content */}
-      <div className="relative z-10 max-w-[900px] mx-auto px-4" style={{ isolation: "isolate" }}>
+
+      <div className="relative z-10 max-w-[900px] mx-auto px-4" style={{ isolation: 'isolate' }}>
         {/* Label */}
-        <p
-          className="text-center"
-          style={{ fontWeight: 300, fontSize: "13px", color: "#aaa", letterSpacing: "0.1em", marginBottom: "8px" }}
-        >
+        <p className="text-center text-[13px] font-light text-muted-foreground tracking-widest mb-2">
           Para quem é
         </p>
 
         {/* Title */}
         <h2
-          className="text-center mx-auto"
-          style={{
-            fontSize: "clamp(26px, 4vw, 46px)",
-            maxWidth: "800px",
-            lineHeight: 1.2,
-            color: "white",
-            fontWeight: 700,
-            marginBottom: "48px",
-          }}
+          className="text-center mx-auto text-white font-bold mb-12 max-w-[800px] leading-tight"
+          style={{ fontSize: 'clamp(26px, 4vw, 46px)' }}
         >
           Se você se reconhece aqui,{" "}
-          <span style={{ fontWeight: 700 }}>é para você.</span>
+          <span className="font-bold">é para você.</span>
         </h2>
 
         {/* Cards Grid 2x2 */}
-        <div
-          className="forwho-grid grid gap-5"
-          style={{ gridTemplateColumns: "repeat(2, 1fr)", maxWidth: "900px", margin: "0 auto", alignItems: "stretch" }}
-        >
+        <div className="forwho-grid grid gap-5 max-w-[900px] mx-auto items-stretch" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
           {cards.map((card, i) => (
-            <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+            <div key={i} className="flex flex-col items-center sm:items-start">
               {/* Icon above card */}
-              <div style={{ height: "94px", display: "flex", alignItems: "flex-end" }}>
+              <div className="h-[94px] flex items-end">
                 {i === 0 && (
-                  <img
-                    src="/icons/personalizado-7.png"
-                    alt=""
-                    style={{
-                      width: "104px",
-                      height: "104px",
-                      objectFit: "contain",
-                      filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                      marginBottom: "8px",
-                    }}
+                  <img src="/icons/personalizado-7.png" alt="" className="w-[104px] h-[104px] object-contain mb-2"
+                    style={{ filter: 'invert(1) brightness(2) drop-shadow(0 0 6px hsl(var(--studio-gray-100) / 0.6)) drop-shadow(0 0 12px hsl(var(--studio-gray-100) / 0.3))' }}
                   />
                 )}
                 {i === 1 && (
-                  <img
-                    src="/icons/Layer_13-3.png"
-                    alt=""
-                    style={{
-                      width: "94px",
-                      height: "94px",
-                      objectFit: "contain",
-                      filter: "drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                      marginBottom: "8px",
-                    }}
+                  <img src="/icons/Layer_13-3.png" alt="" className="w-[94px] h-[94px] object-contain mb-2"
+                    style={{ filter: 'drop-shadow(0 0 6px hsl(var(--studio-gray-100) / 0.6)) drop-shadow(0 0 12px hsl(var(--studio-gray-100) / 0.3))' }}
                   />
                 )}
                 {i === 2 && (
-                  <img
-                    src="/icons/loja-3.png"
-                    alt=""
-                    style={{
-                      width: "94px",
-                      height: "94px",
-                      objectFit: "contain",
-                      filter: "drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                      marginBottom: "8px",
-                    }}
+                  <img src="/icons/loja-3.png" alt="" className="w-[94px] h-[94px] object-contain mb-2"
+                    style={{ filter: 'drop-shadow(0 0 6px hsl(var(--studio-gray-100) / 0.6)) drop-shadow(0 0 12px hsl(var(--studio-gray-100) / 0.3))' }}
                   />
                 )}
                 {i === 3 && (
-                  <img
-                    src="/icons/Liberal-3.svg"
-                    alt=""
-                    style={{
-                      width: "116px",
-                      height: "116px",
-                      objectFit: "contain",
-                      filter: "invert(1) brightness(2) drop-shadow(0 0 6px rgba(234,234,234,0.6)) drop-shadow(0 0 12px rgba(234,234,234,0.3))",
-                      marginBottom: "-2px",
-                    }}
+                  <img src="/icons/Liberal-3.svg" alt="" className="w-[116px] h-[116px] object-contain -mb-0.5"
+                    style={{ filter: 'invert(1) brightness(2) drop-shadow(0 0 6px hsl(var(--studio-gray-100) / 0.6)) drop-shadow(0 0 12px hsl(var(--studio-gray-100) / 0.3))' }}
                   />
                 )}
               </div>
+
               <motion.div
-                className="text-[#efe0c8]"
+                className="text-studio-sand-100 glass-card-forwho w-full cursor-pointer p-8 pb-9 flex flex-col items-start text-left relative overflow-hidden"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-                whileHover={{
-                  y: -6,
-                  boxShadow: "0 16px 48px rgba(0,0,0,0.3)",
-                }}
-                style={{
-                  background: "linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
-                  backdropFilter: "blur(40px) saturate(1.4)",
-                  WebkitBackdropFilter: "blur(40px) saturate(1.4)",
-                  borderRadius: "28px",
-                  padding: "32px 32px 36px",
-                  border: "1px solid rgba(255,255,255,0.45)",
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.06), inset 0 1px 1px rgba(255,255,255,0.6), inset 0 -1px 1px rgba(255,255,255,0.1)",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  position: "relative",
-                  overflow: "hidden",
-                  cursor: "pointer",
-                  transition: "border-color 0.3s ease",
-                  width: "100%",
-                }}
+                whileHover={{ y: -6, boxShadow: '0 16px 48px rgba(0,0,0,0.3)' }}
+                style={{ transition: 'border-color 0.3s ease' }}
               >
-              {/* Header: title left, icon in fixed container right */}
-              <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", width: "100%", marginBottom: "20px" }}>
-                <div>
-                  <h3 style={{ fontWeight: 700, fontSize: "15px", color: "#eaeaea", marginBottom: "4px" }}>
-                    {card.title}
-                  </h3>
-                  <p style={{ fontWeight: 400, fontSize: "13px", color: "#eaeaea" }}>
-                    {card.subtitle}
-                  </p>
+                <div className="flex flex-row justify-between items-start w-full mb-5">
+                  <div>
+                    <h3 className="font-bold text-[15px] text-studio-gray-100 mb-1">{card.title}</h3>
+                    <p className="text-[13px] text-studio-gray-100">{card.subtitle}</p>
+                  </div>
                 </div>
-              </div>
 
-              {/* Separator */}
-              <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", margin: "0 0 20px 0", width: "100%" }} />
+                <div className="border-t border-black/[0.08] w-full mb-5" />
 
-              {/* Body — independente do ícone */}
-              <p style={{ fontWeight: 400, fontSize: "14px", lineHeight: 1.8, color: "#eaeaea", marginBottom: "20px" }}>
-                {card.body}
-              </p>
-
-              {/* Quote — independente do ícone */}
-              <p style={{ fontWeight: 700, fontSize: "14px", color: "#eaeaea" }}>
-                {card.quote}
-              </p>
+                <p className="text-sm leading-loose text-studio-gray-100 mb-5">{card.body}</p>
+                <p className="font-bold text-sm text-studio-gray-100">{card.quote}</p>
               </motion.div>
             </div>
           ))}
         </div>
 
         {/* Cut text */}
-        <div className="text-center mx-auto" style={{ maxWidth: "640px", marginTop: "52px" }}>
-          <p style={{ fontWeight: 400, color: "#ccc", fontSize: "18px", lineHeight: 1.7 }}>
+        <div className="text-center mx-auto max-w-[640px] mt-[52px]">
+          <p className="text-lg leading-relaxed text-studio-gray-300">
             Se você já fatura, já atende clientes e quer crescer com mais clareza e estrutura —{" "}
-            <span style={{ fontWeight: 700, color: "white" }}>é para você.</span>
+            <span className="font-bold text-white">é para você.</span>
           </p>
-          <p style={{ fontWeight: 400, color: "#ccc", fontSize: "18px", lineHeight: 1.7, marginTop: "12px" }}>
+          <p className="text-lg leading-relaxed text-studio-gray-300 mt-3">
             Se ainda está validando ideia, não tem clientes ou está começando do zero —{" "}
-            <span style={{ fontWeight: 700, color: "white" }}>pode ser cedo.</span>
+            <span className="font-bold text-white">pode ser cedo.</span>
           </p>
         </div>
 
         {/* CTA */}
-        <div className="text-center" style={{ marginTop: "48px" }}>
-          <a
-            href="#preco"
-            className="forwho-cta inline-block uppercase cursor-pointer"
-            style={{
-              fontWeight: 700,
-              fontSize: "15px",
-              letterSpacing: "0.06em",
-              color: "#1a1a1a",
-              background: "#D97706",
-              borderRadius: "999px",
-              padding: "18px 52px",
-              border: "none",
-              boxShadow: "0 0 20px rgba(217,119,6,0.55), 0 0 40px rgba(217,119,6,0.28), 0 0 80px rgba(217,119,6,0.12)",
-              transition: "all 0.2s ease",
-              textDecoration: "none",
-            }}
-          >
+        <div className="text-center mt-12">
+          <a href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
             ISSO SOU EU · R$47
           </a>
         </div>
       </div>
-
     </section>
   );
 };

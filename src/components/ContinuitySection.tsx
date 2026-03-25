@@ -1,45 +1,21 @@
 import continuityTv from "@/assets/continuity-tv.png";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ContinuitySection = () => {
+  const isMobile = useIsMobile();
+
   return (
-    <section
-      className="relative py-24 overflow-hidden"
-      style={{
-        backgroundColor: '#EFE7DA',
-        backgroundImage:
-          'linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)',
-        backgroundSize: '32px 32px',
-        borderRadius: 24,
-      }}
-    >
-      <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 24px' }}>
+    <section className="relative py-16 sm:py-24 overflow-hidden bg-studio-sand-100 bg-graph-paper rounded-3xl">
+      <div className="max-w-[780px] mx-auto px-6">
         {/* Label */}
-        <p
-          className="font-display"
-          style={{
-            fontWeight: 300,
-            fontSize: 13,
-            color: '#888',
-            letterSpacing: '0.1em',
-            textAlign: 'center',
-            marginBottom: 10,
-          }}
-        >
+        <p className="text-center text-[13px] font-light text-studio-gray-500 tracking-widest mb-2.5">
           E depois?
         </p>
 
         {/* Título */}
         <h2
-          className="font-display"
-          style={{
-            fontWeight: 700,
-            color: '#1a1a1a',
-            fontSize: 'clamp(24px, 3.5vw, 40px)',
-            lineHeight: 1.2,
-            textAlign: 'center',
-            maxWidth: 720,
-            margin: '0 auto 36px',
-          }}
+          className="font-bold text-studio-gray-900 text-center max-w-[720px] mx-auto mb-6 sm:mb-9 leading-tight"
+          style={{ fontSize: 'clamp(24px, 3.5vw, 40px)' }}
         >
           A imersão é o diagnóstico.
           <br />
@@ -47,229 +23,105 @@ const ContinuitySection = () => {
         </h2>
 
         {/* Parágrafo principal */}
-        <p
-          className="font-display"
-          style={{
-            fontWeight: 400,
-            fontSize: 17,
-            color: '#333',
-            lineHeight: 1.7,
-            textAlign: 'center',
-            maxWidth: 560,
-            margin: '0 auto 48px',
-          }}
-        >
+        <p className="text-[15px] sm:text-[17px] text-studio-gray-700 leading-relaxed text-center max-w-[560px] mx-auto mb-8 sm:mb-12">
           Se você sair da imersão querendo implementar o que descobriu, existe a{' '}
-          <span style={{ fontWeight: 700, color: '#1a1a1a' }}>Metodologia Gravada</span>
+          <span className="font-bold text-studio-gray-900">Metodologia Gravada</span>
           : 90 dias de conteúdo prático com exercícios, templates e scripts para colocar cada eixo para funcionar.
         </p>
 
-        {/* Grid: TV + Setas + Textos */}
-        <div
-          className="continuity-grid"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gridTemplateRows: 'auto auto auto',
-            gap: 0,
-            alignItems: 'center',
-            position: 'relative',
-            maxWidth: 780,
-            margin: '0 auto',
-          }}
-        >
-          {/* TV — coluna esquerda, ocupa 2 linhas */}
-          <div
-            style={{
-              gridRow: '1 / 4',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
+        {/* Mobile: stack vertical */}
+        {isMobile && (
+          <div className="flex flex-col items-center gap-6">
             <img
               src={continuityTv}
               alt="TV vintage"
-              className="continuity-tv-float"
+              className="continuity-tv-float block w-[220px] h-auto"
               style={{
-                width: 340,
-                height: 'auto',
-                objectFit: 'contain',
                 mixBlendMode: 'multiply',
-                display: 'block',
                 filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
-                transform: 'translateY(calc(-20% - 80px))',
               }}
             />
-          </div>
-
-          {/* Coluna direita — Seta */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              paddingLeft: 32,
-              paddingBottom: 8,
-            }}
-          >
-            <img
-              src="/icons/Seta.png"
-              alt=""
-              style={{
-                width: 273,
-                height: 'auto',
-                objectFit: 'contain',
-                mixBlendMode: 'multiply',
-                display: 'block',
-                transform: 'scaleX(-1) translateX(90%) translateY(calc(-20% - 80px))',
-              }}
-            />
-          </div>
-
-          {/* Coluna direita — Texto */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              paddingLeft: 32,
-              paddingTop: 8,
-              paddingBottom: 8,
-            }}
-          >
-            <p
-              className="font-display"
-              style={{ fontWeight: 400, fontSize: 16, color: '#333', lineHeight: 1.6, transform: 'translateY(calc(-180% - 80px))' }}
-            >
-              A imersão <span style={{ fontWeight: 700 }}>funciona sozinha.</span>
+            <p className="text-sm text-studio-gray-700 leading-relaxed text-center px-4">
+              A imersão <span className="font-bold">funciona sozinha.</span>
               <br />
               Você pode parar no diagnóstico e seguir por conta própria.
             </p>
-          </div>
-
-          {/* Coluna direita linha 2 — Seta 2 */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              paddingLeft: 32,
-              paddingTop: 16,
-            }}
-          >
-            <img
-              src="/icons/Seta_2.png"
-              alt=""
-              style={{
-                width: 140,
-                height: 'auto',
-                objectFit: 'contain',
-                mixBlendMode: 'multiply',
-                display: 'block',
-                transform: 'translateY(calc(-20% - 80px))',
-              }}
+            <img src="/icons/Seta_2.png" alt="" className="block w-[100px] h-auto"
+              style={{ mixBlendMode: 'multiply' }}
             />
           </div>
-        </div>
+        )}
+
+        {/* Desktop: grid 2 cols */}
+        {!isMobile && (
+          <div
+            className="relative max-w-[780px] mx-auto"
+            style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto auto auto', gap: 0, alignItems: 'center' }}
+          >
+            <div className="flex items-center justify-center" style={{ gridRow: '1 / 4' }}>
+              <img
+                src={continuityTv}
+                alt="TV vintage"
+                className="continuity-tv-float block"
+                style={{
+                  width: 340, height: 'auto', objectFit: 'contain',
+                  mixBlendMode: 'multiply',
+                  filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
+                  transform: 'translateY(calc(-20% - 80px))',
+                }}
+              />
+            </div>
+            <div className="flex items-center justify-center pl-8 pb-2">
+              <img src="/icons/Seta.png" alt="" className="block"
+                style={{ width: 273, height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1) translateX(90%) translateY(calc(-20% - 80px))' }}
+              />
+            </div>
+            <div className="flex flex-col items-start pl-8 py-2">
+              <p className="text-base text-studio-gray-700 leading-relaxed" style={{ transform: 'translateY(calc(-180% - 80px))' }}>
+                A imersão <span className="font-bold">funciona sozinha.</span>
+                <br />
+                Você pode parar no diagnóstico e seguir por conta própria.
+              </p>
+            </div>
+            <div className="flex items-start pl-8 pt-4">
+              <img src="/icons/Seta_2.png" alt="" className="block"
+                style={{ width: 140, height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'translateY(calc(-20% - 80px))' }}
+              />
+            </div>
+          </div>
+        )}
 
         {/* Texto final */}
         <p
-          className="font-display"
-          style={{
-            marginTop: 48,
-            maxWidth: 680,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            fontWeight: 400,
-            fontSize: 17,
-            color: '#444',
-            lineHeight: 1.7,
-            textAlign: 'center',
-            transform: 'translateY(calc(-20% - 80px))',
-          }}
+          className="text-[15px] sm:text-[17px] text-studio-gray-700 leading-relaxed text-center max-w-[680px] mx-auto mt-8 sm:mt-12"
+          style={!isMobile ? { transform: 'translateY(calc(-20% - 80px))' } : undefined}
         >
           Mas se quiser continuar com estrutura, o próximo passo será apresentado no final da imersão —{' '}
-          <span style={{ fontWeight: 700, color: '#1a1a1a' }}>
+          <span className="font-bold text-studio-gray-900">
             com uma condição exclusiva para quem estiver ao vivo.
           </span>
         </p>
 
         {/* Badge bônus */}
-        <p className="font-display" style={{ fontWeight: 400, fontSize: 15, color: '#1a1a1a', margin: 0, textAlign: 'center', transform: 'translateY(calc(-20% - 40px))' }}>
+        <p
+          className="text-[14px] sm:text-[15px] text-studio-gray-900 text-center m-0 mt-4 sm:mt-0"
+          style={!isMobile ? { transform: 'translateY(calc(-20% - 40px))' } : undefined}
+        >
           Os 5 primeiros a garantir a metodologia
           <br />
-          no dia da imersão levam um <span style={{ fontWeight: 700 }}>BÔNUS ESPECIAL.</span>
+          no dia da imersão levam um <span className="font-bold">BÔNUS ESPECIAL.</span>
         </p>
 
-        {/* Botão BÔNUS ESPECIAL */}
-        <a
-          href="#"
-          className="font-display"
-          style={{
-            display: 'block',
-            width: 'fit-content',
-            fontWeight: 700,
-            fontSize: 21,
-            color: '#1a1a1a',
-            background: '#D97706',
-            borderRadius: 999,
-            padding: '22px 67px',
-            textAlign: 'center',
-            margin: '24px auto 0',
-            textDecoration: 'none',
-            letterSpacing: '0.06em',
-            textTransform: 'uppercase' as const,
-            cursor: 'pointer',
-            boxShadow: '0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3)',
-            transform: 'translateY(calc(-20% - 40px))',
-            transition: 'all 0.2s ease',
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLElement).style.boxShadow = '0 0 30px rgba(217,119,6,0.95), 0 0 60px rgba(217,119,6,0.55)';
-            (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 40px - 2px)) scale(1.02)';
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLElement).style.boxShadow = '0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3)';
-            (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 40px))';
-          }}
+        {/* Botão */}
+        <div
+          className="text-center mt-6 sm:mt-0"
+          style={!isMobile ? { transform: 'translateY(calc(-20% - 40px))' } : undefined}
         >
-          {'\n'}
-        </a>
+          <a href="#" className="btn-amber text-base sm:text-[21px] tracking-widest px-8 sm:px-[67px] py-4 sm:py-[22px] block w-fit mx-auto">
+            ACESSAR IMERSÃO
+          </a>
+        </div>
       </div>
-
-      {/* Responsive styles */}
-      <style>{`
-        @keyframes tvFloat {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-8px); }
-        }
-        .continuity-tv-float {
-          animation: tvFloat 4s ease-in-out infinite;
-        }
-        @media (max-width: 640px) {
-          .continuity-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .continuity-grid > div:first-child {
-            grid-row: auto !important;
-            margin-bottom: 32px;
-          }
-          .continuity-grid > div:first-child img {
-            width: 240px !important;
-            margin: 0 auto !important;
-          }
-          .continuity-grid > div:nth-child(2),
-          .continuity-grid > div:nth-child(3) {
-            padding-left: 0 !important;
-            align-items: center !important;
-            text-align: center;
-          }
-          .continuity-grid > div:nth-child(2) img,
-          .continuity-grid > div:nth-child(3) img {
-            width: 100px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 };
