@@ -59,7 +59,7 @@ const ProblemSection = () => {
           {cards.map((card, i) => (
             <div key={i} className="relative flex flex-col items-center">
               {i === 1 && (
-                <div className="absolute flex items-center justify-center w-[246px] h-[246px]" style={{ top: '-182px', left: '-95%' }}>
+                <div className="absolute hidden md:flex items-center justify-center w-[246px] h-[246px]" style={{ top: '-182px', left: '-95%' }}>
                   <img src="/icons/Cerebro-3.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
