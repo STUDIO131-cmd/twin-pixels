@@ -1,6 +1,9 @@
 import continuityTv from "@/assets/continuity-tv.png";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ContinuitySection = () => {
+  const isMobile = useIsMobile();
+
   return (
     <section className="relative py-16 sm:py-24 overflow-hidden bg-studio-sand-100 bg-graph-paper rounded-3xl">
       <div className="max-w-[780px] mx-auto px-6">
@@ -26,85 +29,75 @@ const ContinuitySection = () => {
           : 90 dias de conteúdo prático com exercícios, templates e scripts para colocar cada eixo para funcionar.
         </p>
 
-        {/* Mobile: stack vertical | Desktop: grid 2 cols */}
-        <div className="flex flex-col items-center gap-6 sm:hidden">
-          {/* TV */}
-          <img
-            src={continuityTv}
-            alt="TV vintage"
-            className="continuity-tv-float block w-[220px] h-auto"
-            style={{
-              mixBlendMode: 'multiply',
-              filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
-            }}
-          />
-
-          {/* Seta */}
-          <img src="/icons/Seta.png" alt="" className="block w-[160px] h-auto"
-            style={{ mixBlendMode: 'multiply', transform: 'scaleX(-1)' }}
-          />
-
-          {/* Texto */}
-          <p className="text-sm text-studio-gray-700 leading-relaxed text-center px-4">
-            A imersão <span className="font-bold">funciona sozinha.</span>
-            <br />
-            Você pode parar no diagnóstico e seguir por conta própria.
-          </p>
-
-          {/* Seta 2 */}
-          <img src="/icons/Seta_2.png" alt="" className="block w-[100px] h-auto"
-            style={{ mixBlendMode: 'multiply' }}
-          />
-        </div>
-
-        {/* Desktop grid */}
-        <div
-          className="hidden sm:grid relative max-w-[780px] mx-auto"
-          style={{ gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto auto auto', gap: 0, alignItems: 'center' }}
-        >
-          {/* TV */}
-          <div className="flex items-center justify-center" style={{ gridRow: '1 / 4' }}>
+        {/* Mobile: stack vertical */}
+        {isMobile && (
+          <div className="flex flex-col items-center gap-6">
             <img
               src={continuityTv}
               alt="TV vintage"
-              className="continuity-tv-float block"
+              className="continuity-tv-float block w-[220px] h-auto"
               style={{
-                width: 340, height: 'auto', objectFit: 'contain',
                 mixBlendMode: 'multiply',
                 filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
-                transform: 'translateY(calc(-20% - 80px))',
               }}
             />
-          </div>
-
-          {/* Seta */}
-          <div className="flex items-center justify-center pl-8 pb-2">
-            <img src="/icons/Seta.png" alt="" className="block"
-              style={{ width: 273, height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1) translateX(90%) translateY(calc(-20% - 80px))' }}
+            <img src="/icons/Seta.png" alt="" className="block w-[160px] h-auto"
+              style={{ mixBlendMode: 'multiply', transform: 'scaleX(-1)' }}
             />
-          </div>
-
-          {/* Texto */}
-          <div className="flex flex-col items-start pl-8 py-2">
-            <p className="text-base text-studio-gray-700 leading-relaxed" style={{ transform: 'translateY(calc(-180% - 80px))' }}>
+            <p className="text-sm text-studio-gray-700 leading-relaxed text-center px-4">
               A imersão <span className="font-bold">funciona sozinha.</span>
               <br />
               Você pode parar no diagnóstico e seguir por conta própria.
             </p>
-          </div>
-
-          {/* Seta 2 */}
-          <div className="flex items-start pl-8 pt-4">
-            <img src="/icons/Seta_2.png" alt="" className="block"
-              style={{ width: 140, height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'translateY(calc(-20% - 80px))' }}
+            <img src="/icons/Seta_2.png" alt="" className="block w-[100px] h-auto"
+              style={{ mixBlendMode: 'multiply' }}
             />
           </div>
-        </div>
+        )}
+
+        {/* Desktop: grid 2 cols */}
+        {!isMobile && (
+          <div
+            className="relative max-w-[780px] mx-auto"
+            style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto auto auto', gap: 0, alignItems: 'center' }}
+          >
+            <div className="flex items-center justify-center" style={{ gridRow: '1 / 4' }}>
+              <img
+                src={continuityTv}
+                alt="TV vintage"
+                className="continuity-tv-float block"
+                style={{
+                  width: 340, height: 'auto', objectFit: 'contain',
+                  mixBlendMode: 'multiply',
+                  filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
+                  transform: 'translateY(calc(-20% - 80px))',
+                }}
+              />
+            </div>
+            <div className="flex items-center justify-center pl-8 pb-2">
+              <img src="/icons/Seta.png" alt="" className="block"
+                style={{ width: 273, height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1) translateX(90%) translateY(calc(-20% - 80px))' }}
+              />
+            </div>
+            <div className="flex flex-col items-start pl-8 py-2">
+              <p className="text-base text-studio-gray-700 leading-relaxed" style={{ transform: 'translateY(calc(-180% - 80px))' }}>
+                A imersão <span className="font-bold">funciona sozinha.</span>
+                <br />
+                Você pode parar no diagnóstico e seguir por conta própria.
+              </p>
+            </div>
+            <div className="flex items-start pl-8 pt-4">
+              <img src="/icons/Seta_2.png" alt="" className="block"
+                style={{ width: 140, height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'translateY(calc(-20% - 80px))' }}
+              />
+            </div>
+          </div>
+        )}
 
         {/* Texto final */}
         <p
           className="text-[15px] sm:text-[17px] text-studio-gray-700 leading-relaxed text-center max-w-[680px] mx-auto mt-8 sm:mt-12"
-          style={{ transform: window.innerWidth >= 640 ? 'translateY(calc(-20% - 80px))' : 'none' }}
+          style={!isMobile ? { transform: 'translateY(calc(-20% - 80px))' } : undefined}
         >
           Mas se quiser continuar com estrutura, o próximo passo será apresentado no final da imersão —{' '}
           <span className="font-bold text-studio-gray-900">
@@ -115,7 +108,7 @@ const ContinuitySection = () => {
         {/* Badge bônus */}
         <p
           className="text-[14px] sm:text-[15px] text-studio-gray-900 text-center m-0 mt-4 sm:mt-0"
-          style={{ transform: window.innerWidth >= 640 ? 'translateY(calc(-20% - 40px))' : 'none' }}
+          style={!isMobile ? { transform: 'translateY(calc(-20% - 40px))' } : undefined}
         >
           Os 5 primeiros a garantir a metodologia
           <br />
@@ -125,7 +118,7 @@ const ContinuitySection = () => {
         {/* Botão */}
         <div
           className="text-center mt-6 sm:mt-0"
-          style={{ transform: window.innerWidth >= 640 ? 'translateY(calc(-20% - 40px))' : 'none' }}
+          style={!isMobile ? { transform: 'translateY(calc(-20% - 40px))' } : undefined}
         >
           <a href="#" className="btn-amber text-base sm:text-[21px] tracking-widest px-8 sm:px-[67px] py-4 sm:py-[22px] block w-fit mx-auto">
             ACESSAR IMERSÃO
