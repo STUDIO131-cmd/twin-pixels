@@ -114,7 +114,7 @@ const ContinuitySection = () => {
 
         {/* Botão */}
         <div
-          className="text-center mt-[62px] sm:mt-0"
+          className="text-center mt-10 sm:mt-0"
           style={!isMobile ? { transform: 'translateY(calc(-20% - 40px))' } : undefined}
         >
           <a href="#" className="btn-amber text-base sm:text-[21px] tracking-widest px-8 sm:px-[67px] py-4 sm:py-[22px] block w-fit mx-auto">
