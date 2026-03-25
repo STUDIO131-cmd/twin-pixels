@@ -64,7 +64,7 @@ const ContinuitySection = () => {
                 alt="TV vintage"
                 className="continuity-tv-float block"
                 style={{
-                  width: 320, height: 'auto', objectFit: 'contain',
+                  width: 285, height: 'auto', objectFit: 'contain',
                   mixBlendMode: 'multiply',
                   filter: 'drop-shadow(0 16px 32px rgba(0,0,0,0.15))',
                   transform: 'translateY(calc(-20% - 80px))',
