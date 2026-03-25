@@ -64,7 +64,7 @@ const ProblemSection = () => {
                 </div>
               )}
               {i === 1 && (
-                <div className="absolute flex items-center justify-center w-[246px] h-[246px] left-1/2 -translate-x-1/2" style={{ top: '-160px' }}>
+                <div className="absolute hidden md:flex items-center justify-center w-[246px] h-[246px] left-1/2 -translate-x-1/2" style={{ top: '-160px' }}>
                   <img src="/icons/Dinheiro-2.png" alt="Ícone Dinheiro" className="w-full h-full object-contain" />
                 </div>
               )}
