@@ -60,9 +60,7 @@ const HeroSection = () => {
 
         {/* Title */}
         <h1 className="font-bold text-white text-center mt-10 leading-[1.15] text-[clamp(29px,4.4vw,51px)]">
-          Você trabalha demais
-          <br />
-          para depender de{' '}
+          Você trabalha demais para depender de{' '}
           <span className="text-amber font-bold">sorte</span>
         </h1>
 
