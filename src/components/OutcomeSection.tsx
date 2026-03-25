@@ -85,7 +85,7 @@ const OutcomeSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative w-full" style={{ maxWidth: '400px', aspectRatio: '4/3' }}>
+            <div className="relative w-full" style={{ maxWidth: '425px', aspectRatio: '4/3' }}>
               <img
                 src={vintageTv}
                 alt="TV vintage"
