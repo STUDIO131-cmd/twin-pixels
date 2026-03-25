@@ -1,3 +1,5 @@
+import continuityTv from "@/assets/continuity-tv.png";
+
 const ContinuitySection = () => {
   return (
     <section
