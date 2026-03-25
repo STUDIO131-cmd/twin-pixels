@@ -79,21 +79,21 @@ const ProblemSection = () => {
 
               {/* Ícone cérebro acima do card */}
               {i === 1 && (
-                <div className="absolute flex items-center justify-center" style={{ width: '246px', height: '246px', top: '-182px', left: '-95%' }}>
+                <div className="absolute flex items-center justify-center" style={{ width: '266px', height: '266px', top: '-182px', left: '-95%' }}>
                   <img src="/icons/Cerebro-3.png" alt="Ícone" className="w-full h-full object-contain" />
                 </div>
               )}
 
               {/* Ícone dinheiro centralizado com o card */}
               {i === 1 && (
-                <div className="absolute flex items-center justify-center" style={{ width: '246px', height: '246px', top: '-160px', left: '50%', transform: 'translateX(-50%)' }}>
+                <div className="absolute flex items-center justify-center" style={{ width: '266px', height: '266px', top: '-160px', left: '50%', transform: 'translateX(-50%)' }}>
                   <img src="/icons/Dinheiro-2.png" alt="Ícone Dinheiro" className="w-full h-full object-contain" />
                 </div>
               )}
 
               {/* Ícone alto-falante centralizado com o terceiro card */}
               {i === 2 && (
-                <div className="absolute flex items-center justify-center" style={{ width: '246px', height: '246px', top: '-191px', left: '50%', transform: 'translateX(-50%)' }}>
+                <div className="absolute flex items-center justify-center" style={{ width: '266px', height: '266px', top: '-191px', left: '50%', transform: 'translateX(-50%)' }}>
                   <img src="/icons/Alto_Falante-2.png" alt="Ícone Alto-Falante" className="w-full h-full object-contain" />
                 </div>
               )}
