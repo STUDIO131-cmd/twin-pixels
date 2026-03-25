@@ -36,21 +36,7 @@ const PillarsSection = () => {
   return (
     <section className="relative py-24 px-6 overflow-hidden">
       {/* Background photos collage */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 grid grid-cols-3 gap-0">
-          <div className="relative overflow-hidden">
-            <img src="/images/DSC05896.jpg" alt="" className="w-full h-full object-cover" />
-          </div>
-          <div className="relative overflow-hidden">
-            <img src="/images/DSC07091.jpg" alt="" className="w-full h-full object-cover" />
-          </div>
-          <div className="relative overflow-hidden">
-            <img src="/images/DSC07094.jpg" alt="" className="w-full h-full object-cover" />
-          </div>
-        </div>
-        {/* Overlay escuro para legibilidade */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(220,220,220,0.95) 0%, rgba(210,210,210,0.85) 30%, rgba(210,210,210,0.85) 70%, rgba(220,220,220,0.95) 100%)' }} />
-      </div>
+      <div className="absolute inset-0 z-0 bg-[#d4d4d4]" />
       <div className="max-w-[860px] mx-auto relative z-10" style={{
         background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 100%)',
         backdropFilter: 'blur(40px) saturate(1.4)',
