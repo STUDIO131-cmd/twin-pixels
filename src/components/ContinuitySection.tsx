@@ -88,7 +88,7 @@ const ContinuitySection = () => {
             }}
           >
             <img
-              src="/images/TV.png"
+              src={continuityTv}
               alt="TV vintage"
               className="continuity-tv-float"
               style={{
