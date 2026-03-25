@@ -32,18 +32,6 @@ const HeroSection = () => {
         style={{ zIndex: 2, maxWidth: 780, margin: '0 auto', padding: '60px 24px 80px' }}
       >
         {/* Logo */}
-        <img
-          src="/images/Logo.png"
-          alt="The Journey"
-          className="hero-logo-pulse"
-          style={{
-            width: 220,
-            height: 'auto',
-            display: 'block',
-            margin: '0 auto 32px',
-            mixBlendMode: 'screen',
-          }}
-        />
 
         {/* Mockup */}
         <img
