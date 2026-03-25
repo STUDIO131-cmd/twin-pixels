@@ -233,7 +233,7 @@ const ContinuitySection = () => {
             (e.currentTarget as HTMLElement).style.transform = 'translateY(calc(-20% - 40px))';
           }}
         >
-          {'\n'}
+          ACESSAR IMERSÃO
         </a>
       </div>
 
