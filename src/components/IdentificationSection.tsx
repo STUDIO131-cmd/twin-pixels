@@ -25,17 +25,28 @@ const cards = [
 
 const IdentificationSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-[hsl(var(--dark-bg-alt))]">
+    <section
+      className="relative py-24 overflow-hidden"
+      style={{ backgroundColor: "#1a1a1a" }}
+    >
       <div className="container max-w-[1100px] mx-auto px-4">
         {/* Label */}
-        <p className="text-center mb-3 text-[13px] font-light text-muted-foreground tracking-widest">
+        <p
+          className="text-center mb-3"
+          style={{ fontSize: "13px", fontWeight: 300, color: "#aaa", letterSpacing: "0.1em" }}
+        >
           Isso é sobre você?
         </p>
 
         {/* Título */}
         <h2
-          className="text-center text-white mx-auto mb-14 font-bold leading-tight max-w-[800px]"
-          style={{ fontSize: 'clamp(18px, 2.8vw, 31px)' }}
+          className="text-center text-white mx-auto mb-14"
+          style={{
+            fontSize: "clamp(18px, 2.8vw, 31px)",
+            fontWeight: 700,
+            lineHeight: 1.2,
+            maxWidth: "800px",
+          }}
         >
           Você sabe que é bom no que faz.
           <br />
@@ -50,36 +61,69 @@ const IdentificationSection = () => {
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              className="identification-card glass-card relative cursor-pointer h-full flex flex-col items-center p-8 text-center"
+              transition={{
+                duration: 0.7,
+                delay: i * 0.12,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              className="identification-card relative cursor-pointer h-full flex flex-col items-center"
+              style={{
+                background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%)",
+                backdropFilter: "blur(40px) saturate(1.4)",
+                WebkitBackdropFilter: "blur(40px) saturate(1.4)",
+                border: "1px solid rgba(255,255,255,0.3)",
+                borderRadius: "24px",
+                padding: "32px 20px",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.15), inset 0 1px 1px rgba(255,255,255,0.35), inset 0 -1px 1px rgba(255,255,255,0.05)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                justifyContent: "flex-start",
+              }}
             >
-              {/* Ícones */}
+
+              {/* Ícone acima do título */}
               {i === 0 && (
-                <div className="w-[100px] h-[100px] mb-4 flex items-center justify-center icon-glow-white">
-                  <img src="/icons/personalizado-5.png" alt="Ícone" className="w-full h-full object-contain icon-neon-white" />
+                <div className="w-[100px] h-[100px] mb-4 flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 8px #eaeaea) drop-shadow(0 0 20px #eaeaea) drop-shadow(0 0 40px rgba(234,234,234,0.5))' }}>
+                  <img src="/icons/personalizado-5.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(90%)' }} />
                 </div>
               )}
               {i === 1 && (
-                <div className="w-16 h-[100px] mb-4 flex items-center justify-center icon-glow-white">
-                  <img src="/icons/Layer_13-2.png" alt="Ícone" className="w-full h-full object-contain icon-neon-white" />
+                <div className="w-16 h-[100px] mb-4 flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 8px #eaeaea) drop-shadow(0 0 20px #eaeaea) drop-shadow(0 0 40px rgba(234,234,234,0.5))' }}>
+                  <img src="/icons/Layer_13-2.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(90%)' }} />
                 </div>
               )}
               {i === 2 && (
-                <div className="w-16 h-[100px] mb-4 flex items-center justify-center icon-glow-white">
-                  <img src="/icons/loja-2.png" alt="Ícone" className="w-full h-full object-contain icon-neon-white" />
+                <div className="w-16 h-[100px] mb-4 flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 8px #eaeaea) drop-shadow(0 0 20px #eaeaea) drop-shadow(0 0 40px rgba(234,234,234,0.5))' }}>
+                  <img src="/icons/loja-2.png" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(90%)' }} />
                 </div>
               )}
               {i === 3 && (
-                <div className="w-[100px] h-[100px] mb-4 flex items-center justify-center icon-glow-white">
-                  <img src="/icons/Liberal-2.svg" alt="Ícone" className="w-full h-full object-contain icon-neon-white" />
+                <div className="w-[100px] h-[100px] mb-4 flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 8px #eaeaea) drop-shadow(0 0 20px #eaeaea) drop-shadow(0 0 40px rgba(234,234,234,0.5))' }}>
+                  <img src="/icons/Liberal-2.svg" alt="Ícone" className="w-full h-full object-contain" style={{ filter: 'brightness(0) saturate(100%) invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(90%)' }} />
                 </div>
               )}
 
-              <h3 className="font-bold text-[15px] text-white text-center w-full mb-3 leading-snug">
+              {/* Título */}
+              <h3
+                style={{ fontWeight: 700, fontSize: "15px", color: "white", textAlign: "center", width: "100%", marginBottom: "12px", lineHeight: 1.3 }}
+              >
                 {card.title}
               </h3>
 
-              <p className="text-[13px] leading-relaxed text-studio-gray-300 text-center w-full m-0">
+              {/* Texto — independente do ícone */}
+              <p
+                style={{
+                  fontWeight: 400,
+                  fontSize: "13px",
+                  lineHeight: 1.7,
+                  color: "#bbb",
+                  textAlign: "center",
+                  width: "100%",
+                  margin: 0,
+                }}
+              >
                 {card.text}
               </p>
             </motion.div>
@@ -87,11 +131,19 @@ const IdentificationSection = () => {
         </div>
 
         {/* Texto final */}
-        <p className="text-center mx-auto mt-14 max-w-[680px] text-lg leading-relaxed">
-          <span className="text-studio-gray-300">
+        <p
+          className="text-center mx-auto"
+          style={{
+            marginTop: "56px",
+            maxWidth: "680px",
+            fontSize: "18px",
+            lineHeight: 1.7,
+          }}
+        >
+          <span style={{ fontWeight: 400, color: "#ccc" }}>
             O problema não é falta de competência.{" "}
           </span>
-          <strong className="text-white font-bold">
+          <strong className="text-white" style={{ fontWeight: 700 }}>
             É falta de estrutura para transformar competência em posicionamento,
             comunicação e venda.
           </strong>
@@ -99,11 +151,57 @@ const IdentificationSection = () => {
 
         {/* Botão CTA */}
         <div className="mt-11 text-center">
-          <a href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
+          <a
+            href="#preco"
+            className="hero-cta-btn inline-block uppercase cursor-pointer"
+            style={{
+              fontWeight: 700,
+              fontSize: "15px",
+              letterSpacing: "0.06em",
+              color: "#1a1a1a",
+              background: "#D97706",
+              borderRadius: "999px",
+              padding: "18px 52px",
+              border: "none",
+              transition: "all 0.2s ease",
+            }}
+          >
             QUERO CLAREZA · R$47
           </a>
         </div>
       </div>
+
+      <style>{`
+        .identification-card {
+          transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+        }
+        .identification-card::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at 50% 0%, rgba(217,119,6,0.08) 0%, transparent 60%);
+          opacity: 0;
+          transition: opacity 0.35s ease;
+          pointer-events: none;
+          border-radius: 20px;
+        }
+        .identification-card:hover {
+          background: rgba(255,255,255,0.08) !important;
+          border-color: rgba(217,119,6,0.3) !important;
+          box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(217,119,6,0.15), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+          transform: translateY(-8px);
+        }
+        .identification-card:hover::before {
+          opacity: 1;
+        }
+        @keyframes glowPulse {
+          0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+          50%       { opacity: 0.9; transform: translateX(-50%) scale(1.2); }
+        }
+        .icon-glow-pulse {
+          animation: glowPulse 3s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };

@@ -30,7 +30,7 @@ const MethodologySection = () => {
           <p className="text-muted-foreground font-body text-sm tracking-widest uppercase mb-2">
             O que você vai levar
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             Estrutura da Metodologia
           </h2>
           <p className="text-muted-foreground font-body max-w-xl mx-auto">
@@ -47,10 +47,10 @@ const MethodologySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="bg-card border border-border rounded-2xl p-8 hover:border-amber/30 transition-colors duration-300"
+              className="bg-card border border-border rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300"
             >
-              <card.icon className="w-10 h-10 text-amber mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-3">{card.title}</h3>
+              <card.icon className="w-10 h-10 text-gold mb-4" />
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">{card.title}</h3>
               <p className="text-muted-foreground font-body text-sm leading-relaxed">
                 {card.description}
               </p>

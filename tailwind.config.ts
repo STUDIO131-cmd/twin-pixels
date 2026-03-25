@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"TikTok Sans"', '"Inter"', 'sans-serif'],
+        display: ['"Inter"', '"TikTok Sans"', 'sans-serif'],
         body: ['"Source Sans 3"', '"Moneta"', 'sans-serif'],
       },
       colors: {
@@ -23,6 +23,18 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        coral: {
+          DEFAULT: "hsl(var(--coral))",
+          dark: "hsl(var(--coral-dark))",
+          light: "hsl(var(--coral-light))",
+        },
+        vinho: "hsl(var(--vinho))",
+        "azul-escuro": "hsl(var(--azul-escuro))",
+        azul: "hsl(var(--azul))",
+        verde: "hsl(var(--verde))",
+        creme: "hsl(var(--creme))",
+        "azul-claro": "hsl(var(--azul-claro))",
+        "verde-claro": "hsl(var(--verde-claro))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -51,63 +63,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        /* Studio palette */
-        "studio-red": {
-          700: "hsl(var(--studio-red-700))",
-          500: "hsl(var(--studio-red-500))",
-          300: "hsl(var(--studio-red-300))",
-        },
-        "studio-sand": {
-          100: "hsl(var(--studio-sand-100))",
-        },
-        "studio-gray": {
-          100: "hsl(var(--studio-gray-100))",
-          300: "hsl(var(--studio-gray-300))",
-          500: "hsl(var(--studio-gray-500))",
-          700: "hsl(var(--studio-gray-700))",
-          900: "hsl(var(--studio-gray-900))",
-        },
-        "studio-wine": {
-          900: "hsl(var(--studio-wine-900))",
-          700: "hsl(var(--studio-wine-700))",
-          500: "hsl(var(--studio-wine-500))",
-          300: "hsl(var(--studio-wine-300))",
-        },
-        "studio-navy": {
-          900: "hsl(var(--studio-navy-900))",
-          700: "hsl(var(--studio-navy-700))",
-          500: "hsl(var(--studio-navy-500))",
-          300: "hsl(var(--studio-navy-300))",
-        },
-        "studio-ocean": {
-          900: "hsl(var(--studio-ocean-900))",
-          700: "hsl(var(--studio-ocean-700))",
-          500: "hsl(var(--studio-ocean-500))",
-          300: "hsl(var(--studio-ocean-300))",
-        },
-        "studio-forest": {
-          900: "hsl(var(--studio-forest-900))",
-          700: "hsl(var(--studio-forest-700))",
-          500: "hsl(var(--studio-forest-500))",
-          300: "hsl(var(--studio-forest-300))",
-        },
-        amber: {
-          DEFAULT: "hsl(var(--amber))",
-          dark: "hsl(var(--amber-dark))",
-        },
-        /* Legacy aliases */
-        coral: {
-          DEFAULT: "hsl(var(--coral))",
-          dark: "hsl(var(--coral-dark))",
-          light: "hsl(var(--coral-light))",
-        },
-        vinho: "hsl(var(--vinho))",
-        "azul-escuro": "hsl(var(--azul-escuro))",
-        azul: "hsl(var(--azul))",
-        verde: "hsl(var(--verde))",
-        creme: "hsl(var(--creme))",
-        "azul-claro": "hsl(var(--azul-claro))",
-        "verde-claro": "hsl(var(--verde-claro))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

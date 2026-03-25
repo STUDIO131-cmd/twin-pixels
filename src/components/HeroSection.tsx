@@ -1,74 +1,130 @@
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden min-h-screen">
-      {/* Background image — LCP element */}
+    <section className="relative overflow-hidden" style={{ minHeight: '100vh' }}>
+      {/* Background image */}
       <img
         src="/backgrounds/Background-4.png"
         alt=""
-        className="absolute inset-0 w-full h-full object-cover object-center z-0"
-        fetchPriority="high"
-        decoding="async"
-        width={1920}
-        height={1080}
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center',
+          zIndex: 0,
+        }}
       />
 
       {/* Dark overlay */}
       <div
-        className="absolute inset-0 z-[1]"
         style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 1,
           background: 'linear-gradient(to bottom, rgba(10,8,5,0.55) 0%, rgba(10,8,5,0.45) 40%, rgba(10,8,5,0.60) 100%)',
         }}
       />
 
       {/* Content */}
-      <div className="relative z-[2] flex flex-col items-center text-center max-w-[780px] mx-auto px-6 pt-[60px] pb-20">
+      <div
+        className="relative flex flex-col items-center text-center"
+        style={{ zIndex: 2, maxWidth: 780, margin: '0 auto', padding: '60px 24px 80px' }}
+      >
+        {/* Logo */}
+
         {/* Mockup */}
         <img
           src="/images/Produto.png"
           alt="Produto"
-          className="hero-float block mx-auto w-96 h-auto"
-          width={384}
-          height={384}
-          loading="eager"
-          decoding="async"
+          className="hero-float"
           style={{
+            width: 384,
+            height: 'auto',
+            display: 'block',
+            margin: '0 auto 0',
             mixBlendMode: 'screen',
             filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.7))',
           }}
         />
 
         {/* Progress bar */}
-        <div className="w-80 mx-auto relative">
+        <div style={{ width: 320, margin: '0 auto 0', position: 'relative' }}>
           <div
-            className="hero-progress-neon rounded-full h-1.5 overflow-hidden relative"
-            style={{ background: 'hsl(var(--studio-gray-700))' }}
+            className="hero-progress-neon"
+            style={{
+              background: '#333',
+              borderRadius: 999,
+              height: 6,
+              overflow: 'hidden',
+              position: 'relative',
+              boxShadow: '0 0 8px rgba(217,119,6,0.4), 0 0 20px rgba(217,119,6,0.2), 0 0 40px rgba(217,119,6,0.1)',
+            }}
           >
             <div
-              className="rounded-full h-full relative overflow-hidden"
               style={{
                 width: '81%',
-                background: 'linear-gradient(90deg, hsl(var(--amber)), hsl(var(--amber) / 0.85))',
-                boxShadow: '0 0 12px hsl(var(--amber) / 0.8), 0 0 24px hsl(var(--amber) / 0.4)',
+                background: 'linear-gradient(90deg, #D97706, #f59e0b)',
+                borderRadius: 999,
+                height: '100%',
+                position: 'relative',
+                boxShadow: '0 0 12px rgba(217,119,6,0.8), 0 0 24px rgba(217,119,6,0.4)',
+                overflow: 'hidden',
               }}
             />
-            <div className="hero-light-sweep absolute inset-0 rounded-full pointer-events-none" />
+              {/* Light sweep overlay */}
+              <div
+                className="hero-light-sweep"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: 999,
+                  pointerEvents: 'none',
+                }}
+              />
           </div>
-          <p className="font-light text-xs text-muted-foreground text-center mt-1.5">
+          <p className="font-display" style={{ fontWeight: 300, fontSize: 12, color: '#aaa', textAlign: 'center', marginTop: 6 }}>
             81% das vagas preenchidas a R$47,00
           </p>
         </div>
 
         {/* Title */}
-        <h1 className="font-bold text-white text-center mt-10 leading-[1.15] text-[clamp(29px,4.4vw,51px)]">
-          Você trabalha demais para depender de{' '}
-          <span className="text-amber font-bold">sorte</span>
+        <h1
+          className="font-display"
+          style={{
+            fontWeight: 700,
+            color: 'white',
+            fontSize: 'clamp(29px, 4.4vw, 51px)',
+            lineHeight: 1.15,
+            textAlign: 'center',
+            marginTop: 40,
+          }}
+        >
+          Você trabalha demais
+          <br />
+          para depender de{' '}
+          <span style={{ color: '#D97706', fontWeight: 700 }}>sorte</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-studio-gray-300 text-center mt-6 max-w-[580px] text-lg leading-relaxed">
+        <p
+          className="font-display"
+          style={{
+            fontWeight: 400,
+            fontSize: 18,
+            color: '#ccc',
+            lineHeight: 1.65,
+            textAlign: 'center',
+            marginTop: 24,
+            maxWidth: 580,
+          }}
+        >
           Em 1 dia, descubra o que está travando seu crescimento
           <br />
-          —<span className="font-bold text-white">se é um problema de marca, de conteúdo ou de vendas</span>—
+          —<span style={{ fontWeight: 700, color: 'white' }}>se é um problema de marca, de conteúdo ou de vendas</span>—
           <br />
           e saia sabendo exatamente o que resolver primeiro.
         </p>
@@ -76,15 +132,35 @@ const HeroSection = () => {
         {/* CTA */}
         <a
           href="#preco"
-          className="hero-cta-neon btn-amber mt-10 text-base px-14 py-5 rounded-lg tracking-widest"
+          className="font-display hero-cta-neon"
+          style={{
+            marginTop: 40,
+            display: 'block',
+            width: 'fit-content',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            fontWeight: 700,
+            fontSize: 16,
+            letterSpacing: '0.06em',
+            textTransform: 'uppercase',
+            color: '#1a1a1a',
+            backgroundColor: '#D97706',
+            borderRadius: 8,
+            padding: '20px 56px',
+            border: 'none',
+            cursor: 'pointer',
+            textDecoration: 'none',
+            boxShadow: '0 0 20px rgba(217,119,6,0.6), 0 0 40px rgba(217,119,6,0.3), 0 0 80px rgba(217,119,6,0.15)',
+            transition: 'all 0.2s ease',
+          }}
         >
           PARTICIPAR DA IMERSÃO · R$47
         </a>
 
         {/* Lote note */}
-        <p className="mt-4 text-[13px] text-studio-gray-500 text-center">
-          <span className="font-bold text-studio-gray-300">Lote 1</span> · R$47 até 06/04 |{' '}
-          <span className="font-bold text-studio-gray-300">Lote 2</span> · R$99 a partir de 07/04
+        <p className="font-display" style={{ marginTop: 16, fontSize: 13, color: '#999', textAlign: 'center' }}>
+          <span style={{ fontWeight: 700, color: '#ddd' }}>Lote 1</span> · R$47 até 06/04 |{' '}
+          <span style={{ fontWeight: 700, color: '#ddd' }}>Lote 2</span> · R$99 a partir de 07/04
         </p>
       </div>
     </section>

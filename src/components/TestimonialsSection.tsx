@@ -9,9 +9,9 @@ const videos = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 section-darker">
       <div className="container max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
           O que diz quem viveu a experiência?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -33,17 +33,17 @@ const CountdownSection = () => {
   return (
     <section className="py-16 section-dark text-center">
       <div className="container max-w-4xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl text-foreground mb-2">
+        <h2 className="font-display text-2xl md:text-3xl text-foreground mb-2">
           A próxima edição está chegando:
         </h2>
-        <p className="text-amber text-xl md:text-2xl font-bold mb-10">
+        <p className="text-gold font-display text-xl md:text-2xl font-bold mb-10">
           21 e 22 de Fevereiro de 2026
         </p>
         <div className="flex justify-center gap-4 md:gap-8">
           {blocks.map((b) => (
             <div key={b.label} className="flex flex-col items-center">
               <div className="w-16 h-16 md:w-24 md:h-24 rounded-lg bg-secondary flex items-center justify-center border border-border">
-                <span className="text-2xl md:text-4xl font-bold text-amber">
+                <span className="text-2xl md:text-4xl font-bold text-gold font-display">
                   {String(b.value).padStart(2, "0")}
                 </span>
               </div>
