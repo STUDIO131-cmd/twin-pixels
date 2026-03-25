@@ -71,11 +71,6 @@ const ContinuitySection = () => {
                 }}
               />
             </div>
-            <div className="flex items-center justify-center pl-8 pb-2">
-              <img src="/icons/Seta.png" alt="" className="block"
-                style={{ width: 273, height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply', transform: 'scaleX(-1) translateX(90%) translateY(calc(-20% - 80px))' }}
-              />
-            </div>
             <div className="flex flex-col items-start pl-8 py-2">
               <p className="text-base text-studio-gray-700 leading-relaxed" style={{ transform: 'translateY(calc(-180% - 80px))' }}>
                 A imersão <span className="font-bold">funciona sozinha.</span>
