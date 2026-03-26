@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const cards = [
   { title: "Clareza de Marca", text: "O cliente sabe por que te escolher?" },
