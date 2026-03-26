@@ -33,10 +33,20 @@ const PricingSection = () => {
         </p>
 
         {/* Botão CTA */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-4">
           <a href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer" className="btn-amber text-base tracking-widest px-14 py-5">
             GARANTIR MINHA VAGA · R$47
           </a>
+        </div>
+
+        {/* Barra de vagas */}
+        <div className="w-80 mx-auto text-center mb-10">
+          <div className="rounded-full h-1.5 overflow-hidden bg-studio-gray-700">
+            <div className="w-[81%] bg-amber rounded-full h-full" />
+          </div>
+          <p className="font-light text-xs text-muted-foreground mt-2">
+            81% das vagas preenchidas a R$47,00
+          </p>
         </div>
 
         {/* Ingresso 1 */}
@@ -76,16 +86,6 @@ const PricingSection = () => {
             decoding="async"
           />
         </motion.div>
-
-        {/* Barra de vagas */}
-        <div className="w-80 mx-auto text-center">
-          <div className="rounded-full h-1.5 overflow-hidden bg-studio-gray-700">
-            <div className="w-[81%] bg-amber rounded-full h-full" />
-          </div>
-          <p className="font-light text-xs text-muted-foreground mt-2">
-            81% das vagas preenchidas a R$47,00
-          </p>
-        </div>
       </div>
     </section>
   );
