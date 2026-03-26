@@ -1,5 +1,6 @@
 import continuityTv from "@/assets/continuity-tv.png";
 import { useIsMobile } from "@/hooks/use-mobile";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const ContinuitySection = () => {
   const isMobile = useIsMobile();
