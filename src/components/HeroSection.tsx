@@ -1,4 +1,6 @@
-const HeroSection = () => {
+import { memo } from "react";
+
+const HeroSection = memo(() => {
   return (
     <section className="relative overflow-hidden min-h-screen">
       {/* Background image — LCP element */}
@@ -26,7 +28,7 @@ const HeroSection = () => {
         <img
           src="/images/Produto.png"
           alt="Produto"
-          className="hero-float block mx-auto w-96 h-auto"
+          className="hero-float block mx-auto w-96 h-auto will-change-transform"
           width={384}
           height={384}
           loading="eager"
@@ -89,6 +91,7 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};
+});
+HeroSection.displayName = "HeroSection";
 
 export default HeroSection;

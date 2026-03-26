@@ -1,4 +1,6 @@
-const FooterSection = () => {
+import { memo } from "react";
+
+const FooterSection = memo(() => {
   return (
     <footer className="text-center py-10 px-4" style={{ background: 'hsl(var(--dark-bg-deep))' }}>
       <p className="font-semibold text-[15px] text-white mb-2">
@@ -9,6 +11,7 @@ const FooterSection = () => {
       </p>
     </footer>
   );
-};
+});
+FooterSection.displayName = "FooterSection";
 
 export default FooterSection;
