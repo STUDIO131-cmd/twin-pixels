@@ -69,9 +69,9 @@ const ScheduleSection = () => {
 
           {/* CTA */}
           <div className="mt-10 text-center">
-            <a href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
+            <TrackedCTA href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
               RESERVAR MEU LUGAR · R$47
-            </a>
+            </TrackedCTA>
           </div>
         </div>
       </div>

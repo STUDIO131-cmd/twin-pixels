@@ -73,9 +73,9 @@ const PillarsSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-8">
-          <a href="#preco" className="btn-coral text-[15px] tracking-wider px-12 py-5">
+          <TrackedCTA href="#preco" className="btn-coral text-[15px] tracking-wider px-12 py-5">
             QUERO FAZER ESSE DIAGNÓSTICO · R$47
-          </a>
+          </TrackedCTA>
         </div>
       </div>
     </section>

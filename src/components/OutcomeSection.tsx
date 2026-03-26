@@ -96,9 +96,9 @@ const OutcomeSection = () => {
 
         {/* CTA */}
         <div className="mt-11 text-center">
-          <a href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
+          <TrackedCTA href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
             QUERO ESSA CLAREZA · R$47
-          </a>
+          </TrackedCTA>
         </div>
       </div>
     </section>
