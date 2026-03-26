@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { useFacebookTracking } from "@/hooks/useFacebookTracking";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
