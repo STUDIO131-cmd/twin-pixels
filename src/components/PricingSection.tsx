@@ -27,6 +27,18 @@ const PricingSection = () => {
           A clareza que você vai ter em 1 dia custa menos do que o tempo que você perde toda semana tentando resolver sozinho.
         </p>
 
+        {/* Urgência */}
+        <p className="text-center font-bold text-xl text-white mb-8">
+          Lote 1 encerra em 06/04 · <span className="text-studio-red-500">Vagas limitadas</span>
+        </p>
+
+        {/* Botão CTA */}
+        <div className="text-center mb-10">
+          <a href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer" className="btn-amber text-base tracking-widest px-14 py-5">
+            GARANTIR MINHA VAGA · R$47
+          </a>
+        </div>
+
         {/* Ingresso 1 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,18 +76,6 @@ const PricingSection = () => {
             decoding="async"
           />
         </motion.div>
-
-        {/* Urgência */}
-        <p className="text-center font-bold text-xl text-white mb-8">
-          Lote 1 encerra em 06/04 · <span className="text-studio-red-500">Vagas limitadas</span>
-        </p>
-
-        {/* Botão CTA */}
-        <div className="text-center mb-4">
-          <a href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer" className="btn-amber text-base tracking-widest px-14 py-5">
-            GARANTIR MINHA VAGA · R$47
-          </a>
-        </div>
 
         {/* Barra de vagas */}
         <div className="w-80 mx-auto text-center">
