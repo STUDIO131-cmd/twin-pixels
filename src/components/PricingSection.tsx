@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
-import { useFacebookTracking } from "@/hooks/useFacebookTracking";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const PricingSection = () => {
-  const { trackInitiateCheckout } = useFacebookTracking();
-
-  const handleCheckoutClick = () => {
-    trackInitiateCheckout({
-      productIds: ['IMERSAO-JORNADA'],
-      numItems: 1,
-      value: 47.00,
-      currency: 'BRL',
-    });
-  };
   return (
     <section id="preco" className="relative overflow-hidden py-24">
       {/* Background */}
