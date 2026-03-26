@@ -1,20 +1,18 @@
-const FinalCTASection = () => {
+import { memo } from "react";
+
+const FinalCTASection = memo(() => {
   return (
     <section className="relative overflow-hidden py-20 bg-background">
-      {/* Light leak bottom-left */}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse at 0% 100%, hsl(var(--studio-wine-700) / 0.55) 0%, transparent 50%)' }}
       />
-      {/* Light leak top-right */}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse at 100% 0%, hsl(var(--amber-dark) / 0.2) 0%, transparent 40%)' }}
       />
-      {/* Grain */}
       <div className="noise-bg absolute inset-0 pointer-events-none z-[1]" />
 
-      {/* Content */}
       <div className="relative z-[2] text-center px-4">
         <h2 className="leading-[1.15] mb-6">
           <span className="font-bold text-amber block" style={{ fontSize: 'clamp(28px, 4.5vw, 52px)' }}>
@@ -38,10 +36,10 @@ const FinalCTASection = () => {
         </a>
       </div>
 
-      {/* Separator */}
       <div className="absolute bottom-0 left-0 right-0 border-t border-white/[0.08]" />
     </section>
   );
-};
+});
+FinalCTASection.displayName = "FinalCTASection";
 
 export default FinalCTASection;
