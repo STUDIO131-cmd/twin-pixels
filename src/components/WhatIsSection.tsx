@@ -78,18 +78,18 @@ const WhatIsSection = () => {
             <div key={i} className="relative flex flex-col items-center">
               {/* Icons */}
               {i === 0 && (
-                <div className="w-16 h-16 mb-3 flex items-center justify-center icon-glow-coral">
-                  <img src="/icons/cerebro_copy2-2.png" alt="Ícone" className="w-full h-full object-contain icon-neon-coral" />
+                <div className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-2 sm:mb-3 flex-shrink-0 flex items-center justify-center icon-glow-coral">
+                  <img src="/icons/cerebro_copy2-2.png" alt="Ícone" className="w-full h-full object-contain icon-neon-coral" loading="lazy" />
                 </div>
               )}
               {i === 1 && (
-                <div className="w-16 h-16 mb-3 flex items-center justify-center icon-glow-coral">
-                  <img src="/icons/megaphone.png" alt="Ícone" className="w-full h-full object-contain icon-neon-coral" />
+                <div className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-2 sm:mb-3 flex-shrink-0 flex items-center justify-center icon-glow-coral">
+                  <img src="/icons/megaphone.png" alt="Ícone" className="w-full h-full object-contain icon-neon-coral" loading="lazy" />
                 </div>
               )}
               {i === 2 && (
-                <div className="w-16 h-16 mb-3 flex items-center justify-center icon-glow-coral">
-                  <img src="/icons/Layer_12_copy.png" alt="Ícone" className="w-full h-full object-contain icon-neon-coral" />
+                <div className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-2 sm:mb-3 flex-shrink-0 flex items-center justify-center icon-glow-coral">
+                  <img src="/icons/Layer_12_copy.png" alt="Ícone" className="w-full h-full object-contain icon-neon-coral" loading="lazy" />
                 </div>
               )}
 
