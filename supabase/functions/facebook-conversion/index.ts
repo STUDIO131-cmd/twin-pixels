@@ -56,19 +56,32 @@ serve(async (req) => {
       });
     }
 
+    // Get client IP from request headers
+    const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      || req.headers.get('x-real-ip')
+      || '0.0.0.0';
+
+    // Generate external_id from available data (fbp, fbc, or random)
+    const externalId = eventData.fbp
+      || eventData.fbc
+      || `anon_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
+
     // Build user_data with hashed PII
-    const userData: Record<string, string | null> = {
-      em: await hashSHA256Async(eventData.email),
-      ph: await hashSHA256Async(eventData.phone),
-      fn: await hashSHA256Async(eventData.firstName),
-      ln: await hashSHA256Async(eventData.lastName),
-      ct: await hashSHA256Async(eventData.city),
-      st: await hashSHA256Async(eventData.state),
-      zp: await hashSHA256Async(eventData.zipCode),
-      country: await hashSHA256Async(eventData.country),
-      client_user_agent: eventData.userAgent || null,
+    const userData: Record<string, string | null | string[]> = {
+      em: eventData.email ? [await hashSHA256Async(eventData.email)] : null,
+      ph: eventData.phone ? [await hashSHA256Async(eventData.phone)] : null,
+      fn: eventData.firstName ? [await hashSHA256Async(eventData.firstName)] : null,
+      ln: eventData.lastName ? [await hashSHA256Async(eventData.lastName)] : null,
+      ct: eventData.city ? [await hashSHA256Async(eventData.city)] : null,
+      st: eventData.state ? [await hashSHA256Async(eventData.state)] : null,
+      zp: eventData.zipCode ? [await hashSHA256Async(eventData.zipCode)] : null,
+      country: eventData.country ? [await hashSHA256Async(eventData.country)] : null,
+      // Required parameters for matching
+      client_ip_address: clientIp,
+      client_user_agent: eventData.userAgent || req.headers.get('user-agent') || '',
       fbc: eventData.fbc || null,
       fbp: eventData.fbp || null,
+      external_id: [await hashSHA256Async(externalId)],
     };
 
     // Remove null values
@@ -80,6 +93,7 @@ serve(async (req) => {
       data: [{
         event_name: eventName,
         event_time: Math.floor(Date.now() / 1000),
+        event_id: `${eventName}_${Date.now()}`,
         action_source: 'website',
         event_source_url: eventData.event_source_url || '',
         user_data: userData,
