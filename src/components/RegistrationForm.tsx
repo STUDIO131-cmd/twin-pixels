@@ -3,6 +3,7 @@ import { toast } from "sonner";
 import { useFacebookTracking } from "@/hooks/useFacebookTracking";
 
 const RegistrationForm = () => {
+  const { trackLead } = useFacebookTracking();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -21,6 +22,14 @@ const RegistrationForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackLead({
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      phone: formData.whatsapp,
+      formName: "Lista de Espera - Imersão",
+      value: 47.0,
+      currency: "BRL",
+    });
     toast.success("Inscrição enviada! Entraremos em contato em breve.");
   };
 
