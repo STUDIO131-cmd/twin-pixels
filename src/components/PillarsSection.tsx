@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const Pillar = ({ num, title, subtitle, desc, items, img, reverse = false, textOffset }: any) => (
   <div className="relative w-full max-w-[860px] mx-auto mb-[60px]">
