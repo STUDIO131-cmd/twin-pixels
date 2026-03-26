@@ -55,17 +55,19 @@ const PricingSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative max-w-[760px] mx-auto mb-6"
+          className="relative max-w-[760px] mx-auto mb-6 cursor-pointer"
         >
-          <img
-            src="/images/Ingresso_1.png"
-            alt="Ingresso Lote 1"
-            className="w-full h-auto block rounded-[20px] drop-shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-            width={760}
-            height={400}
-            loading="lazy"
-            decoding="async"
-          />
+          <a href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer">
+            <img
+              src="/images/Ingresso_1.png"
+              alt="Ingresso Lote 1"
+              className="w-full h-auto block rounded-[20px] drop-shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:scale-[1.02] transition-transform"
+              width={760}
+              height={400}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
         </motion.div>
 
         {/* Ingresso 2 */}
