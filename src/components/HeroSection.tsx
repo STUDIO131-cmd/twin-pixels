@@ -85,8 +85,7 @@ const HeroSection = memo(() => {
 
         {/* Lote note */}
         <p className="mt-4 text-[13px] text-studio-gray-500 text-center">
-          <span className="font-bold text-studio-gray-300">Lote 1</span> · R$47 até 06/04 |{' '}
-          <span className="font-bold text-studio-gray-300">Lote 2</span> · R$99 a partir de 07/04
+          <span className="font-bold text-studio-gray-300">Lote 1</span> · R$47 até 06/04
         </p>
       </div>
     </section>
