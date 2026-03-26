@@ -1,4 +1,5 @@
 import { memo } from "react";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const FinalCTASection = memo(() => {
   return (
