@@ -538,6 +538,37 @@
   .draw-arrowhead-3{ animation: drawLine 0.25s ease-out forwards; animation-delay: 2.6s; }
 }
 
+/* ========== SHIMMER SKELETON ========== */
+
+.shimmer-skeleton {
+  background: hsl(var(--studio-gray-700));
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(var(--studio-gray-600) / 0.4) 40%,
+    hsl(var(--studio-gray-600) / 0.6) 50%,
+    hsl(var(--studio-gray-600) / 0.4) 60%,
+    transparent 100%
+  );
+  animation: shimmer 1.8s ease-in-out infinite;
+  /* GPU-accelerated */
+  will-change: transform;
+  transform: translateX(-100%);
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 /* ========== KEYFRAMES ========== */
 
 @keyframes ticker {
