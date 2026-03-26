@@ -72,7 +72,7 @@ const PricingSection = () => {
 
         {/* Botão CTA */}
         <div className="text-center mb-4">
-          <a href="#" className="btn-amber text-base tracking-widest px-14 py-5">
+          <a href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer" className="btn-amber text-base tracking-widest px-14 py-5">
             GARANTIR MINHA VAGA · R$47
           </a>
         </div>
