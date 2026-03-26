@@ -44,7 +44,7 @@ const SupportSection = () => {
           </p>
 
           <a
-            href="https://wa.me/5517992595117"
+            href="https://api.whatsapp.com/send?phone=5517992595117&text=Ol%C3%A1!%20quero%20falar%20sobre%20a%20Imers%C3%A3o%20%F0%9F%94%91"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp text-[15px]"
