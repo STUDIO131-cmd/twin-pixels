@@ -55,7 +55,7 @@ const ProblemSection = () => {
         </div>
 
         {/* Ícones + Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto max-w-[860px] items-start" style={{ marginTop: '118px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto max-w-[860px] items-start mt-10 md:mt-[118px]">
           {cards.map((card, i) => (
             <div key={i} className="relative flex flex-col items-center">
               {i === 1 && (
