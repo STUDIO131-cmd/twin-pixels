@@ -94,7 +94,7 @@ const ContinuitySection = () => {
         {/* Texto final */}
         <p
           className="text-[15px] sm:text-[17px] text-studio-gray-700 leading-relaxed text-center max-w-[680px] mx-auto mt-8 sm:mt-12"
-          style={!isMobile ? { transform: 'translateY(calc(-20% - 80px))' } : undefined}
+          style={!isMobile ? { transform: 'translateY(-60px)' } : undefined}
         >
           Mas se quiser continuar com estrutura, o próximo passo será apresentado no final da imersão —{' '}
           <span className="font-bold text-studio-gray-900">
@@ -104,8 +104,8 @@ const ContinuitySection = () => {
 
         {/* Badge bônus */}
         <p
-          className="text-[14px] sm:text-[15px] text-studio-gray-900 text-center m-0 mt-6 sm:mt-0"
-          style={!isMobile ? { transform: 'translateY(calc(-20% - 40px))' } : undefined}
+          className="text-[14px] sm:text-[15px] text-studio-gray-900 text-center m-0 mt-6 sm:mt-4"
+          style={!isMobile ? { transform: 'translateY(-40px)' } : undefined}
         >
           Os 5 primeiros a garantir a metodologia
           <br />
@@ -114,8 +114,8 @@ const ContinuitySection = () => {
 
         {/* Botão */}
         <div
-          className="text-center mt-10 sm:mt-0"
-          style={!isMobile ? { transform: 'translateY(calc(-20% - 40px))' } : undefined}
+          className="text-center mt-10 sm:mt-6"
+          style={!isMobile ? { transform: 'translateY(-20px)' } : undefined}
         >
           <a href="#" className="btn-amber text-base sm:text-[21px] tracking-widest px-8 sm:px-[67px] py-4 sm:py-[22px] block w-fit mx-auto">
             ACESSAR IMERSÃO
