@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import vintageTv from "@/assets/vintage-tv.png";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const items = [
   { label: ". Qual eixo está travando -", bold: "marca, conteúdo ou vendas" },
