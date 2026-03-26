@@ -1,4 +1,5 @@
 import { memo } from "react";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const HeroSection = memo(() => {
   return (
@@ -76,12 +77,12 @@ const HeroSection = memo(() => {
         </p>
 
         {/* CTA */}
-        <a
+        <TrackedCTA
           href="#preco"
           className="hero-cta-neon btn-amber mt-10 text-base px-14 py-5 rounded-lg tracking-widest"
         >
           PARTICIPAR DA IMERSÃO · R$47
-        </a>
+        </TrackedCTA>
 
         {/* Lote note */}
         <p className="mt-4 text-[13px] text-studio-gray-500 text-center">

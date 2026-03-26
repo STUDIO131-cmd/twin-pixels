@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
-import { useFacebookTracking } from "@/hooks/useFacebookTracking";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const PricingSection = () => {
-  const { trackInitiateCheckout } = useFacebookTracking();
-
-  const handleCheckoutClick = () => {
-    trackInitiateCheckout({
-      productIds: ['IMERSAO-JORNADA'],
-      numItems: 1,
-      value: 47.00,
-      currency: 'BRL',
-    });
-  };
   return (
     <section id="preco" className="relative overflow-hidden py-24">
       {/* Background */}
@@ -45,9 +35,9 @@ const PricingSection = () => {
 
         {/* Botão CTA */}
         <div className="text-center mb-4">
-          <a href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer" className="btn-amber text-base tracking-widest px-14 py-5" onClick={handleCheckoutClick}>
+          <TrackedCTA href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer" className="btn-amber text-base tracking-widest px-14 py-5">
             GARANTIR MINHA VAGA · R$47
-          </a>
+          </TrackedCTA>
         </div>
 
         {/* Barra de vagas */}
@@ -68,7 +58,7 @@ const PricingSection = () => {
           transition={{ duration: 0.5 }}
           className="relative max-w-[760px] mx-auto mb-6 cursor-pointer"
         >
-          <a href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer" onClick={handleCheckoutClick}>
+          <TrackedCTA href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer">
             <img
               src="/images/Ingresso_1.png"
               alt="Ingresso Lote 1"
@@ -78,7 +68,7 @@ const PricingSection = () => {
               loading="lazy"
               decoding="async"
             />
-          </a>
+          </TrackedCTA>
         </motion.div>
 
         {/* Ingresso 2 */}

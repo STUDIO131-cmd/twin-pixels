@@ -1,4 +1,5 @@
 import { memo } from "react";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const FinalCTASection = memo(() => {
   return (
@@ -27,13 +28,13 @@ const FinalCTASection = memo(() => {
           11 de abril · Online
         </p>
 
-        <a
+        <TrackedCTA
           href="#preco"
           className="btn-amber text-base tracking-widest px-[60px] py-5 rounded-full"
           style={{ animation: 'btnGlow 2.5s ease-in-out infinite' }}
         >
           QUERO PARTICIPAR · R$47
-        </a>
+        </TrackedCTA>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 border-t border-white/[0.08]" />

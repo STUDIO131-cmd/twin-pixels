@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const cards = [
   { title: "Clareza de Marca", text: "O cliente sabe por que te escolher?" },
@@ -130,9 +131,9 @@ const WhatIsSection = () => {
 
         {/* CTA */}
         <div className="mt-11 text-center">
-          <a href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
+          <TrackedCTA href="#preco" className="btn-amber text-[15px] tracking-widest px-[52px] py-[18px]">
             QUERO PARTICIPAR · R$47
-          </a>
+          </TrackedCTA>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import continuityTv from "@/assets/continuity-tv.png";
 import { useIsMobile } from "@/hooks/use-mobile";
+import TrackedCTA from "@/components/TrackedCTA";
 
 const ContinuitySection = () => {
   const isMobile = useIsMobile();
@@ -117,9 +118,9 @@ const ContinuitySection = () => {
           className="text-center mt-10 sm:mt-6"
           style={!isMobile ? { transform: 'translateY(-20px)' } : undefined}
         >
-          <a href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer" className="btn-amber text-base sm:text-[21px] tracking-widest px-8 sm:px-[67px] py-4 sm:py-[22px] block w-fit mx-auto">
+          <TrackedCTA href="https://checkout.perfectpay.com.br/pay/PPU38CQ9F3P?" target="_blank" rel="noopener noreferrer" className="btn-amber text-base sm:text-[21px] tracking-widest px-8 sm:px-[67px] py-4 sm:py-[22px] block w-fit mx-auto">
             ACESSAR IMERSÃO
-          </a>
+          </TrackedCTA>
         </div>
       </div>
     </section>
