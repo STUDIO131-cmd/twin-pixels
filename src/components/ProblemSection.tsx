@@ -58,19 +58,20 @@ const ProblemSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto max-w-[860px] items-start mt-10 md:mt-[118px]">
           {cards.map((card, i) => (
             <div key={i} className="relative flex flex-col items-center">
+              {/* Decorative icons - desktop only */}
               {i === 1 && (
                 <div className="absolute hidden md:flex items-center justify-center w-[246px] h-[246px]" style={{ top: '-182px', left: '-95%' }}>
-                  <img src="/icons/Cerebro-3.png" alt="Ícone" className="w-full h-full object-contain" />
+                  <img src="/icons/Cerebro-3.png" alt="Ícone" className="w-full h-full object-contain" loading="lazy" />
                 </div>
               )}
               {i === 1 && (
                 <div className="absolute hidden md:flex items-center justify-center w-[246px] h-[246px] left-1/2 -translate-x-1/2" style={{ top: '-160px' }}>
-                  <img src="/icons/Dinheiro-2.png" alt="Ícone Dinheiro" className="w-full h-full object-contain" />
+                  <img src="/icons/Dinheiro-2.png" alt="Ícone Dinheiro" className="w-full h-full object-contain" loading="lazy" />
                 </div>
               )}
               {i === 2 && (
                 <div className="absolute hidden md:flex items-center justify-center w-[246px] h-[246px] left-1/2 -translate-x-1/2" style={{ top: '-191px' }}>
-                  <img src="/icons/Alto_Falante-2.png" alt="Ícone Alto-Falante" className="w-full h-full object-contain" />
+                  <img src="/icons/Alto_Falante-2.png" alt="Ícone Alto-Falante" className="w-full h-full object-contain" loading="lazy" />
                 </div>
               )}
 
