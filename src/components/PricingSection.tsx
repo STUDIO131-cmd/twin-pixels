@@ -68,7 +68,7 @@ const PricingSection = () => {
               loading="lazy"
               decoding="async"
             />
-          </a>
+          </TrackedCTA>
         </motion.div>
 
         {/* Ingresso 2 */}
